@@ -88,28 +88,28 @@ M.plugin = {
 
     -- Edits to "Alternative" file in various locations
     nnoremap('<leader><leader>ra',      '<cmd>A<CR>')
-    nnoremap('<leader><leader>rae',     '<cmd>AE<CR>',                              { desc = 'edit alternate file'})
-    nnoremap('<leader><leader>ras',     '<cmd>AS<CR>',                              { desc = 'edit alternate in h split'})
-    nnoremap('<leader><leader>rav',     '<cmd>AV<CR>',                              { desc = 'edit alternate in tab},'})
-    nnoremap('<leader><leader>rat',     '<cmd>AT<CR>',                              { desc = 'edit alternate in v split'})
+    nnoremap('<leader><leader>rae',     '<cmd>AE<CR>',                       { desc = 'edit alternate file'})
+    nnoremap('<leader><leader>ras',     '<cmd>AS<CR>',                       { desc = 'edit alternate in h split'})
+    nnoremap('<leader><leader>rav',     '<cmd>AV<CR>',                       { desc = 'edit alternate in tab},'})
+    nnoremap('<leader><leader>rat',     '<cmd>AT<CR>',                       { desc = 'edit alternate in v split'})
 
 
     -- Edits to "Relative" file in various locations
     nnoremap('<leader><leader>re',      '<cmd>R<CR>')
-    nnoremap('<leader><leader>ree',     '<cmd>RE<CR>',                              { desc = 'edit relative file'})
-    nnoremap('<leader><leader>res',     '<cmd>RS<CR>',                              { desc = 'edit relative in h split'})
-    nnoremap('<leader><leader>rev',     '<cmd>RV<CR>',                              { desc = 'edit relative in tab'})
-    nnoremap('<leader><leader>ret',     '<cmd>RT<CR>',                              { desc = 'edit relative in v split'})
+    nnoremap('<leader><leader>ree',     '<cmd>RE<CR>',                       { desc = 'edit relative file'})
+    nnoremap('<leader><leader>res',     '<cmd>RS<CR>',                       { desc = 'edit relative in h split'})
+    nnoremap('<leader><leader>rev',     '<cmd>RV<CR>',                       { desc = 'edit relative in tab'})
+    nnoremap('<leader><leader>ret',     '<cmd>RT<CR>',                       { desc = 'edit relative in v split'})
 
 
     -- Partial Extraction
     vnoremap('<leader><leader>rex',     ':Extract ',                                { desc = 'extract to partial'})
 
     -- Rfactory
-    nnoremap('<leader><leader>rf',      '<cmd>Rfactory<CR>',                        { desc = 'Edit Factory File'})
-    nnoremap('<leader><leader>rfs',     '<cmd>RSfactory<CR>',                       { desc = 'Edit Factory File in H Split'})
-    nnoremap('<leader><leader>rfv',     '<cmd>RVfactory<CR>',                       { desc = 'Edit Factory File in V Split'})
-    nnoremap('<leader><leader>rft',     '<cmd>RTfactory<CR>',                       { desc = 'Edit Factory File in Tab'})
+    nnoremap('<leader><leader>rf',      '<cmd>Rfactory<CR>',                 { desc = 'Edit Factory File'})
+    nnoremap('<leader><leader>rfs',     '<cmd>RSfactory<CR>',                { desc = 'Edit Factory File in H Split'})
+    nnoremap('<leader><leader>rfv',     '<cmd>RVfactory<CR>',                { desc = 'Edit Factory File in V Split'})
+    nnoremap('<leader><leader>rft',     '<cmd>RTfactory<CR>',                { desc = 'Edit Factory File in Tab'})
 
     -- Preview Page
     nnoremap('<leader><leader>rp',      ':Preview<CR>',                             { desc = 'open web browser for current view'})
@@ -126,6 +126,11 @@ M.plugin = {
     nnoremap('<leader><leader>rgdc',    ':Generate devise:controllers<Space>',      { desc = 'Rails Generate Devise Controllers'})
     nnoremap('<leader><leader>rgdm',    ':Generate devise<Space>',                  { desc = 'Rails Generate Devise Model'})
     nnoremap('<leader><leader>rgdv',    ':Generate devise:views<Space>',            { desc = 'Rails Generate Devise Views'})
+
+    -- LiveReload Gem
+    nnoremap('<leader><leader>rlri',    ':!rails livereload:install<CR>',    { desc = 'Install Rails Live Reload'})
+    nnoremap('<leader><leader>rlrd',    ':!rails livereload:disable<CR>',    { desc = 'Disable Rails Live Reload'})
+    nnoremap('<leader><leader>rlre',    ':!rails livereload:enable<CR>',     { desc = 'Enable Rails Live Reload'})
 
     -- Rspec Gem
     nnoremap('<leader><leader>rgRch',   ':Generate rspec:channel<CR>',              { desc = 'Rails Generate Rspec Channel'})

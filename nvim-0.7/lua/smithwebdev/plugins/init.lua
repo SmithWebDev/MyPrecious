@@ -20,6 +20,7 @@ local plugins = {
 
   -- Aesthetics --
   'animate',          -- https://github.com/camspiers/animate.vim
+  'colorscheme',
   'indent_blankline', -- https://github.com/lukas-reineke/indent-blankline.nvim
   --  'colorbuddy', -- https://github.com/tjdevries/colorbuddy.nvim
   'lush',             -- https://github.com/rktjmp/lush.nvim
@@ -102,5 +103,10 @@ vim.api.nvim_create_autocmd('BufWritePost', {
     end
   end,
 })
+
+local u = require'smithwebdev.core.utils'
+local nnoremap = u.nnoremap
+
+nnoremap('<leader>P', ':PackerSync<cr>', { desc = "Packer Sync" })
 
 print('Plugins connected...')

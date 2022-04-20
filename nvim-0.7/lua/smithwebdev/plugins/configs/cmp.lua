@@ -89,13 +89,12 @@ M.plugin = {
       }),
 
       sources = cmp.config.sources({
-        {name = 'LSP'},
+        {name = 'nvim_lsp'},
         {name = 'luasnip'},
         {name = 'emoji'},
         {name = 'orgmode'},
         {name = 'pandoc_references'},
         {name = 'cmp-pandoc.nvim'},
-      }, {
         { name = 'buffer', keyword_length = 5 },
         { name = 'nvim_lsp_signature_help' },
       }),
@@ -147,11 +146,6 @@ M.plugin = {
       --  entries = { name = 'wildmenu', separator = '|' }
       --}
     })
-
-    -- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    -- require('lspconfig')['place_server_name_here'].setup {
-    --   capabilities = capabilities
-    -- }
 
   end
 }

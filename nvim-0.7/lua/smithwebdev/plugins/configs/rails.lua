@@ -15,9 +15,7 @@ M.plugin = {
 
   config = function()
     local u = require'smithwebdev.core.utils'
-    local noremap = u.noremap
     local nnoremap = u.nnoremap
-    local inoremap = u.inoremap
     local vnoremap = u.vnoremap
 
     -- keybindings

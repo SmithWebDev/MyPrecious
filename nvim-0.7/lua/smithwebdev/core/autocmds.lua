@@ -9,8 +9,12 @@ vim.api.nvim_create_autocmd('FileType', {
 local UltestRunner = vim.api.nvim_create_augroup('UltestRunner', {clear = true})
 vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = '*',
-  command = 'UltestNearest'
+  command = 'UltestNearest',
+  group = 'UltestRunner'
 })
+
+--local Auto_Leave_Save = vim.api.nvim_create_augroup('AutoLeaveSave', {clear = true})
+--vim.api.nvim_create_augroup()
 --local auto = vim.cmd
 --auto [[
 --    augroup autosave

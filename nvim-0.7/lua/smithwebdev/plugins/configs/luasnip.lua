@@ -7,7 +7,7 @@ M.plugin = {
     --require('smithwebdev.snippets')
     require('luasnip.loaders.from_vscode').lazy_load()
     require('luasnip.loaders.from_snipmate').lazy_load()
-    require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim-nightly/luasnippets"})
+    require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/luasnippets"})
     local ls = require('luasnip')
     local types = require('luasnip.util.types')
 

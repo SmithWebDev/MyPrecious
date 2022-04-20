@@ -69,6 +69,7 @@ local plugins = {
   -- Project Organization --
   'orgmode', --https://github.com/nvim-orgmode/orgmode
   'vim-mkdir', -- https://github.com/pbrisbin/vim-mkdir
+  'vim-wakatime', -- https://github.com/wakatime/vim-wakatime
 
   -- Testing --
   'vim-ultest', -- https://github.com/rcarriga/vim-ultest

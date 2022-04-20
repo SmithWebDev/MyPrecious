@@ -2,7 +2,10 @@ local M = {}
 
 M.plugin = {
   'folke/zen-mode.nvim',
+
+  requires = {
   'folke/twilight.nvim', -- https://github.com/folke/twilight.nvim
+  },
 
   config = function()
     require'zen-mode'.setup({

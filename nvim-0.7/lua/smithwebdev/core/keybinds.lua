@@ -25,6 +25,8 @@ inoremap('<C-l>',              '<Esc>$a',                       { desc = 'Jump t
 nnoremap('<',                  '<<',                            { desc = 'Alternative Shift Tab (indent)'})
 nnoremap('>',                  '>>',                            { desc = 'Alternative Tab (indent)'})
 vnoremap('p',                  '_dP',                           { desc = 'Maintain registered info when pasting'})
+nnoremap('<leader>b',          ':b<Space>',                        { desc = 'Switch to buffer'})
+nnoremap('<leader>l',          ':ls<CR>',                        { desc = 'List open files'})
 nnoremap('<leader>w',          ':w<CR>',                        { desc = 'Save shortcut'})
 nnoremap('<leader>W',          ':wall<CR>',                     { desc = 'Save all shortcut'})
 

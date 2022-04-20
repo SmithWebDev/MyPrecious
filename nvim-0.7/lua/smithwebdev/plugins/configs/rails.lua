@@ -1,5 +1,6 @@
 local M = {}
 
+vim.g.blockle_mapping = '<leader>bl'
 M.plugin = {
   'tpope/vim-rails',
 
@@ -14,9 +15,7 @@ M.plugin = {
 
   config = function()
     local u = require'smithwebdev.core.utils'
-    local noremap = u.noremap
     local nnoremap = u.nnoremap
-    local inoremap = u.inoremap
     local vnoremap = u.vnoremap
 
     -- keybindings
@@ -128,9 +127,9 @@ M.plugin = {
     nnoremap('<leader><leader>rgdv',    ':Generate devise:views<Space>',            { desc = 'Rails Generate Devise Views'})
 
     -- LiveReload Gem
-    nnoremap('<leader><leader>rlri',    ':!rails livereload:install<CR>',    { desc = 'Install Rails Live Reload'})
-    nnoremap('<leader><leader>rlrd',    ':!rails livereload:disable<CR>',    { desc = 'Disable Rails Live Reload'})
-    nnoremap('<leader><leader>rlre',    ':!rails livereload:enable<CR>',     { desc = 'Enable Rails Live Reload'})
+    nnoremap('<leader><leader>rlri',    ':!rails livereload:install<CR>',           { desc = 'Install Rails Live Reload'})
+    nnoremap('<leader><leader>rlrd',    ':!rails livereload:disable<CR>',           { desc = 'Disable Rails Live Reload'})
+    nnoremap('<leader><leader>rlre',    ':!rails livereload:enable<CR>',            { desc = 'Enable Rails Live Reload'})
 
     -- Rspec Gem
     nnoremap('<leader><leader>rgRch',   ':Generate rspec:channel<CR>',              { desc = 'Rails Generate Rspec Channel'})

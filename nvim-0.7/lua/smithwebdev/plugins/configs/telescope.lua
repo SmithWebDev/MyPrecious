@@ -35,7 +35,9 @@ M.plugin = {
               ['<esc>'] = require("telescope.actions").close,
               ['jj'] = {'<esc', type = 'command' },
             },
-            ['n'] = {},
+            ['n'] = {
+              ['jk'] = require('telescope.actions').close,
+            },
           },
         },
         --fzy_native = {
@@ -100,8 +102,8 @@ M.plugin = {
     vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope file_browser', default_opts)
     vim.api.nvim_set_keymap('n', '<leader>fc', [[<Cmd>lua TelescopeFindConfigFiles()<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]], default_opts)
+    vim.api.nvim_set_keymap('n', '<leader>fg', [[<Cmd>lua TelescopeLiveGrep()<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>fh', [[<Cmd>Telescope help_tags<CR>]], default_opts)
-    vim.api.nvim_set_keymap('n', '<leader>fl', [[<Cmd>lua TelescopeLiveGrep()<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>fm', [[<Cmd>lua TelescopeKeyMap()<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>fq', [[<Cmd>lua TelescopeQuickFix()<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>fs', [[<Cmd>Telescope luasnip<CR>]], default_opts)

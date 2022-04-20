@@ -2,20 +2,35 @@ local M = {}
 
 M.plugin = {
   'nvim-treesitter/nvim-treesitter',
-  'RRethy/nvim-treesitter-endwise',              -- https://github.com/RRethy/nvim-treesitter-endwise
-  'nvim-treesitter/nvim-treesitter-refactor',
-  'nvim-treesitter/nvim-treesitter-textobjects', -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-  'RRethy/nvim-treesitter-textsubjects',         -- https://github.com/RRethy/nvim-treesitter-textsubjects
 
+  requires = {
+  'nvim-treesitter/playground', --https://github.com/nvim-treesitter/playground
+    'RRethy/nvim-treesitter-endwise',              -- https://github.com/RRethy/nvim-treesitter-endwise
+    'nvim-treesitter/nvim-treesitter-refactor',
+    'nvim-treesitter/nvim-treesitter-textobjects', -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    'RRethy/nvim-treesitter-textsubjects',         -- https://github.com/RRethy/nvim-treesitter-textsubjects
+  },
+
+  run = ':TSUpdate',
 
   config = function()
     require("nvim-treesitter.configs").setup({
-      ensure_installed = 'maintained',
-     indent = {
+      ensure_installed = {
+        'lua',
+        'ruby',
+        'html',
+        'css',
+        'javascript',
+        'query',
+      },
+      sync_install = true,
+      indent = {
         enable = true,
       },
       highlight = {
         enable = true,
+        disable = {'org'},
+        additional_vim_regex_highlighting = {'org'},
       },
       endwise = {
         enable = true,

@@ -3,9 +3,9 @@ local M = {}
 M.plugin = {
   'ray-x/navigator.lua',
 
-  after = {
-    'nvim-treesitter',
-  },
+  -- after = {
+  --   'nvim-treesitter',
+  -- },
 
   requires = {
     'neovim/nvim-lspconfig',

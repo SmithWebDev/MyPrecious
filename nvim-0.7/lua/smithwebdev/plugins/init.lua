@@ -1,4 +1,4 @@
-local install_path = os.getenv('HOME').. '/.local/share/nvim-nightly/site/pack/packer/start/packer.nvim'
+local install_path = os.getenv('HOME').. '/.local/share/nvim/site/pack/packer/start/packer.nvim'
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   local plugin_repo = 'https://github.com/wbthomason/packer.nvim'
@@ -12,16 +12,17 @@ local packer = require'packer'
 -- Use your local data path and not plugin/
 -- this is `~/.local/share/nvim/site/plugin/packer_compiled.lua` in WSL/Linux and MacOS
 packer.init {
-  package_root = os.getenv('HOME') .. '/.local/share/nvim-nightly/site/pack',
-  compile_path = os.getenv('HOME') .. '/.config/nvim-nightly/plugin/packer_compiled.vim',
+  package_root = string.format('%s/site/pack', vim.fn.stdpath('data')),
+  compile_path = string.format('%s/site/plugin/packer_compiled.lua', vim.fn.stdpath('data')),
 }
 
 local plugins = {
 
   -- Aesthetics --
   'animate',          -- https://github.com/camspiers/animate.vim
+  'colorscheme',
   'indent_blankline', -- https://github.com/lukas-reineke/indent-blankline.nvim
---  'colorbuddy', -- https://github.com/tjdevries/colorbuddy.nvim
+  --  'colorbuddy', -- https://github.com/tjdevries/colorbuddy.nvim
   'lush',             -- https://github.com/rktjmp/lush.nvim
   'statusline', -- https://github.com/beauwilliams/statusline.lua
   'vim-smoothie',     -- https://github.com/psliwka/vim-smoothie
@@ -40,6 +41,7 @@ local plugins = {
   'marks',            -- https://github.com/chentau/marks.nvim
   'peekabo',          -- https://github.com/junegunn/vim-peekaboo
   'surround',         -- https://github.com/tpope/vim-surround
+  'vim-exchange', -- https://github.com/tommcdo/vim-exchange
   'yode',             -- https://github.com/hoschi/yode-nvim
   'zen', -- https://github.com/folke/zen-mode.nvim
 
@@ -60,11 +62,17 @@ local plugins = {
   'whichkey',         -- https://github.com/folke/which-key.nvim
 
   -- LSP/Navigator --
-  'navigator',        -- https://github.com/ray-x/navigator.lua
+  'lspconfig',
+  'lspsaga',
+  --'navigator',        -- https://github.com/ray-x/navigator.lua
+
+  -- Project Organization --
+  'orgmode', --https://github.com/nvim-orgmode/orgmode
+  'vim-mkdir', -- https://github.com/pbrisbin/vim-mkdir
 
   -- Testing --
   'vim-ultest', -- https://github.com/rcarriga/vim-ultest
- 
+
   -- Treesitter/ Syntax Highlighting --
   'treesitter',       -- https://github.com/nvim-treesitter/nvim-treesitter
 }
@@ -78,5 +86,27 @@ packer.startup(function(use)
   end
 end)
 
-vim.cmd 'PackerSync'
+-- Autocmd to match the path in your config that is in
+-- lua/smithwebdev/plugins/*.lua or lua/smithwebdev/plugins/configs/*.lua
+-- and then create a packer compile file whenever you :w in those files
+local packer_group =  vim.api.nvim_create_augroup('packer_user_events', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', {
+  group = packer_group,
+
+  pattern = '*.lua',
+
+  callback = function(event)
+    local found = event.file:find('.*smithwebdev/plugins.*') ~= nil
+
+    if found then
+      vim.cmd 'PackerCompile'
+    end
+  end,
+})
+
+local u = require'smithwebdev.core.utils'
+local nnoremap = u.nnoremap
+
+nnoremap('<leader>P', ':PackerSync<cr>', { desc = "Packer Sync" })
+
 print('Plugins connected...')

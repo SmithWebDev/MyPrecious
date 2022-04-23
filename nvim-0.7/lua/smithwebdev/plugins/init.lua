@@ -46,9 +46,11 @@ local plugins = {
   'zen', -- https://github.com/folke/zen-mode.nvim
 
   -- Filetype --
+  'haml', -- https://github.com/tpope/vim-haml
   'markdown_preview', -- https://github.com/iamcco/markdown-preview.nvim
   'rails',            -- https://github.com/tpope/vim-rails
   'sniprun',          -- https://github.com/michaelb/sniprun
+  --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
 
   -- Fuzzy / File Finder --
   'harpoon',          -- https://github.com/ThePrimeagen/harpoon
@@ -100,6 +102,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
     local found = event.file:find('.*smithwebdev/plugins.*') ~= nil
 
     if found then
+      vim.cmd 'PackerSync'
       vim.cmd 'PackerCompile'
     end
   end,

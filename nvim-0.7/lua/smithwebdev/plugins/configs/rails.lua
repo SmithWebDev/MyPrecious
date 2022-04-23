@@ -7,7 +7,6 @@ M.plugin = {
   requires = {
     'christoomey/vim-rfactory',        --,                          https://github.com/christoomey/vim-rfactory
     'tpope/vim-endwise',               --,                          https://github.com/tpope/vim-endwise
-    --'joshcheek/seeing_is_believing', --,                     https://github.com/JoshCheek/seeing_is_believing
     'tpope/vim-dispatch',              --,                          https://github.com/tpope/vim-dispatch
     'tpope/vim-projectionist',         --,                          https://github.com/tpope/vim-projectionist
     'jgdavey/vim-blockle',             --,                          https://github.com/gdavey/vim-blockle

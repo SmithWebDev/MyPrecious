@@ -3,10 +3,14 @@ local M = {}
 M.plugin = {
   'L3MON4D3/LuaSnip',
 
+  --after = {
+  --  'nvim-cmp',
+  --},
+
   config = function()
-    --require('smithwebdev.snippets')
+    require('smithwebdev.snippets')
     require('luasnip.loaders.from_vscode').lazy_load()
-    require('luasnip.loaders.from_snipmate').lazy_load()
+    --require('luasnip.loaders.from_snipmate').lazy_load()
     require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/luasnippets"})
     local ls = require('luasnip')
     local types = require('luasnip.util.types')
@@ -33,7 +37,7 @@ M.plugin = {
 
     -- keybinds
     vim.keymap.set("i", "<c-l>", function()
-      if ls.choice_active() then 
+      if ls.choice_active() then
         ls.change_choice(1)
       end
     end)
@@ -45,3 +49,4 @@ M.plugin = {
 }
 
 return M
+

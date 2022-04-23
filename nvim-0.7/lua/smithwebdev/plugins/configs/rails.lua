@@ -55,7 +55,6 @@ M.plugin = {
     nnoremap('<leader><leader>rgs',     ':Generate scaffold<Space>',                { desc = 'Rails Generate Scaffold Command'})
     nnoremap('<leader><leader>rgsc',    ':Generate scaffold_controller<Space>',     { desc = 'Rails Generate Scaffold Controller Command'})
     nnoremap('<leader><leader>rgt',     ':Generate task<Space>',                    { desc = 'Rails Generate Task Command'})
-    
     --nnoremap('',                   '')
     --nnoremap('',                   '')
 

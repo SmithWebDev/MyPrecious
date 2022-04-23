@@ -28,60 +28,49 @@ ls.add_snippets(nil,{
     }),
     ls.parser.parse_snippet('expand', '-- this is what was expanded!')
   },
---
---  lua = {
---    s("req", fmt("local {} = require('{}')", { i(1), rep(1)})),
---    s('keymap', fmt("{}noremap('{}',  '{}', {{ desc = '{}'}})", {i(1), i(2), i(3), i(4)})),
---    s('pcreate', fmt([[
---    local M = {{}}
---
---    M.plugin = {{
---      '{}',
---
---      config = function()
---        {}
---      end
---    }}
---
---    return M]],
---    {i(1), i(2)})),
---
---    --s("auc", fmt("vim.api.nvim_create_autocmd('{}')", i(1))),
---
---    --s('auc', fmt([[
---    --  vim.api.nvim_create_autocmd('{}', {
---    --    pattern = '{}',
---    --    command = '{}'{}
---    --    }), {i(1), i(2), i(3), c(4, sn(nil, fmt(",\n  group = {}"), i(0))), t""}]]))
---
---    s({
---      trig = 'auc',
---      name = 'Create Autocmd',
---      dscr = 'create autocmd with optional group tag',
---    }, fmt(
---    [[vim.api.nvim_create_autocmd('{}', {{
---      {},
---      {},
---      {}
---    }})]], 
---    {i(1, 'event'), c(2, {t"pattern = '{}'", t"command = '{}'", t"group = "}), c(3, {t"pattern = '{}'", t"command = '{}'", t'group = ', t''}), c(4,{ t'group = ', t''})}
---    )),
---
---    s('agroup', c(1, {
---      t'some text',
---      t("some other text"),
---      sn(nil, {i(1), t"some next text"})
---    }))
---  },
---  eruby = {
---    s({
---      trig = 'ltc',
---      name = 'Link to with class',
---      dscr = 'Link_to tag with added class option'
---    }, fmt(
---    [[link_to '{}', {}_path, class: '{}']],
---    {i(1), i(2), i(3)}))
---  },
+
+  lua = {
+    s("req", fmt("local {} = require('{}')", { i(1), rep(1)})),
+    s('keymap', fmt("{}noremap('{}',  '{}', {{ desc = '{}'}})", {i(1), i(2), i(3), i(4)})),
+    s('pcreate', fmt([[
+     local M = {{}}
+
+     M.plugin = {{
+       '{}',
+
+       config = function()
+         {}
+       end
+     }}
+
+     return M]],
+      {i(1), i(2)})),
+    --s('auc', {
+    --  t('vim.api.nvim_create_autocmd({ '),
+    --  i(1),
+    --  t(" '}, {"),
+    --  t('\t'),
+    --  i()
+    --})
+    --}),
+    s('aug', fmt("vim.api.nvim_create_autogroup('{}', {{ clear = true }})", {i(1)})),
+    s('auc', fmt([[
+      vim.api.nvim_create_autocmd('{}', {{
+        pattern = '{}',
+        command = '{}',
+        group = '{}'
+      }})
+    ]], {i(1), i(2), i(3), i(4)})),
+  },
+  eruby = {
+    s({
+      trig = 'ltc',
+      name = 'Link to with class',
+      dscr = 'Link_to tag with added class option'
+    }, fmt(
+        [[link_to '{}', {}_path, class: '{}']],
+        {i(1), i(2), i(3)}))
+  },
 })
 
 print('snippets installed!')

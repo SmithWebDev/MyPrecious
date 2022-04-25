@@ -93,6 +93,34 @@ ls.add_snippets(nil,{
     }, fmt(
         [[<%= button_to '{}', {}_path{}, method: :delete, class: '{}' %>]],
         {i(1), i(2), i(3), i(4)})),
+    s({
+      trig = 'tstream',
+      name = 'turbo stream',
+      dscr = 'Inserts turbo stream tag with choice of methods'
+    }, {
+        fmt(
+          [[<%= turbo_stream.{} {}]],
+          {c(1, {
+            t('remove'),
+            t('remove_all'),
+            t('replace'),
+            t('replace_all'),
+            t('before'),
+            t('before_all'),
+            t('after'),
+            t('after_all'),
+            t('update'),
+            t('update_all'),
+            t('append'),
+            t('append_all'),
+            t('prepend'),
+            t('prepend_all'),
+            t('action'),
+            t('action_all'),
+          }), i()}
+
+        )
+      }),
   },
   ruby = {
     s({

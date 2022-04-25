@@ -7,9 +7,8 @@ vim.g.user_emmet_settings = {
       {['for'] = 'htmlFor'},
       {class = 'className'}
       },
-    ['javascript.jsx'] = {
-      {extends = 'jsx'}
-        },
+    javascript =  {extends = 'jsx'},
+    typescripte ={ extends = 'tsx'}
     -- ['erb'] = {
     --   {extends = 'html'}
     --   },

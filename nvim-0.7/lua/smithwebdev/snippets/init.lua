@@ -28,7 +28,9 @@ ls.add_snippets(nil,{
     }),
     ls.parser.parse_snippet('expand', '-- this is what was expanded!')
   },
-
+  html = {
+    ls.parser.parse_snippet('dtf', 'data-turbo=\'false\''),
+  },
   lua = {
     s("req", fmt("local {} = require('{}')", { i(1), rep(1)})),
     s('keymap', fmt("{}noremap('{}',  '{}', {{ desc = '{}'}})", {i(1), i(2), i(3), i(4)})),
@@ -68,8 +70,54 @@ ls.add_snippets(nil,{
       name = 'Link to with class',
       dscr = 'Link_to tag with added class option'
     }, fmt(
-        [[link_to '{}', {}_path, class: '{}']],
-        {i(1), i(2), i(3)}))
+        [[<%= link_to '{}', {}_path{}, class: '{}' %>]],
+        {i(1), i(2), i(3), i(4)})),
+    s({
+      trig = 'btc',
+      name = 'Button to with class',
+      dscr = 'Button_to tag with added class option'
+    }, fmt(
+        [[<%= button_to '{}', {}_path{}, class: '{}' %>]],
+        {i(1), i(2), i(3), i(4)})),
+    s({
+      trig = 'dltc',
+      name = 'Link to with delete action & class',
+      dscr = 'Link_to tag with added deleted action & class option'
+    }, fmt(
+        [[<%= link_to '{}', {}_path{}, method: :delete, class: '{}' %>]],
+        {i(1), i(2), i(3), i(4)})),
+    s({
+      trig = 'dbtc',
+      name = 'Button to with delete action & class',
+      dscr = 'Button_to tag with added deleted action & class option'
+    }, fmt(
+        [[<%= button_to '{}', {}_path{}, method: :delete, class: '{}' %>]],
+        {i(1), i(2), i(3), i(4)})),
+  },
+  ruby = {
+    s({
+      trig = 'ba',
+      name = 'Before Action',
+      dscr = 'Model Before Action'
+    }, {
+        t('before_action')
+      })
+  },
+  markdown = {
+    s({
+      trig = 'link',
+      namr = 'markdown_link',
+      dscr = 'Create markdown link [txt](url)',
+    }, {
+        t('['),
+        i(1),
+        t(']('),
+        f(function(_, snip)
+          return snip.env.TM_SELECTED_TEXT[1] or {}
+        end, {}),
+        t(')'),
+        i(0)
+      }),
   },
 })
 

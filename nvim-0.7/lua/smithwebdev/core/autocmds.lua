@@ -12,6 +12,17 @@ vim.api.nvim_create_autocmd('BufEnter', {
   pattern = "*.txt",
 })
 
+vim.api.nvim_create_autocmd('BufEnter', {
+  callback = function()
+    if vim.bo.buftype == 'lspinfo' then
+      local bufnr = vim.api.nvim_get_current_buf()
+      vim.keymap.set('n', 'q', ':q<CR>', { silent = true, buffer = bufnr })
+    end
+  end,
+  group = "Help",
+  desc = "close LspInfo window with 'q'",
+})
+
 vim.cmd('cnoreabbrev h vert bot help')
 vim.cmd('cnoreabbrev help vert bot help')
 
@@ -53,6 +64,11 @@ vim.api.nvim_create_autocmd({ 'TextChangedI', 'InsertEnter' }, {
     end, 4000)
   end
 })
+vim.api.nvim_create_autocmd({'InsertLeave', 'BufWritePre'}, {
+  pattern = '*',
+  command = '%s/\\s\\+$//e',
+  group = AutoSaveGroup
+})
 
 vim.api.nvim_create_augroup('CursorInsertMode', { clear = true })
 vim.api.nvim_create_autocmd({'InsertLeave', 'WinEnter' },{
@@ -69,3 +85,5 @@ vim.api.nvim_create_autocmd({'InsertEnter', 'WinLeave'}, {
   group = 'CursorInsertMode',
   desc = 'Disable cursorline on insert',
 })
+
+

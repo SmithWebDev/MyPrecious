@@ -27,7 +27,7 @@ local plugins = {
   'statusline', -- https://github.com/beauwilliams/statusline.lua
   'vim-smoothie',     -- https://github.com/psliwka/vim-smoothie
 
-  -- Completion & Snippets -- 
+  -- Completion & Snippets --
   'luasnip',          -- https://github.com/L3MON4D3/LuaSnip
   'cmp',              -- https://github.com/hrsh7th/nvim-cmp
 
@@ -111,6 +111,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 local u = require'smithwebdev.core.utils'
 local nnoremap = u.nnoremap
 
-nnoremap('<leader>P', ':PackerSync<cr>', { desc = "Packer Sync" })
+nnoremap('<leader>PS', ':PackerSync<cr>', { desc = "Packer Sync" })
+nnoremap('<leader>PC', ':PackerCompile<cr>', { desc = "Packer Compile" })
 
 print('Plugins connected...')

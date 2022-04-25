@@ -54,6 +54,7 @@ M.plugin = {
     nnoremap('<leader><leader>rgrc',    ':Generate responders_controller<Space>',   { desc = 'Rails Generate Responders Controller Command'})
     nnoremap('<leader><leader>rgs',     ':Generate scaffold<Space>',                { desc = 'Rails Generate Scaffold Command'})
     nnoremap('<leader><leader>rgsc',    ':Generate scaffold_controller<Space>',     { desc = 'Rails Generate Scaffold Controller Command'})
+    nnoremap('<leader><leader>rgst',    ':Generate system_test<Space>',             { desc = 'Rails Generate System Test Command'})
     nnoremap('<leader><leader>rgt',     ':Generate task<Space>',                    { desc = 'Rails Generate Task Command'})
     --nnoremap('',                   '')
     --nnoremap('',                   '')
@@ -110,6 +111,8 @@ M.plugin = {
 
     -- Preview Page
     nnoremap('<leader><leader>rp',      ':Preview<CR>',                             { desc = 'open web browser for current view'})
+    -- MiniTest
+    nnoremap('<leader><leader>rts',      ':!rails test:',                             { desc = 'Rails Test:{directory}'})
 
     -- Run Ctags for Ruby/Rails program, includes gems
     nnoremap('<leader><leader>rt',      ':!ctags -R --languages=Ruby --exclude=.git --exclude=log . $(bundle list --paths) && echo "tags" >> .gitignore<CR>') --,  create ctags for project incl bundled gems
@@ -145,6 +148,9 @@ M.plugin = {
     nnoremap('<leader><leader>rgRs',    ':Generate rspec:scaffold<CR>',             { desc = 'Rails Generate Rspec Scaffold'})
     nnoremap('<leader><leader>rgRS',    ':Generate rspec:system<CR>',               { desc = 'Rails Generate Rspec System'})
     nnoremap('<leader><leader>rgRv',    ':Generate rspec:view<CR>',                 { desc = 'Rails Generate Rspec View'})
+
+    -- Simple Form
+    nnoremap('<leader><leader>rgSfi',    ':Generate simple_form:install<CR>',       { desc = 'Rails Generate Simple Form Install'})
   end
 }
 

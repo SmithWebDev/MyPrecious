@@ -68,31 +68,31 @@ ls.add_snippets(nil,{
     s({
       trig = 'ltc',
       name = 'Link to with class',
-      dscr = 'Link_to tag with added class option'
+      dscr = 'Link_to tag with added class option / optional delete action'
     }, fmt(
-        [[<%= link_to '{}', {}_path{}, class: '{}' %>]],
-        {i(1), i(2), i(3), i(4)})),
+        [[<%= link_to '{}', {}_path{},{} class: '{}' %>]],
+        {i(1), i(2), i(3), c(4,{t(' '), t(' method: :delete,')}), i(5)})),
     s({
       trig = 'btc',
       name = 'Button to with class',
-      dscr = 'Button_to tag with added class option'
+      dscr = 'Button_to tag with added class option / optional delete action'
     }, fmt(
-        [[<%= button_to '{}', {}_path{}, class: '{}' %>]],
-        {i(1), i(2), i(3), i(4)})),
-    s({
-      trig = 'dltc',
-      name = 'Link to with delete action & class',
-      dscr = 'Link_to tag with added deleted action & class option'
-    }, fmt(
-        [[<%= link_to '{}', {}_path{}, method: :delete, class: '{}' %>]],
-        {i(1), i(2), i(3), i(4)})),
-    s({
-      trig = 'dbtc',
-      name = 'Button to with delete action & class',
-      dscr = 'Button_to tag with added deleted action & class option'
-    }, fmt(
-        [[<%= button_to '{}', {}_path{}, method: :delete, class: '{}' %>]],
-        {i(1), i(2), i(3), i(4)})),
+        [[<%= button_to '{}', {}_path{},{} class: '{}' %>]],
+        {i(1), i(2), i(3), c(4,{t(' '), t(' method: :delete,')}), i(5)})),
+    --s({
+    --  trig = 'dltc',
+    --  name = 'Link to with delete action & class',
+    --  dscr = 'Link_to tag with added deleted action & class option'
+    --}, fmt(
+    --    [[<%= link_to '{}', {}_path{}, method: :delete, class: '{}' %>]],
+    --    {i(1), i(2), i(3), i(4)})),
+    --s({
+    --  trig = 'dbtc',
+    --  name = 'Button to with delete action & class',
+    --  dscr = 'Button_to tag with added deleted action & class option'
+    --}, fmt(
+    --    [[<%= button_to '{}', {}_path{}, method: :delete, class: '{}' %>]],
+    --    {i(1), i(2), i(3), i(4)})),
     --s({
     --  trig = 'tstream',
     --  name = 'turbo stream',
@@ -133,7 +133,7 @@ ls.add_snippets(nil,{
       name = 'Before Action',
       dscr = 'Model Before Action'
     }, {
-        t('before_action')
+        t('before_action ')
       })
   },
   markdown = {

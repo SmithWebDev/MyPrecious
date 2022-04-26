@@ -119,38 +119,41 @@ M.plugin = {
 
 
     -- Annotate Gem
-    nnoremap('<leader><leader>rgai',    ':Generate annotate:install<CR>',           { desc = 'Rails Generate Annotate Install'})
+    nnoremap('<leader><leader>rgAi',    ':Generate annotate:install<CR>',           { desc = 'Rails Generate Annotate Install'})
 
     -- Devise Gem
-    nnoremap('<leader><leader>rgdi',    ':Generate devise:install <CR>',            { desc = 'Rails Generate Devise Install'})
-    nnoremap('<leader><leader>rgdc',    ':Generate devise:controllers<Space>',      { desc = 'Rails Generate Devise Controllers'})
-    nnoremap('<leader><leader>rgdm',    ':Generate devise<Space>',                  { desc = 'Rails Generate Devise Model'})
-    nnoremap('<leader><leader>rgdv',    ':Generate devise:views<Space>',            { desc = 'Rails Generate Devise Views'})
+    nnoremap('<leader><leader>rgDi',    ':Generate devise:install <CR>',            { desc = 'Rails Generate Devise Install'})
+    nnoremap('<leader><leader>rgDC',    ':Generate devise:controllers<Space>',      { desc = 'Rails Generate Devise Controllers'})
+    nnoremap('<leader><leader>rgDM',    ':Generate devise<Space>',                  { desc = 'Rails Generate Devise Model'})
+    nnoremap('<leader><leader>rgDV',    ':Generate devise:views<Space>',            { desc = 'Rails Generate Devise Views'})
+
+    -- GraphQL Ruby
+    nnoremap('<leader><leader>rgGi',    ':Generate graphql:install <CR>',           { desc = 'Rails Generate GraphQL Install'})
 
     -- LiveReload Gem
-    nnoremap('<leader><leader>rlri',    ':!rails livereload:install<CR>',           { desc = 'Install Rails Live Reload'})
-    nnoremap('<leader><leader>rlrd',    ':!rails livereload:disable<CR>',           { desc = 'Disable Rails Live Reload'})
-    nnoremap('<leader><leader>rlre',    ':!rails livereload:enable<CR>',            { desc = 'Enable Rails Live Reload'})
+    nnoremap('<leader><leader>rLRi',    ':!rails livereload:install<CR>',           { desc = 'Install Rails Live Reload'})
+    nnoremap('<leader><leader>rLRD',    ':!rails livereload:disable<CR>',           { desc = 'Disable Rails Live Reload'})
+    nnoremap('<leader><leader>rLRE',    ':!rails livereload:enable<CR>',            { desc = 'Enable Rails Live Reload'})
 
     -- Rspec Gem
-    nnoremap('<leader><leader>rgRch',   ':Generate rspec:channel<CR>',              { desc = 'Rails Generate Rspec Channel'})
-    nnoremap('<leader><leader>rgRc',    ':Generate rspec:controller<CR>',           { desc = 'Rails Generate Rspec Controller'})
-    nnoremap('<leader><leader>rgRf',    ':Generate rspec:feature<CR>',              { desc = 'Rails Generate Rspec Feature'})
-    nnoremap('<leader><leader>rgRg',    ':Generate rspec:generator<CR>',            { desc = 'Rails Generate Rspec Generator'})
-    nnoremap('<leader><leader>rgRh',    ':Generate rspec:helper<CR>',               { desc = 'Rails Generate Rspec Helper'})
+    nnoremap('<leader><leader>rgRCH',   ':Generate rspec:channel<CR>',              { desc = 'Rails Generate Rspec Channel'})
+    nnoremap('<leader><leader>rgRC',    ':Generate rspec:controller<CR>',           { desc = 'Rails Generate Rspec Controller'})
+    nnoremap('<leader><leader>rgRF',    ':Generate rspec:feature<CR>',              { desc = 'Rails Generate Rspec Feature'})
+    nnoremap('<leader><leader>rgRG',    ':Generate rspec:generator<CR>',            { desc = 'Rails Generate Rspec Generator'})
+    nnoremap('<leader><leader>rgRH',    ':Generate rspec:helper<CR>',               { desc = 'Rails Generate Rspec Helper'})
     nnoremap('<leader><leader>rgRi',    ':Generate rspec:install<CR>',              { desc = 'Rails Generate Rspec Install'})
     nnoremap('<leader><leader>rgRI',    ':Generate rspec:integration<CR>',          { desc = 'Rails Generate Rspec Integration'})
-    nnoremap('<leader><leader>rgRj',    ':Generate rspec:job<CR>',                  { desc = 'Rails Generate Rspec Job'})
-    nnoremap('<leader><leader>rgRm',    ':Generate rspec:mailer<CR>',               { desc = 'Rails Generate Rspec Mailer'})
-    nnoremap('<leader><leader>rgRmbox', ':Generate rspec:mailbox<CR>',              { desc = 'Rails Generate Rspec Mailbox'})
-    nnoremap('<leader><leader>rgRm',    ':Generate rspec:model<CR>',                { desc = 'Rails Generate Rspec Model'})
-    nnoremap('<leader><leader>rgRr',    ':Generate rspec:request<CR>',              { desc = 'Rails Generate Rspec Request'})
-    nnoremap('<leader><leader>rgRs',    ':Generate rspec:scaffold<CR>',             { desc = 'Rails Generate Rspec Scaffold'})
-    nnoremap('<leader><leader>rgRS',    ':Generate rspec:system<CR>',               { desc = 'Rails Generate Rspec System'})
-    nnoremap('<leader><leader>rgRv',    ':Generate rspec:view<CR>',                 { desc = 'Rails Generate Rspec View'})
+    nnoremap('<leader><leader>rgRJ',    ':Generate rspec:job<CR>',                  { desc = 'Rails Generate Rspec Job'})
+    nnoremap('<leader><leader>rgRM',    ':Generate rspec:mailer<CR>',               { desc = 'Rails Generate Rspec Mailer'})
+    nnoremap('<leader><leader>rgRMB', ':Generate rspec:mailbox<CR>',              { desc = 'Rails Generate Rspec Mailbox'})
+    nnoremap('<leader><leader>rgRMod',    ':Generate rspec:model<CR>',                { desc = 'Rails Generate Rspec Model'})
+    nnoremap('<leader><leader>rgRR',    ':Generate rspec:request<CR>',              { desc = 'Rails Generate Rspec Request'})
+    nnoremap('<leader><leader>rgRS',    ':Generate rspec:scaffold<CR>',             { desc = 'Rails Generate Rspec Scaffold'})
+    nnoremap('<leader><leader>rgRSY',    ':Generate rspec:system<CR>',               { desc = 'Rails Generate Rspec System'})
+    nnoremap('<leader><leader>rgRV',    ':Generate rspec:view<CR>',                 { desc = 'Rails Generate Rspec View'})
 
     -- Simple Form
-    nnoremap('<leader><leader>rgSfi',    ':Generate simple_form:install<CR>',       { desc = 'Rails Generate Simple Form Install'})
+    nnoremap('<leader><leader>rgSFi',    ':Generate simple_form:install<CR>',       { desc = 'Rails Generate Simple Form Install'})
   end
 }
 

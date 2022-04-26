@@ -2,13 +2,10 @@
 --                 SmithWebDev                 --
 --                   Keymaps                   --
 ---[[---------------------------------------]]---
-local u = require'smithwebdev.core.utils'
-local noremap = u.noremap
+local u        = require'smithwebdev.core.utils'
 local nnoremap = u.nnoremap
 local inoremap = u.inoremap
-local tnoremap = u.tnoremap
 local vnoremap = u.vnoremap
-local default_opts = {noremap = false, silent = true}
 
 -- Map Leader
 --------------------------------------------------------------------------------
@@ -24,16 +21,17 @@ nnoremap('Y',                   'y$',                            { desc = 'Alter
 inoremap('<C-l>',               '<Esc>$a',                       { desc = 'Jump to end of line while in Insert Mode'})
 nnoremap('<',                   '<<',                            { desc = 'Alternative Shift Tab (indent)'})
 nnoremap('>',                   '>>',                            { desc = 'Alternative Tab (indent)'})
-vnoremap('p',                   '_dP',                           { desc = 'Maintain registered info when pasting'})
+--vnoremap('p',                   '_dP',                           { desc = 'Maintain registered info when pasting'})
 nnoremap('<leader>b',           ':b<Space>',                     { desc = 'Switch to buffer'})
-nnoremap('<leader>li',          ':ls<CR>',                      { desc = 'List open files'})
+nnoremap('<leader>li',          ':ls<CR>',                       { desc = 'List open files'})
 nnoremap('<leader>w',           ':w<CR>',                        { desc = 'Save shortcut'})
 nnoremap('<leader>W',           ':wall<CR>',                     { desc = 'Save all shortcut'})
 
+nnoremap('<leader>nw',           ':set nowrap<CR>',              { desc = 'Set No Wrap'})
 
 -- Disable Highlights
 --------------------------------------------------------------------------------
-nnoremap("<leader><CR>",        ":noh<CR>",                      { desc = 'Disable Highlights'})
+nnoremap('<leader><CR>',        ':noh<CR>',                      { desc = 'Disable Highlights'})
 
 -- Resize Window Panes
 --------------------------------------------------------------------------------
@@ -81,19 +79,19 @@ nnoremap('<leader>Q',           ':qa!<CR>',                      { desc = 'Windo
 
 -- Better movement between windows
 --------------------------------------------------------------------------------
-nnoremap("<C-h>",               "<C-w><C-h>",                    { desc = "Go to the left window" })
-nnoremap("<C-l>",               "<C-w><C-l>",                    { desc = "Go to the right window" })
-nnoremap("<C-j>",               "<C-w><C-j>",                    { desc = "Go to the bottom window" })
-nnoremap("<C-k>",               "<C-w><C-k>",                    { desc = "Go to the top window" })
+nnoremap('<C-h>',               '<C-w><C-h>',                    { desc = 'Go to the left window' })
+nnoremap('<C-l>',               '<C-w><C-l>',                    { desc = 'Go to the right window' })
+nnoremap('<C-j>',               '<C-w><C-j>',                    { desc = 'Go to the bottom window' })
+nnoremap('<C-k>',               '<C-w><C-k>',                    { desc = 'Go to the top window' })
 
 -- Alternative file explorer
 --------------------------------------------------------------------------------
-nnoremap("<leader><leader>e",   ":Lex 30<CR>",                   { desc = "Open File Explorer to the left"})
+nnoremap('<leader><leader>e',   ':Lex 30<CR>',                   { desc = 'Open File Explorer to the left'})
 
 -- Highly Used CLI commands
 --------------------------------------------------------------------------------
-nnoremap('<leader><leader>cya', ':!yarn add<Space>',            { desc = 'Yarn add command'})
+nnoremap('<leader><leader>cya', ':!yarn add<Space>',             { desc = 'Yarn add command'})
 nnoremap('<leader><leader>ct',  ':!touch<Space>',                { desc = 'Touch cli command'})
 
 --vim.api.nvim_set_keymap('i',  '<c-l>', ':lua EscapePair()<CR>', default_opts)
-nnoremap("<leader><leader>ht",  ":helptags $VIMRUNTIME/doc<CR>", { desc = "Connect VIM/Neovim help docs to editor paths" })
+nnoremap('<leader><leader>ht',  ':helptags $VIMRUNTIME/doc<CR>', { desc = 'Connect VIM/Neovim help docs to editor paths' })

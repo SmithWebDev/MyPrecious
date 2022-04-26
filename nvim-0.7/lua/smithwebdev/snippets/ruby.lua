@@ -19,7 +19,14 @@ local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 
-local date  = function() return { os.date('%Y-%m-%d') } end
+return{
+    s({
+      trig = 'ba',
+      name = 'Before Action',
+      dscr = 'Model Before Action'
+    }, {
+        t('before_action ')
+      })
+},
 
-
-print('snippets dir accessed!')
+print('ruby snippets attached')

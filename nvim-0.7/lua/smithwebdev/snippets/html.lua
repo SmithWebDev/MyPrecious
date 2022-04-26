@@ -19,7 +19,8 @@ local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 
-local date  = function() return { os.date('%Y-%m-%d') } end
+return {
+    ls.parser.parse_snippet('dtf', 'data-turbo=\'false\''),
+},
 
-
-print('snippets dir accessed!')
+print('html snippets attached')

@@ -19,7 +19,11 @@ local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 
-local date  = function() return { os.date('%Y-%m-%d') } end
+return {
+    s("ternary", {
+      i(1, "cond"), t(" ? "), i(2, "then"), t(" : "), i(3, "else")
+    }),
+    ls.parser.parse_snippet('expand', '-- this is what was expanded!')
+},
 
-
-print('snippets dir accessed!')
+print('all snippets attached')

@@ -44,9 +44,9 @@ return{
     name = 'data turbo frame',
     dscr = 'Data attr for turbo frames'
   },
-    fmt([[{}data: {{ turbo_frame: '{}' }}{}]], {
+    fmt([[{}data: {{ turbo_frame: {} }}{}]], {
       c(1, {t(''),t(', ')}),
-      c(2, {t('_top'), i(1)}),
+      c(2, {t('\'_top\''), i(1),{t('dom_id('), i(1), t(') ')}}),
       c(3, {t(''), t(', ')})
     })
   ),

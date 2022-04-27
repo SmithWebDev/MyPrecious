@@ -1,0 +1,25 @@
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.diagnostics.globals": [
+        "vim",
+        "s",
+        "sn",
+        "t",
+        "i",
+        "f",
+        "conds",
+        "types",
+        "fmta",
+        "fmt",
+        "dl",
+        "n",
+        "m",
+        "p",
+        "rep",
+        "l",
+        "c",
+        "d",
+        "r",
+        "ls"
+    ]
+}

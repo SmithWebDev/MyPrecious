@@ -1,25 +1,24 @@
-local ls = require("luasnip")
+ls = require("luasnip")
 -- some shorthands...
-local s = ls.snippet
-local sn = ls.snippet_node
-local t = ls.text_node
-local i = ls.insert_node
-local f = ls.function_node
-local c = ls.choice_node
-local d = ls.dynamic_node
-local r = ls.restore_node
-local l = require("luasnip.extras").lambda
-local rep = require("luasnip.extras").rep
-local p = require("luasnip.extras").partial
-local m = require("luasnip.extras").match
-local n = require("luasnip.extras").nonempty
-local dl = require("luasnip.extras").dynamic_lambda
-local fmt = require("luasnip.extras.fmt").fmt
-local fmta = require("luasnip.extras.fmt").fmta
-local types = require("luasnip.util.types")
-local conds = require("luasnip.extras.expand_conditions")
+s = ls.snippet
+sn = ls.snippet_node
+t = ls.text_node
+i = ls.insert_node
+f = ls.function_node
+c = ls.choice_node
+d = ls.dynamic_node
+r = ls.restore_node
+l = require("luasnip.extras").lambda
+rep = require("luasnip.extras").rep
+p = require("luasnip.extras").partial
+m = require("luasnip.extras").match
+n = require("luasnip.extras").nonempty
+dl = require("luasnip.extras").dynamic_lambda
+fmt = require("luasnip.extras.fmt").fmt
+fmta = require("luasnip.extras.fmt").fmta
+types = require("luasnip.util.types")
+conds = require("luasnip.extras.expand_conditions")
 
-local date  = function() return { os.date('%Y-%m-%d') } end
-
+local date = function() return { os.date('%Y-%m-%d') } end
 
 print('snippets dir accessed!')

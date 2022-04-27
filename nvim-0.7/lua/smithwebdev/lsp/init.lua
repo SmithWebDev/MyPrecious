@@ -48,6 +48,3 @@ function M.get_capabilities()
 end
 
 return M
-
---map(0, "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
---map(0, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(2, '<c-d>')<cr>", {})

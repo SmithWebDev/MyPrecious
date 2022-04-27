@@ -62,20 +62,28 @@ return{
     t('')
   }),
   c(2, {
+    -- Remove a Turbo Frame
     t('remove'),
     t('remove_all'),
-    t('replace'),
-    t('replace_all'),
-    t('before'),
-    t('before_all'),
-    t('after'),
-    t('after_all'),
-    t('update'),
-    t('update_all'),
+
+    -- Insert a Turbo Frame at the beginning/end of a list
     t('append'),
     t('append_all'),
     t('prepend'),
     t('prepend_all'),
+
+    -- Insert a Turbo Frame before/after another Turbo Frame
+    t('before'),
+    t('before_all'),
+    t('after'),
+    t('after_all'),
+
+    -- Replace or update the content of a Turbo Frame
+    t('replace'),
+    t('replace_all'),
+    t('update'),
+    t('update_all'),
+
     t('action'),
     t('action_all'),
   }),

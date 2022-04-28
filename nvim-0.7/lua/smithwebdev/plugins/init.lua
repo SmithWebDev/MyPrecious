@@ -20,11 +20,13 @@ local plugins = {
 
   -- Aesthetics --
   'animate',                -- https://github.com/camspiers/animate.vim
+  'colorbuddy',             -- https://github.com/tjdevries/colorbuddy.nvim
   'colorscheme',
   'indent_blankline',       -- https://github.com/lukas-reineke/indent-blankline.nvim
   --  'colorbuddy',         -- https://github.com/tjdevries/colorbuddy.nvim
   'lush',                   -- https://github.com/rktjmp/lush.nvim
   'statusline',             -- https://github.com/beauwilliams/statusline.lua
+  'transparent',            -- https://github.com/xiyaowong/nvim-transparent
   'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie
 
   -- Completion & Snippets --

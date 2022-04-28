@@ -1,4 +1,5 @@
 return {
+  -- Link_to Helper snippet
   s({
     trig = 'ltc',
     name = 'Link to with class',
@@ -6,6 +7,7 @@ return {
   }, fmt(
       [[<%= link_to '{}', {}_path{},{} class: '{}' %>]],
       { i(1), i(2), i(3), c(4, { t(''), t(' method: :delete,') }), i(5) })),
+  -- Button_to Helper snippet
   s({
     trig = 'btc',
     name = 'Button to with class',
@@ -13,6 +15,8 @@ return {
   }, fmt(
       [[<%= button_to '{}', {}_path{},{} class: '{}' %>]],
       { i(1), i(2), i(3), c(4, { t(''), t(' method: :delete,') }), i(5) })),
+
+  -- Turbo Frame Tag helper block *WIP*
   s({
     trig = 'tftb',
     name = 'turbo_frame_tag',
@@ -29,6 +33,8 @@ return {
       i(0)
     }
   ),
+
+  -- Turbo Frame Tag helper snippet
   s({
     trig = 'tft',
     name = 'turbo_frame_tag',
@@ -39,6 +45,8 @@ return {
       t(' do %>'),
       i(0)
     }),
+
+  -- Data Turbo Frame attribute snippet
   s({
     trig = 'dtframe',
     name = 'data turbo frame',
@@ -50,6 +58,8 @@ return {
       c(3, { t(''), t(', ') })
     })
   ),
+
+  -- Turbo Stream helper tag snippet
   s({
     trig = 'tstream',
     name = 'turbo stream',
@@ -105,5 +115,6 @@ return {
         })
       })
   ),
+
 },
 print("eruby snippets attached")

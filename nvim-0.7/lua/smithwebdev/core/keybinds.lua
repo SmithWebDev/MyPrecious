@@ -95,3 +95,13 @@ nnoremap('<leader><leader>ct',  ':!touch<Space>',                { desc = 'Touch
 
 --vim.api.nvim_set_keymap('i',  '<c-l>', ':lua EscapePair()<CR>', default_opts)
 nnoremap('<leader><leader>ht',  ':helptags $VIMRUNTIME/doc<CR>', { desc = 'Connect VIM/Neovim help docs to editor paths' })
+
+
+
+
+
+---[[---------------------------------------]]---
+--                 SmithWebDev                 --
+--                   Macros                    --
+---[[---------------------------------------]]---
+

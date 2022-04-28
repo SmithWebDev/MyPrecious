@@ -1,7 +1,9 @@
+---@diagnostic disable: lowercase-global
 ls = require("luasnip")
 -- some shorthands...
 s = ls.snippet
 sn = ls.snippet_node
+isn = ls.indent_snippet_node
 t = ls.text_node
 i = ls.insert_node
 f = ls.function_node

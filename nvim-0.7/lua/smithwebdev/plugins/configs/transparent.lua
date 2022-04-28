@@ -7,7 +7,7 @@ M.plugin = {
     local u = require'smithwebdev.core.utils'
     local nnoremap = u.nnoremap
 
-    --nnoremap('<leader><leader>rc',      '<cmd>Console!<CR>',                        { desc = 'Open Rails Console New Tmux Window'})
+    nnoremap('<leader>nt', '<cmd>TransparentToggle<CR>', { desc = 'Toggle Transparent Background in Nvim'})
   end
 }
 

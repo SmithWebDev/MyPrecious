@@ -46,13 +46,13 @@ M.plugin = {
           },
         }
       end
-      --if server.name == 'solargraph' then
-      --  opts.settings = {
-      --    solargraph = {
-      --      formatting = true
-      --    }
-      --  }
-      --end
+      if server.name == 'solargraph' then
+        opts.settings = {
+          solargraph = {
+            formatting = true
+          }
+        }
+      end
 
       server:setup(opts)
     end)

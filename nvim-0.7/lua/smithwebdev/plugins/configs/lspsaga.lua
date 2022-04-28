@@ -6,7 +6,7 @@ M.plugin = {
   config = function()
 
     local lspsaga = require 'lspsaga'
-    lspsaga.setup { 
+    lspsaga.setup {
       --
       -- defaults ...
       debug = false,

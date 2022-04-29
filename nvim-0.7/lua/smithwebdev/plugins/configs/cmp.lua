@@ -20,7 +20,7 @@ M.plugin = {
     'jc-doyle/cmp-pandoc-references',      -- https://github.com/jc-doyle/cmp-pandoc-references
     'aspeddro/cmp-pandoc.nvim',            -- https://github.com/aspeddro/cmp-pandoc.nvim
 
-    -- Additional 
+    -- Additional
     'onsails/lspkind-nvim',                -- https://github.com/onsails/lspkind-nvim},
     'windwp/nvim-autopairs',               -- https://github.com/windwp/nvim-autopairs
     'nvim-lua/plenary.nvim',
@@ -83,7 +83,6 @@ M.plugin = {
             fallback()
           end
         end, {'i', 's'}),
-        --['C-Space'] = cmp.mapping.complete,
         ['<C-e>'] = cmp.mapping.close(),
         ['jk'] = cmp.mapping.confirm({ select = true })
       }),

@@ -16,7 +16,7 @@ M.plugin = {
       updateevents = "TextChanged, TextChangedI",
       ext_base_prio = 200,
       ext_prio_increase = 1,
-      enable_autosnippets = false,
+      enable_autosnippets = true,
       store_selection_keys = "<c-s>",
       ext_opts = {
         [types.choiceNode] = {
@@ -27,8 +27,12 @@ M.plugin = {
       },
     }
 
-    ls.filetype_extend("all", { "_" })
-    ls.filetype_extend("eruby", { "html" })
+    ls.filetype_extend("all",             { "_" })
+    ls.filetype_extend("eruby",           { "html" })
+    ls.filetype_extend("javascriptreact", { "javascript" })
+    ls.filetype_extend("typescriptreact", { "javascript" })
+    ls.filetype_extend("typescript",      { "javascript" })
+
 
 
     -- keybinds
@@ -55,7 +59,6 @@ M.plugin = {
     end)
 
     vim.keymap.set("n", "<Space><Space>se", "<cmd>lua require('luasnip.loaders.from_lua').edit_snippet_files()<CR>")
-    print('luasnip file')
   end
 }
 

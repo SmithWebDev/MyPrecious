@@ -23,7 +23,7 @@ nnoremap('<',                   '<<',                            { desc = 'Alter
 nnoremap('>',                   '>>',                            { desc = 'Alternative Tab (indent)'})
 --vnoremap('p',                   '_dP',                           { desc = 'Maintain registered info when pasting'})
 nnoremap('<leader>b',           ':b<Space>',                     { desc = 'Switch to buffer'})
-nnoremap('<leader>li',          ':ls<CR>',                       { desc = 'List open files'})
+nnoremap('<leader>ls',          ':ls<CR>',                       { desc = 'List open files'})
 nnoremap('<leader>w',           ':w<CR>',                        { desc = 'Save shortcut'})
 nnoremap('<leader>W',           ':wall<CR>',                     { desc = 'Save all shortcut'})
 

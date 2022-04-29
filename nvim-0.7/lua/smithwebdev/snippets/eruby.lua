@@ -68,6 +68,7 @@ return {
   }, fmt([[<%= turbo_stream{}{} {}{}{} %>]],
       { c(1, {
         t('.'),
+         t('_from'),
         t('_from.'),
         t('')
       }),

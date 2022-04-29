@@ -1,4 +1,5 @@
 return {
+
   -- Link_to Helper snippet
   s({
     trig = 'ltc',
@@ -7,6 +8,7 @@ return {
   }, fmt(
       [[<%= link_to '{}', {}_path{},{} class: '{}' %>]],
       { i(1), i(2), i(3), c(4, { t(''), t(' method: :delete,') }), i(5) })),
+
   -- Button_to Helper snippet
   s({
     trig = 'btc',
@@ -51,8 +53,7 @@ return {
     trig = 'dtframe',
     name = 'data turbo frame',
     dscr = 'Data attr for turbo frames'
-  },
-    fmt([[{}data: {{ turbo_frame: {} }}{}]], {
+  }, fmt([[{}data: {{ turbo_frame: {} }}{}]], {
       c(1, { t(''), t(', ') }),
       c(2, { t('\'_top\''), i(1), { t('dom_id('), i(1), t(') ') } }),
       c(3, { t(''), t(', ') })
@@ -64,8 +65,7 @@ return {
     trig = 'tstream',
     name = 'turbo stream',
     dscr = 'Inserts turbo stream tag with methods, partial, locals support'
-  },
-    fmt([[<%= turbo_stream{}{} {}{}{} %>]],
+  }, fmt([[<%= turbo_stream{}{} {}{}{} %>]],
       { c(1, {
         t('.'),
         t('_from.'),
@@ -115,6 +115,60 @@ return {
         })
       })
   ),
-  --s({},{})
+  s({
+    trig = 'aftcommit',
+    name = 'After Commit Actions',
+    dscr = 'Broadcast transaction shortcuts'
+  }, fmt(
+      [[after_{}_commit -> {{ {}
+                            partial: '{}',
+                            locals: {{ {}: {} }},
+                            target: '{}' }}]],
+      {c(1,{
+        t('save'),
+        t('create'),
+        t('update'),
+        t('destroy')
+      }),
+        i(2, 'bactions'),
+        i(3),
+        i(4),
+        i(5),
+        i(6),
+      })
+  ),
+  s({
+    trig = 'bactions',
+    name = 'Broadcast ActionHelpers',
+    dscr = 'Turbo Streams Broadcast ActionHelpers'
+  }, fmt([[
+  broadcast_{}_to '{}'{}
+  ]], {
+        c(1,{
+          t('remove'),
+          t('replace'),
+          t('update'),
+          t('before'),
+          t('after'),
+          t('append'),
+          t('prepend'),
+          t('action'),
+          t('replace_later'),
+          t('update_later'),
+          t('before_later'),
+          t('after_later'),
+          t('append_later'),
+          t('prepend_later'),
+          t('action_later'),
+          t('render'),
+          t('render_later'),
+        }),
+        i(2),
+        c(3,{
+          t(''),
+          t(', ')
+        })
+      })
+  ),
 },
-print("eruby snippets attached")
+  print("eruby snippets attached")

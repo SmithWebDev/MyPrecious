@@ -105,7 +105,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
     local found = event.file:find('.*smithwebdev/plugins.*') ~= nil
 
     if found then
-      vim.cmd 'PackerSync'
+      --vim.cmd 'PackerSync'
       vim.cmd 'PackerCompile'
     end
   end,

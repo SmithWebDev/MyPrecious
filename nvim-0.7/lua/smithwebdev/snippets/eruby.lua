@@ -121,21 +121,31 @@ return {
     name = 'After Commit Actions',
     dscr = 'Broadcast transaction shortcuts'
   }, fmt(
-      [[after_{}_commit -> {{ {}
-                            partial: '{}',
-                            locals: {{ {}: {} }},
-                            target: '{}' }}]],
+      [[after_{}_commit -> {{ {} {} {} {} }}]],
       {c(1,{
         t('save'),
         t('create'),
         t('update'),
         t('destroy')
       }),
-        i(2, 'bactions'),
-        i(3),
-        i(4),
-        i(5),
-        i(6),
+        sn(2, {
+          t('bactions')
+        }),
+        c(3,{
+          {t('partial: \''),
+            i(1),
+            t('\',')
+          },
+          t('')
+        }),
+        c(4, {
+          {t('locals: {'), i(1), t('}: {'), i(2), t('},')},
+          t('')
+        }),
+        c(5, {
+          {t('target: \''), i(1), t('\',')},
+          t('')
+        }),
       })
   ),
   s({
@@ -146,23 +156,23 @@ return {
   broadcast_{}_to '{}'{}
   ]], {
         c(1,{
-          t('remove'),
-          t('replace'),
-          t('update'),
-          t('before'),
-          t('after'),
-          t('append'),
-          t('prepend'),
           t('action'),
-          t('replace_later'),
-          t('update_later'),
-          t('before_later'),
-          t('after_later'),
-          t('append_later'),
-          t('prepend_later'),
           t('action_later'),
+          t('after'),
+          t('after_later'),
+          t('append'),
+          t('append_later'),
+          t('before'),
+          t('before_later'),
+          t('prepend'),
+          t('prepend_later'),
+          t('update'),
+          t('update_later'),
+          t('remove'),
           t('render'),
           t('render_later'),
+          t('replace'),
+          t('replace_later'),
         }),
         i(2),
         c(3,{

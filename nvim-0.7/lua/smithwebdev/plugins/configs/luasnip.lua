@@ -16,7 +16,7 @@ M.plugin = {
       updateevents = "TextChanged, TextChangedI",
       ext_base_prio = 200,
       ext_prio_increase = 1,
-      enable_autosnippets = true,
+      enable_autosnippets = false,
       store_selection_keys = "<c-s>",
       ext_opts = {
         [types.choiceNode] = {
@@ -28,7 +28,7 @@ M.plugin = {
     }
 
     ls.filetype_extend("all",             { "_" })
-    ls.filetype_extend("eruby",           { "html" })
+    ls.filetype_extend("eruby",           { "html", "ruby" })
     ls.filetype_extend("javascriptreact", { "javascript" })
     ls.filetype_extend("typescriptreact", { "javascript" })
     ls.filetype_extend("typescript",      { "javascript" })

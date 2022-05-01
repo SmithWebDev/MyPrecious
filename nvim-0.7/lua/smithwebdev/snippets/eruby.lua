@@ -159,7 +159,6 @@ return {
           t('action'),
           t('action_later'),
           t('after'),
-          t('after_later'),
           t('append'),
           t('append_later'),
           t('before'),

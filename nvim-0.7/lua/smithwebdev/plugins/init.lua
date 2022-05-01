@@ -55,7 +55,7 @@ local plugins = {
   --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
 
   -- Fuzzy / File Finder --
-  'aerial',                 -- https://github.com/stevearc/aerial.nvim
+  --'aerial',                 -- https://github.com/stevearc/aerial.nvim
   'harpoon',                -- https://github.com/ThePrimeagen/harpoon
   'lir',                    -- https://github.com/tamago324/lir.nvim
   'telescope',              -- https://github.com/nvim-telescope/telescope.nvim

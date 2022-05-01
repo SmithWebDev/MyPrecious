@@ -4,7 +4,7 @@ local M = {}
 
 -- This will be called when the LSP client attaches to the file buffer
 function M.on_attach(client, bufnr)
-  require("aerial").on_attach(client, bufnr)
+  --require("aerial").on_attach(client, bufnr)
   print('Attached to ' .. client.name)
 
   local nnoremap = require('smithwebdev.core.utils').nnoremap

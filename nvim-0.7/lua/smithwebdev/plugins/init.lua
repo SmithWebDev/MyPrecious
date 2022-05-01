@@ -23,7 +23,6 @@ local plugins = {
   'colorbuddy',             -- https://github.com/tjdevries/colorbuddy.nvim
   'colorscheme',
   'indent_blankline',       -- https://github.com/lukas-reineke/indent-blankline.nvim
-  --  'colorbuddy',         -- https://github.com/tjdevries/colorbuddy.nvim
   'lush',                   -- https://github.com/rktjmp/lush.nvim
   'statusline',             -- https://github.com/beauwilliams/statusline.lua
   'transparent',            -- https://github.com/xiyaowong/nvim-transparent
@@ -56,6 +55,7 @@ local plugins = {
   --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
 
   -- Fuzzy / File Finder --
+  'aerial',                 -- https://github.com/stevearc/aerial.nvim
   'harpoon',                -- https://github.com/ThePrimeagen/harpoon
   'lir',                    -- https://github.com/tamago324/lir.nvim
   'telescope',              -- https://github.com/nvim-telescope/telescope.nvim

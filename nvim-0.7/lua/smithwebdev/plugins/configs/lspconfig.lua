@@ -50,7 +50,7 @@ M.plugin = {
       end
       if server.name == 'solargraph' then
         opts.settings = {
-          solargraph = {
+          ruby = {
             formatting = true
           }
         }

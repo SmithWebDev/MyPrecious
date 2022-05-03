@@ -68,7 +68,7 @@ return {
   }, fmt([[<%= turbo_stream{}{} {}{}{} %>]],
       { c(1, {
         t('.'),
-         t('_from'),
+        t('_from'),
         t('_from.'),
         t('')
       }),
@@ -103,7 +103,7 @@ return {
         i(3),
         c(4, {
           t(''),
-          { t(', partial: \''),
+{ t(', partial: \''),
             i(1),
             t('\' ') },
         }),
@@ -153,25 +153,26 @@ return {
     name = 'Broadcast ActionHelpers',
     dscr = 'Turbo Streams Broadcast ActionHelpers'
   }, fmt([[
-  broadcast_{}_to '{}'{}
+  broadcast{} '{}'{}
   ]], {
         c(1,{
-          t('action'),
-          t('action_later'),
-          t('after'),
-          t('append'),
-          t('append_later'),
-          t('before'),
-          t('before_later'),
-          t('prepend'),
-          t('prepend_later'),
-          t('update'),
-          t('update_later'),
-          t('remove'),
-          t('render'),
-          t('render_later'),
-          t('replace'),
-          t('replace_later'),
+          t('s_to'),
+          t('_action_to'),
+          t('_action_later_to'),
+          t('_after_to'),
+          t('_append_to'),
+          t('_append_later_to'),
+          t('_before_to'),
+          t('_before_later_to'),
+          t('_prepend_to'),
+          t('_prepend_later_to'),
+          t('_update_to'),
+          t('_update_later_to'),
+          t('_remove_to'),
+          t('_render_to'),
+          t('_render_later_to'),
+          t('_replace_to'),
+          t('_replace_later_to'),
         }),
         i(2),
         c(3,{
@@ -180,5 +181,34 @@ return {
         })
       })
   ),
+  s({
+    trig = 'bact',
+    name = 'Broadcast ActionHelpers',
+    dscr = 'Turbo Streams Broadcast ActionHelpers'
+  }, fmt([[
+  broadcast_{}
+  ]], {
+        c(1,{
+          t('to'),
+          t('action_to'),
+          t('action_later_to'),
+          t('after_to'),
+          t('append_to'),
+          t('append_later_to'),
+          t('before_to'),
+          t('before_later_to'),
+          t('prepend_to'),
+          t('prepend_later_to'),
+          t('update_to'),
+          t('update_later_to'),
+          t('remove_to'),
+          t('render_to'),
+          t('render_later_to'),
+          t('replace_to'),
+          t('replace_later_to'),
+          t('stream_to'),
+        })
+      })
+  )
 },
   print("eruby snippets attached")

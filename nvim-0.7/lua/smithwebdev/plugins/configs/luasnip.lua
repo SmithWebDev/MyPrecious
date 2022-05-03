@@ -29,6 +29,7 @@ M.plugin = {
 
     ls.filetype_extend("all",             { "_" })
     ls.filetype_extend("eruby",           { "html", "ruby" })
+    ls.filetype_extend("ruby",            { "html", "eruby" })
     ls.filetype_extend("javascriptreact", { "javascript" })
     ls.filetype_extend("typescriptreact", { "javascript" })
     ls.filetype_extend("typescript",      { "javascript" })

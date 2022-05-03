@@ -154,6 +154,10 @@ M.plugin = {
 
     -- Simple Form
     nnoremap('<leader><leader>rgSFi',    ':Generate simple_form:install<CR>',       { desc = 'Rails Generate Simple Form Install'})
+
+    -- Stimulus/StimulusReflex
+    nnoremap('<leader><leader>rgSR',  '!bundle add stimulus_reflex && rails stimulus_reflex:install', { desc = 'Add and Install StimulusReflex'})
+    nnoremap('<leader><leader>rg',  '', { desc = ''})
   end
 }
 

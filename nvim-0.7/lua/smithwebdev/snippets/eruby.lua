@@ -103,7 +103,7 @@ return {
         i(3),
         c(4, {
           t(''),
-{ t(', partial: \''),
+          { t(', partial: \''),
             i(1),
             t('\' ') },
         }),
@@ -209,6 +209,34 @@ return {
           t('stream_to'),
         })
       })
+  ),
+  s({
+    trig = 'dat',
+    name = 'Data Attribute',
+    dscr = 'insert data attribute into markup'
+  }, fmt([[data{}]], {
+      c(1, {
+        t(''),
+        t(': '),
+        c(1,{
+          {t('controller=\''), i(1), t('\'')},
+          {t('action=\''),i(1, 'data_action'), t('->'), i(2, 'stim_controller'), t('#'), i(3, 'stim_action'),t('\'') }}
+        )})
+    })
+  ),
+  s({
+    trig = 'dc',
+    name = 'Data Controller',
+    dscr = 'adds Data controller attribute'
+  },
+    fmt([[data-controller = '{}']], {i(1)})
+  ),
+  s({
+    trig = 'da',
+    name = 'Data Action',
+    dscr = 'adds Data action attribute'
+  },
+    fmt([[data-action='{}->{}#{}']], {i(1, 'DataAction'), i(2, 'StimulusController'), i(3, 'StimulusAction')})
   )
 },
   print("eruby snippets attached")

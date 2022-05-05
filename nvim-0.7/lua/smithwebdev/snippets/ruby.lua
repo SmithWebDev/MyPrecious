@@ -45,5 +45,42 @@ return{
       }
       )}
   )),
+  s({
+    trig = 'ftstream',
+    name = 'format turbo stream',
+    dscr = 'adds turbo stream attribute for rails controllers'
+  },
+    fmt([[format.turbo_stream {{ {} }}]], {i(1)})
+  ),
+  s({
+    trig = 'resto',
+    name = 'respond_to helper',
+    dscr = 'adds respond_to helper in rails controller'
+  },
+    fmt([[
+      respond_to do |format|
+        format.html {{ redirect_to {}_path{}, notice: '{} was successfully {}!' }}
+        format.turbo_stream {{ flash.now[:notice] = '{} was successfully {}!' }}
+      end
+    ]], {
+        i(1),
+        i(2),
+        i(3),
+        c(4,{
+          t('created'),
+          t('updated'),
+          t('deleted')
+        }),
+        rep(3),
+        rep(4)
+      })
+  ),
+  s({
+    trig = 'ue',
+    name = 'status error',
+    dscr = 'status fallback for error'
+  },
+    fmt([[ render :{}, status: :unprocessable_entity]], {i(1)})
+  ),
 },
   print('ruby snippets attached')

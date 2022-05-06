@@ -90,6 +90,7 @@ M.plugin = {
       sources = cmp.config.sources({
         {name = 'nvim_lsp'},
         {name = 'luasnip'},
+        {name = 'tags'},
         {name = 'emoji'},
         {name = 'orgmode'},
         {name = 'pandoc_references'},

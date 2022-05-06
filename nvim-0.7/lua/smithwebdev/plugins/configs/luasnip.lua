@@ -59,7 +59,7 @@ M.plugin = {
       end
     end)
 
-    vim.keymap.set("n", "<Space><Space>se", "<cmd>lua require('luasnip.loaders.from_lua').edit_snippet_files()<CR>")
+    vim.keymap.set("n", "<leader><leader>se", "<cmd>lua require('luasnip.loaders.from_lua').edit_snippet_files()<CR>")
   end
 }
 

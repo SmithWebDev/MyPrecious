@@ -118,7 +118,7 @@ M.plugin = {
     nnoremap('<leader><leader>rts',      ':!rails test:',                                                { desc = 'Rails Test:{directory}'})
 
     -- Run Ctags for Ruby/Rails program, includes gems
-    nnoremap('<leader><leader>rt',       ':!ctags -R --output-format=json --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) -f .tags<CR>') --,  create ctags for project incl bundled gems
+    nnoremap('<leader><leader>rt',       ':!ctags -R --output-format=json --exclude=node_modules--exclude=.git --exclude=log .  -f .tags $(bundle list --paths) <CR>') --,  create ctags for project incl bundled gems
 
     -- Annotate Gem
     nnoremap('<leader><leader>rgAi',     ':Generate annotate:install<CR>',                               { desc = 'Rails Generate Annotate Install'})

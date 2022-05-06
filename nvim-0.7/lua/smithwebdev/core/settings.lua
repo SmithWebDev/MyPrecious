@@ -75,5 +75,5 @@ o.laststatus = 3
 vim.cmd[[:highlight WinSeparator guibg=None]]
 
 o.completefunc = 'emoji#complete'
---command'set tags+ = gems.tags'
+--vim.cmd[[set tags+= tags]]
 print('Settings connected')

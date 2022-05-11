@@ -37,8 +37,33 @@ M.plugin = {
     local luasnip = require("luasnip")
     local u = require("smithwebdev.core.utils")
     local trig = u.trigger_completion
-
-    lspkind.init()
+    local icons = {
+      Text = "",
+      Method = "",
+      Function = "",
+      Constructor = "⌘",
+      Field = "ﰠ",
+      Variable = "",
+      Class = "ﴯ",
+      Interface = "",
+      Module = "",
+      Property = "ﰠ",
+      Unit = "塞",
+      Value = "",
+      Enum = "",
+      Keyword = "廓",
+      Snippet = "",
+      Color = "",
+      File = "",
+      Reference = "",
+      Folder = "",
+      EnumMember = "",
+      Constant = "",
+      Struct = "פּ",
+      Event = "",
+      Operator = "",
+      TypeParameter = "",
+    }
 
     local has_words_before = function()
       if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
@@ -52,6 +77,16 @@ M.plugin = {
       snippet = {
         expand = function(args)
           require("luasnip").lsp_expand(args.body)
+        end,
+      },
+      experimental = {
+        native_menu = false,
+        ghost_text = false
+      },
+
+      confirmation = {
+        get_commit_characters = function()
+          return {}
         end,
       },
 
@@ -89,8 +124,10 @@ M.plugin = {
 
       sources = cmp.config.sources({
         {name = 'nvim_lsp'},
+        {name = 'nvim_lua'},
         {name = 'luasnip'},
         {name = 'tags'},
+        {name = 'path'},
         {name = 'emoji'},
         {name = 'orgmode'},
         {name = 'pandoc_references'},
@@ -100,48 +137,44 @@ M.plugin = {
       }),
 
       formatting = {
-        format = lspkind.cmp_format({
-          mode = 'symbol_text',
-          menu = ({
-            luasnip  = "[SNIP]",
-            nvim_lsp = "[LSP]",
-            nvim_lua = "[LUA]",
-            tags     = "[TAGS]",
-            buffer   = '[BUFFER]',
-            path     = '[PATH]',
-            emoji    = '[EMOJI]',
-            orgmode  = '[ORG]',
-            pandoc   = '[PDOC]'
-          })
-        }),
+        fields = { "kind", "abbr", "menu"},
+        format = function(_, vim_item)
+          vim_item.menu = vim_item.kind
+          vim_item.kind = icons[vim_item.kind]
+
+          return vim_item
+        end,
+        --format = lspkind.cmp_format({
+        --  mode = 'symbol_text',
+        --  menu = ({
+        --    luasnip  = "[SNIP]",
+        --    nvim_lsp = "[LSP]",
+        --    nvim_lua = "[LUA]",
+        --    tags     = "[TAGS]",
+        --    buffer   = '[BUFFER]',
+        --    path     = '[PATH]',
+        --    emoji    = '[EMOJI]',
+        --    orgmode  = '[ORG]',
+        --    pandoc   = '[PDOC]'
+        --  })
+        --}),
       },
     })
 
     cmp.setup.cmdline('/', {
-      mapping = cmp.mapping.preset.cmdline({
-        --['<C-j>'] = cmp.mapping.select_next_item(),
-        --['<C-k>'] = cmp.mapping.select_prev_item(),
-        --['jk'] = cmp.mapping.confirm({ select = true })
-      }),
+      mapping = cmp.mapping.preset.cmdline(),
       sources = {
         { name = 'buffer', keyword_length = 5  }
       },
-      --view = {
-      --  entries = { name = 'wildmenu', separator = '|' }
-      --}
     })
 
     cmp.setup.cmdline(':', {
-      mapping = cmp.mapping.preset.cmdline({
-        --['<C-j>'] = cmp.mapping.select_next_item(),
-        --['<C-k>'] = cmp.mapping.select_prev_item(),
-        --['jk'] = cmp.mapping.confirm({ select = true })
-      }),
+      mapping = cmp.mapping.preset.cmdline(),
       sources = cmp.config.sources({
         { name = 'path' }
       }, {
-        { name = 'cmdline' }
-      }),
+          { name = 'cmdline' }
+        }),
       --view = {
       --  entries = { name = 'wildmenu', separator = '|' }
       --}

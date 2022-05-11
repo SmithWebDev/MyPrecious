@@ -34,6 +34,7 @@ local plugins = {
 
   -- Editing --
   'autopairs',              -- https://github.com/windwp/nvim-autopairs
+  'color-converter',        -- https://github.com/NTBBloodbath/color-converter.nvim
   'colorizer',              -- https://github.com/norcalli/nvim-colorizer.lua
   'comment',                -- https://github.com/numToStr/Comment.nvim
   'easyalign',              -- https://github.com/junegunn/vim-easy-align
@@ -55,12 +56,13 @@ local plugins = {
   --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
 
   -- Fuzzy / File Finder --
-  --'aerial',                 -- https://github.com/stevearc/aerial.nvim
+  --r'aerial',              -- https://github.com/stevearc/aerial.nvim
   'harpoon',                -- https://github.com/ThePrimeagen/harpoon
   'lir',                    -- https://github.com/tamago324/lir.nvim
   'telescope',              -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git --
+  'gh',                     -- https://github.com/ldelossa/gh.nvim
   'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
 
   -- Keybinds --

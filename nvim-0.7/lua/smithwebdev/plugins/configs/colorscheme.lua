@@ -17,6 +17,8 @@ M.plugin = {
   'vim-scripts/ScrollColors', -- https://github.com/vim-scripts/ScrollColors
   'yonlu/omni.vim', -- https://github.com/yonlu/omni.vim
   'ldelossa/vimdark', -- https://github.com/ldelossa/vimarkd
+  'flazz/vim-colorschemes', --https://github.com/flazz/vim-colorschemes
+  'rafi/awesome-vim-colorschemes', --https://github.com/rafi/awesome-vim-colorschemes
 
   requires = {
     'tjdevries/colorbuddy.nvim', -- https://github.com/tjdevries/colorbuddy.nvim

@@ -61,7 +61,7 @@ vim.api.nvim_create_autocmd({ 'TextChangedI', 'InsertEnter' }, {
     _G.autoleave_timer = vim.defer_fn(function()
       local key = vim.api.nvim_replace_termcodes('<Esc>', true, false, true)
       vim.api.nvim_feedkeys(key, 'n', false)
-    end, 4000)
+    end, 8000)
   end
 })
 vim.api.nvim_create_autocmd({'InsertLeave', 'BufWritePre'}, {
@@ -85,5 +85,4 @@ vim.api.nvim_create_autocmd({'InsertEnter', 'WinLeave'}, {
   group = 'CursorInsertMode',
   desc = 'Disable cursorline on insert',
 })
-
 

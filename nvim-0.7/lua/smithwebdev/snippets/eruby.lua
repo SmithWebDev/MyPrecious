@@ -23,17 +23,17 @@ return {
     trig = 'tftb',
     name = 'turbo_frame_tag',
     dscr = 'Create turbo frame tag',
-  },
-    {
-      t('<%= turbo_frame_tag '),
-      i(1),
-      t(' do %>'),
+  }, fmt([[
+    <%= turbo_frame_tag {} do %>
+      {}
+    <% end %>
+    ]],{
+      c(1, {{i(1)}, t('\'_top\''),  {t('dom_id('), i(1), t(') ') }}),
       f(function(_, snip)
         return snip.env.TM_SELECTED_TEXT[1] or {}
-      end, {}),
-      t('<% end %>'),
-      i(0)
-    }
+      end, {})
+      }
+    )
   ),
 
   -- Turbo Frame Tag helper snippet
@@ -50,7 +50,7 @@ return {
 
   -- Data Turbo Frame attribute snippet
   s({
-    trig = 'dtframe',
+    trig = 'dtf',
     name = 'data turbo frame',
     dscr = 'Data attr for turbo frames'
   }, fmt([[{}data: {{ turbo_frame: {} }}{}]], {
@@ -237,6 +237,17 @@ return {
     dscr = 'adds Data action attribute'
   },
     fmt([[data-action='{}->{}#{}']], {i(1, 'DataAction'), i(2, 'StimulusController'), i(3, 'StimulusAction')})
-  )
+  ),
+  s({
+    trig = 'ren',
+    name = 'render',
+    dscr = 'add render helper tag'
+  },
+    fmt([[<%= render {}, {}: @{} %>]], {
+      i(1),
+      i(2),
+      rep(2)
+    })
+  ),
 },
   print("eruby snippets attached")

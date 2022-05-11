@@ -32,7 +32,12 @@ return{
     name = 'Dependent',
     dscr = 'Dependent attribute for model'
   }, {
-      t('dependent: :')
+      t('dependent: '),
+      c(1,{
+        t(':destroy'),
+        t(':'),
+        t('')
+      })
     }),
   s({
     trig = 'pres',

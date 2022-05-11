@@ -50,7 +50,7 @@ M.plugin = {
         ['r']       = actions.rename,
         ['C']       = actions.cd,
         ['Y']       = actions.yank_path,
-        ['.']       = actions.toddle_show_hidden,
+        ['.']       = actions.toggle_show_hidden,
         ['d']       = actions.delete,
 
         ['J']       = function()

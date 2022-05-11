@@ -35,6 +35,7 @@ M.plugin = {
 
     -- Rails Database Commands
     nnoremap('<leader><leader>rdba',     ':!rails db:drop db:create db:migrate<CR>',                     { desc = 'Rails DB:Drop Create & Migrate Command'})
+    nnoremap('<leader><leader>rdbA',     ':!rails db:drop db:create db:migrate db:seed<CR>',             { desc = 'Rails DB:Drop Create, Migrate, & Seed Command'})
     nnoremap('<leader><leader>rdbc',     ':!rails db:create<CR>',                                        { desc = 'Rails DB:Create Command'})
     nnoremap('<leader><leader>rdbd',     ':!rails db:drop<CR>',                                          { desc = 'Rails DB:Drop Command'})
     nnoremap('<leader><leader>rdbm',     ':!rails db:migrate<CR>',                                       { desc = 'Rails DB:Migrate Command'})
@@ -130,7 +131,10 @@ M.plugin = {
     nnoremap('<leader><leader>rgDV',     ':Generate devise:views<Space>',                                { desc = 'Rails Generate Devise Views'})
 
     -- GraphQL Ruby
-    nnoremap('<leader><leader>rgGi',     ':Generate graphql:install <CR>',                               { desc = 'Rails Generate GraphQL Install'})
+    nnoremap('<leader><leader>rgGQLi',   ':Generate graphql:install <CR>',                               { desc = 'Rails Generate GraphQL Install'})
+
+    -- Guard
+    nnoremap('<leader><leader>rgGi',     ':!guard init && bundle binstubs guard',                        { desc = 'Initialize Guard'})
 
     -- LiveReload Gem
     nnoremap('<leader><leader>rLRi',     ':!rails livereload:install<CR>',                               { desc = 'Install Rails Live Reload'})

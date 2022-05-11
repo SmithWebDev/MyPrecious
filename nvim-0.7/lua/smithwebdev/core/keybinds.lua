@@ -57,6 +57,7 @@ nnoremap('<leader>tk',          ':tabp<Space>',                  { desc = 'Goto 
 nnoremap('<leader>tl',          ':tablast<CR>',                  { desc = 'Goto Tab Last'})
 nnoremap('<leader>tn',          ':tabnew<Space>',                { desc = 'Goto Tab New'})
 nnoremap('<leader>to',          '<C-w>T',                        { desc = 'Open File In New Tab'})
+nnoremap('<leader>t%',          '<C-w>T',                        { desc = 'Open File In New Tab'})
 nnoremap('<leader>tt',          ':tabs',                         { desc = 'Show Tab List'})
 
 -- Window Navigation

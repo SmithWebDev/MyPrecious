@@ -28,10 +28,10 @@ return {
       {}
     <% end %>
     ]],{
-      c(1, {{i(1)}, t('\'_top\''),  {t('dom_id('), i(1), t(') ') }}),
-      f(function(_, snip)
-        return snip.env.TM_SELECTED_TEXT[1] or {}
-      end, {})
+        c(1, {{i(1)}, t('\'_top\''),  {t('dom_id('), i(1), t(') ') }}),
+        f(function(_, snip)
+          return snip.env.TM_SELECTED_TEXT[1] or {}
+        end, {})
       }
     )
   ),
@@ -41,19 +41,47 @@ return {
     trig = 'tft',
     name = 'turbo_frame_tag',
     dscr = 'Create turbo frame tag',
-  }, {
-      t('<%= turbo_frame_tag '),
-      c(1, { t(''), { t('dom_id('), i(1), t(')') } }),
-      t(' do %>'),
-      i(0)
-    }),
+  }, fmt(
+      [[<%= turbo_frame_tag {}{}]],
+      {
+        c(1,{
+          i(1),
+          {
+            t('dom_id('),
+            c(1,{
+              i(1),
+              { t('dom_id('), i(1), t(')') }
+            }),
+            t(')')
+          },
+        }),
+        c(2,{
+          t(' %>'),
+          t(' do %>')
+        })
+    })
+  ),
 
   -- Data Turbo Frame attribute snippet
   s({
     trig = 'dtf',
     name = 'data turbo frame',
     dscr = 'Data attr for turbo frames'
-  }, fmt([[{}data: {{ turbo_frame: {} }}{}]], {
+  }, fmt([[
+  {}
+  data: {{ turbo_frame: {} }}{}
+  ]], {
+      c(1, { t(''), t(', ') }),
+      c(2, { t('\'_top\''), i(1), { t('dom_id('), i(1), t(') ') } }),
+      c(3, { t(''), t(', ') })
+    })
+  ),
+
+  s({
+    trig = 'fdtf',
+    name = 'data turbo frame',
+    dscr = 'Data attr for turbo frames'
+  }, fmt([[{} form: {{data: {{ turbo_frame: {} }}{} }}]], {
       c(1, { t(''), t(', ') }),
       c(2, { t('\'_top\''), i(1), { t('dom_id('), i(1), t(') ') } }),
       c(3, { t(''), t(', ') })
@@ -75,9 +103,14 @@ return {
         c(2, {
           t(''),
 
-          -- Remove a Turbo Frame
-          t('remove'),
-          t('remove_all'),
+          t('action'),
+          t('action_all'),
+
+          -- Insert a Turbo Frame before/after another Turbo Frame
+          t('after'),
+          t('after_all'),
+          t('before'),
+          t('before_all'),
 
           -- Insert a Turbo Frame at the beginning/end of a list
           t('append'),
@@ -85,20 +118,15 @@ return {
           t('prepend'),
           t('prepend_all'),
 
-          -- Insert a Turbo Frame before/after another Turbo Frame
-          t('before'),
-          t('before_all'),
-          t('after'),
-          t('after_all'),
-
           -- Replace or update the content of a Turbo Frame
           t('replace'),
           t('replace_all'),
           t('update'),
           t('update_all'),
 
-          t('action'),
-          t('action_all'),
+          -- Remove a Turbo Frame
+          t('remove'),
+          t('remove_all'),
         }),
         i(3),
         c(4, {
@@ -112,7 +140,8 @@ return {
           { t(', locals: { '),
             i(1), t(': @'), rep(1),
             t(' }')
-          }
+          },
+          t(' do')
         })
       })
   ),

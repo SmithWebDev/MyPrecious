@@ -87,5 +87,24 @@ return{
   },
     fmt([[ render :{}, status: :unprocessable_entity]], {i(1)})
   ),
+  s({
+    trig = 'conres',
+    name = 'Controller Respond',
+    dscr = 'Respond_To format for controller actions'
+  },
+    fmt([[
+      respond_to do |format|
+        format.html {{ redirect_to {}_path(@{}), notice: '{} was successfully {}.' }}
+        format.turbo_stream {{ flash.now[:notice] = '{} was successfully {}.' }}
+      end
+    ]], {
+        i(1),
+        rep(1),
+        i(2),
+        i(3),
+        rep(2),
+        rep(3)
+      })
+  ),
 },
   print('ruby snippets attached')

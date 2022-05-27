@@ -55,8 +55,11 @@ local plugins = {
   'sniprun',                -- https://github.com/michaelb/sniprun
   --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
 
+  -- Formatting--
+  'prettier', -- https://github.com/MunifTanjim/prettier.nvim
+
   -- Fuzzy / File Finder --
-  --r'aerial',              -- https://github.com/stevearc/aerial.nvim
+  --'aerial',              -- https://github.com/stevearc/aerial.nvim
   'harpoon',                -- https://github.com/ThePrimeagen/harpoon
   'lir',                    -- https://github.com/tamago324/lir.nvim
   'telescope',              -- https://github.com/nvim-telescope/telescope.nvim

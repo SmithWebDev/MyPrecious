@@ -7,7 +7,7 @@ M.plugin = {
     require('smithwebdev.snippets')
     require('luasnip.loaders.from_vscode').lazy_load()
     require('luasnip.loaders.from_snipmate').lazy_load()
-    require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/lua/smithwebdev/snippets"})
+    require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/smithwebdev/snippets" })
     local ls = require('luasnip')
     local types = require('luasnip.util.types')
 
@@ -27,33 +27,34 @@ M.plugin = {
       },
     }
 
-    ls.filetype_extend("all",             { "_" })
-    ls.filetype_extend("eruby",           { "html", "ruby" })
-    ls.filetype_extend("ruby",            { "html", "eruby" })
+    ls.filetype_extend("all", { "_" })
+    ls.filetype_extend("eruby", { "html", "ruby" })
+    ls.filetype_extend("ruby", { "eruby", 'rspec' })
     ls.filetype_extend("javascriptreact", { "javascript" })
     ls.filetype_extend("typescriptreact", { "javascript" })
-    ls.filetype_extend("typescript",      { "javascript" })
+    ls.filetype_extend("typescript", { "javascript" })
+    ls.filetype_extend("javascript", { "javascriptreact" })
 
 
 
     -- keybinds
-    vim.keymap.set({"i", "s"}, "<C-l>", function()
+    vim.keymap.set({ "i", "s" }, "<C-l>", function()
       if ls.choice_active() then
         ls.change_choice(1)
       end
     end)
-    vim.keymap.set({"i", "s"}, "<C-h>", function()
+    vim.keymap.set({ "i", "s" }, "<C-h>", function()
       if ls.choice_active() then
         ls.change_choice(-1)
       end
     end)
 
-    vim.keymap.set({"i", "s"}, "<C-j>", function()
+    vim.keymap.set({ "i", "s" }, "<C-j>", function()
       if ls.expand_or_jumpable() then
         ls.expand_or_jump()
       end
     end)
-    vim.keymap.set({"i", "s"}, "<C-k>", function()
+    vim.keymap.set({ "i", "s" }, "<C-k>", function()
       if ls.jumpable(-1) then
         ls.jump(-1)
       end

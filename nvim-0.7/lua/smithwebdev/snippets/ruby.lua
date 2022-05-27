@@ -10,9 +10,9 @@ return{
     trig = 'val',
     name = 'validates',
     dscr = 'addes validates object to model'
-  }, {
+    }, {
       t('validates :')
-      }),
+    }),
   s({
     trig = 'bt',
     name = 'belongs_to',
@@ -49,7 +49,7 @@ return{
         t('presence: false')
       }
       )}
-  )),
+    )),
   s({
     trig = 'ftstream',
     name = 'format turbo stream',

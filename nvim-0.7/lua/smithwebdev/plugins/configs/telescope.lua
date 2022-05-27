@@ -12,7 +12,7 @@ M.plugin = {
     'nvim-telescope/telescope-fzy-native.nvim',
     'benfowler/telescope-luasnip.nvim',
     'ThePrimeagen/harpoon'
-    },
+  },
 
   -- Setup telescope.nvim settings AFTER the plugin (telescope.nvim) is loaded
   config = function()
@@ -33,7 +33,7 @@ M.plugin = {
           mappings = {
             ['i'] = {
               ['<esc>'] = require("telescope.actions").close,
-              ['jj'] = {'<esc', type = 'command' },
+              ['jj'] = { '<esc', type = 'command' },
             },
             ['n'] = {
               ['jk'] = require('telescope.actions').close,
@@ -94,11 +94,10 @@ M.plugin = {
     end
 
     function _G.TelescopeLuaSnip()
-      require'telescope'.extensions.luasnip.luasnip{}
+      require 'telescope'.extensions.luasnip.luasnip {}
     end
 
-
-    local default_opts = {noremap = true, silent = true}
+    local default_opts = { noremap = true, silent = true }
     vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope file_browser', default_opts)
     vim.api.nvim_set_keymap('n', '<leader>fc', [[<Cmd>lua TelescopeFindConfigFiles()<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]], default_opts)

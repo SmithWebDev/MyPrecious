@@ -26,14 +26,14 @@ vim.api.nvim_create_autocmd('BufEnter', {
 vim.cmd('cnoreabbrev h vert bot help')
 vim.cmd('cnoreabbrev help vert bot help')
 
-local UltestRunner = vim.api.nvim_create_augroup('UltestRunner', {clear = true})
+local UltestRunner = vim.api.nvim_create_augroup('UltestRunner', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = '*',
   command = 'UltestNearest',
   group = UltestRunner
 })
 
-local AutoSaveGroup = vim.api.nvim_create_augroup('autosave_user_events', { clear = true})
+local AutoSaveGroup = vim.api.nvim_create_augroup('autosave_user_events', { clear = true })
 vim.api.nvim_create_autocmd({ 'TextChanged', 'InsertLeave' }, {
   group = AutoSaveGroup,
   callback = function()
@@ -64,25 +64,30 @@ vim.api.nvim_create_autocmd({ 'TextChangedI', 'InsertEnter' }, {
     end, 8000)
   end
 })
-vim.api.nvim_create_autocmd({'InsertLeave', 'BufWritePre'}, {
+vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
   pattern = '*',
   command = '%s/\\s\\+$//e',
   group = AutoSaveGroup
 })
 
+vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
+  pattern = '*',
+  command = 'lua vim.lsp.buf.formatting()',
+  group = AutoSaveGroup
+})
+
 vim.api.nvim_create_augroup('CursorInsertMode', { clear = true })
-vim.api.nvim_create_autocmd({'InsertLeave', 'WinEnter' },{
+vim.api.nvim_create_autocmd({ 'InsertLeave', 'WinEnter' }, {
   callback = function()
     vim.opt.cursorline = true
   end,
   group = 'CursorInsertMode',
   desc = "Enable cursorline in normal mode",
 })
-vim.api.nvim_create_autocmd({'InsertEnter', 'WinLeave'}, {
+vim.api.nvim_create_autocmd({ 'InsertEnter', 'WinLeave' }, {
   callback = function()
     vim.opt.cursorline = false
   end,
   group = 'CursorInsertMode',
   desc = 'Disable cursorline on insert',
 })
-

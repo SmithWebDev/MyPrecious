@@ -27,6 +27,7 @@ M.plugin = {
 
     nnoremap('<leader><leader>rD', ':Destroy<Space>', { desc = 'Rails Destroy Command' })
     nnoremap('<leader><leader>rr', ':!rails<Space>', { desc = 'Rails CLI command' })
+    nnoremap('<leader><leader>rrdc', ':!rails dev:cache', { desc = 'Rails CLI command to cache dev env' })
 
     -- Rails Bundler Commands
     nnoremap('<leader><leader>rba', ':!bundle add<Space>', { desc = 'Bundle Add Command' })
@@ -161,6 +162,7 @@ M.plugin = {
 
     -- Stimulus/StimulusReflex
     nnoremap('<leader><leader>rSRi', '!rails stimulus_reflex:install<CR>', { desc = 'Install StimulusReflex' })
+    nnoremap('<leader><leader>rgSRI', '!rails generate stimulus_reflex:initializer<CR>', { desc = 'Create StimulusReflex Initializer' })
     nnoremap('<leader><leader>rgsj', ':Generate stimulus<Space>', { desc = 'Rails Generate stimulus #{model}_controller' })
     nnoremap('<leader><leader>rgsjmu', ':!rails stimulus:manifest:update', { desc = 'Rails update stimulus controllers' })
     nnoremap('<leader><leader>rDs', ':Destroy stimulus<Space>', { desc = 'Rails Destroy Stimulus Controller Command' })

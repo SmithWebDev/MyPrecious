@@ -28,6 +28,7 @@ M.plugin = {
     nnoremap('<leader><leader>rD', ':Destroy<Space>', { desc = 'Rails Destroy Command' })
     nnoremap('<leader><leader>rr', ':!rails<Space>', { desc = 'Rails CLI command' })
     nnoremap('<leader><leader>rrdc', ':!rails dev:cache', { desc = 'Rails CLI command to cache dev env' })
+    nnoremap('<leader><leader>rtlc', ':!rails tmp:clear log:clear<CR>', { desc = 'Removed temp and log files from project' })
 
     -- Rails Bundler Commands
     nnoremap('<leader><leader>rba', ':!bundle add<Space>', { desc = 'Bundle Add Command' })

@@ -4,11 +4,12 @@ M.plugin = {
   'nvim-treesitter/nvim-treesitter',
 
   requires = {
-  'nvim-treesitter/playground', --https://github.com/nvim-treesitter/playground
-    'RRethy/nvim-treesitter-endwise',              -- https://github.com/RRethy/nvim-treesitter-endwise
+    'nvim-treesitter/playground', --https://github.com/nvim-treesitter/playground
+    'RRethy/nvim-treesitter-endwise', -- https://github.com/RRethy/nvim-treesitter-endwise
     'nvim-treesitter/nvim-treesitter-refactor',
     'nvim-treesitter/nvim-treesitter-textobjects', -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-    'RRethy/nvim-treesitter-textsubjects',         -- https://github.com/RRethy/nvim-treesitter-textsubjects
+    'RRethy/nvim-treesitter-textsubjects', -- https://github.com/RRethy/nvim-treesitter-textsubjects
+    'nvim-treesitter/nvim-treesitter-context', --https://github.com/nvim-treesitter/nvim-treesitter-context
   },
 
   run = ':TSUpdate',
@@ -29,8 +30,8 @@ M.plugin = {
       },
       highlight = {
         enable = true,
-        disable = {'org'},
-        additional_vim_regex_highlighting = {'org'},
+        disable = { 'org' },
+        additional_vim_regex_highlighting = { 'org' },
       },
       endwise = {
         enable = true,
@@ -88,6 +89,25 @@ M.plugin = {
     })
     vim.opt.foldmethod = "expr"
     vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+    require('treesitter-context').setup {
+      enable = true,
+      max_lines = 0,
+      patterns = {
+        default = {
+          'class',
+          'function',
+          'method',
+          'for',
+          'while',
+          'if',
+          'switch',
+          'case',
+          'def',
+        },
+      },
+      zindex = 20,
+    }
   end
 }
 

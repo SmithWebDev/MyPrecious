@@ -1,4 +1,4 @@
-local install_path = os.getenv('HOME').. '/.local/share/nvim/site/pack/packer/start/packer.nvim'
+local install_path = os.getenv('HOME') .. '/.local/share/nvim/site/pack/packer/start/packer.nvim'
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   local plugin_repo = 'https://github.com/wbthomason/packer.nvim'
@@ -7,7 +7,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 vim.cmd 'packadd packer.nvim'
-local packer = require'packer'
+local packer = require 'packer'
 
 -- Use your local data path and not plugin/
 -- this is `~/.local/share/nvim/site/plugin/packer_compiled.lua` in WSL/Linux and MacOS
@@ -19,40 +19,40 @@ packer.init {
 local plugins = {
 
   -- Aesthetics --
-  'animate',                -- https://github.com/camspiers/animate.vim
-  'colorbuddy',             -- https://github.com/tjdevries/colorbuddy.nvim
+  'animate', -- https://github.com/camspiers/animate.vim
+  'colorbuddy', -- https://github.com/tjdevries/colorbuddy.nvim
   'colorscheme',
-  'indent_blankline',       -- https://github.com/lukas-reineke/indent-blankline.nvim
-  'lush',                   -- https://github.com/rktjmp/lush.nvim
-  'statusline',             -- https://github.com/beauwilliams/statusline.lua
-  'transparent',            -- https://github.com/xiyaowong/nvim-transparent
-  'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie
+  'indent_blankline', -- https://github.com/lukas-reineke/indent-blankline.nvim
+  'lush', -- https://github.com/rktjmp/lush.nvim
+  'statusline', -- https://github.com/beauwilliams/statusline.lua
+  'transparent', -- https://github.com/xiyaowong/nvim-transparent
+  'vim-smoothie', -- https://github.com/psliwka/vim-smoothie
 
   -- Completion & Snippets --
-  'luasnip',                -- https://github.com/L3MON4D3/LuaSnip
-  'cmp',                    -- https://github.com/hrsh7th/nvim-cmp
-
+  'luasnip', -- https://github.com/L3MON4D3/LuaSnip
+  'cmp', -- https://github.com/hrsh7th/nvim-cmp
+  'cheat_sheet', --https://github.com/Djancyp/cheat-sheet
   -- Editing --
-  'autopairs',              -- https://github.com/windwp/nvim-autopairs
-  'color-converter',        -- https://github.com/NTBBloodbath/color-converter.nvim
-  'colorizer',              -- https://github.com/norcalli/nvim-colorizer.lua
-  'comment',                -- https://github.com/numToStr/Comment.nvim
-  'easyalign',              -- https://github.com/junegunn/vim-easy-align
-  'emmet',                  -- https://github.com/mattn/emmet-vim
-  'hlslens',                -- https://github.com/kevinhwang91/nvim-hlslens
-  'leap',                   -- https://github.com/ggandor/leap.nvim
-  'marks',                  -- https://github.com/chentau/marks.nvim
-  'peekabo',                -- https://github.com/junegunn/vim-peekaboo
-  'surround',               -- https://github.com/tpope/vim-surround
-  'vim-exchange',           -- https://github.com/tommcdo/vim-exchange
-  'yode',                   -- https://github.com/hoschi/yode-nvim
-  'zen',                    -- https://github.com/folke/zen-mode.nvim
+  'autopairs', -- https://github.com/windwp/nvim-autopairs
+  'color-converter', -- https://github.com/NTBBloodbath/color-converter.nvim
+  'colorizer', -- https://github.com/norcalli/nvim-colorizer.lua
+  'comment', -- https://github.com/numToStr/Comment.nvim
+  'easyalign', -- https://github.com/junegunn/vim-easy-align
+  'emmet', -- https://github.com/mattn/emmet-vim
+  'hlslens', -- https://github.com/kevinhwang91/nvim-hlslens
+  'leap', -- https://github.com/ggandor/leap.nvim
+  'marks', -- https://github.com/chentau/marks.nvim
+  'peekabo', -- https://github.com/junegunn/vim-peekaboo
+  'surround', -- https://github.com/tpope/vim-surround
+  'vim-exchange', -- https://github.com/tommcdo/vim-exchange
+  'yode', -- https://github.com/hoschi/yode-nvim
+  'zen', -- https://github.com/folke/zen-mode.nvim
 
   -- Filetype --
-  'haml',                   -- https://github.com/tpope/vim-haml
-  'markdown_preview',       -- https://github.com/iamcco/markdown-preview.nvim
-  'rails',                  -- https://github.com/tpope/vim-rails
-  'sniprun',                -- https://github.com/michaelb/sniprun
+  'haml', -- https://github.com/tpope/vim-haml
+  'markdown_preview', -- https://github.com/iamcco/markdown-preview.nvim
+  'rails', -- https://github.com/tpope/vim-rails
+  'sniprun', -- https://github.com/michaelb/sniprun
   --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
 
   -- Formatting--
@@ -60,16 +60,16 @@ local plugins = {
 
   -- Fuzzy / File Finder --
   --'aerial',              -- https://github.com/stevearc/aerial.nvim
-  'harpoon',                -- https://github.com/ThePrimeagen/harpoon
-  'lir',                    -- https://github.com/tamago324/lir.nvim
-  'telescope',              -- https://github.com/nvim-telescope/telescope.nvim
+  'harpoon', -- https://github.com/ThePrimeagen/harpoon
+  'lir', -- https://github.com/tamago324/lir.nvim
+  'telescope', -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git --
-  'gh',                     -- https://github.com/ldelossa/gh.nvim
-  'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
+  'gh', -- https://github.com/ldelossa/gh.nvim
+  'lazygit', -- https://github.com/kdheepak/lazygit.nvim
 
   -- Keybinds --
-  'whichkey',               -- https://github.com/folke/which-key.nvim
+  'whichkey', -- https://github.com/folke/which-key.nvim
 
   -- LSP/Navigator --
   'lspconfig',
@@ -77,15 +77,15 @@ local plugins = {
   --'navigator',            -- https://github.com/ray-x/navigator.lua
 
   -- Project Organization --
-  'orgmode',                --https://github.com/nvim-orgmode/orgmode
-  'vim-mkdir',              -- https://github.com/pbrisbin/vim-mkdir
-  'vim-wakatime',           -- https://github.com/wakatime/vim-wakatime
+  'orgmode', --https://github.com/nvim-orgmode/orgmode
+  'vim-mkdir', -- https://github.com/pbrisbin/vim-mkdir
+  'vim-wakatime', -- https://github.com/wakatime/vim-wakatime
 
   -- Testing --
-  'vim-ultest',             -- https://github.com/rcarriga/vim-ultest
+  'vim-ultest', -- https://github.com/rcarriga/vim-ultest
 
   -- Treesitter/ Syntax Highlighting --
-  'treesitter',             -- https://github.com/nvim-treesitter/nvim-treesitter
+  'treesitter', -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)
@@ -93,14 +93,14 @@ packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
 
   for _, v in pairs(plugins) do
-    use(require('smithwebdev.plugins.configs.'..v).plugin)
+    use(require('smithwebdev.plugins.configs.' .. v).plugin)
   end
 end)
 
 -- Autocmd to match the path in your config that is in
 -- lua/smithwebdev/plugins/*.lua or lua/smithwebdev/plugins/configs/*.lua
 -- and then create a packer compile file whenever you :w in those files
-local packer_group =  vim.api.nvim_create_augroup('packer_user_events', { clear = true })
+local packer_group = vim.api.nvim_create_augroup('packer_user_events', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', {
   group = packer_group,
 
@@ -116,7 +116,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   end,
 })
 
-local u = require'smithwebdev.core.utils'
+local u = require 'smithwebdev.core.utils'
 local nnoremap = u.nnoremap
 
 nnoremap('<leader>PS', ':PackerSync<cr>', { desc = "Packer Sync" })

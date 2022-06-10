@@ -32,6 +32,7 @@ local plugins = {
   'luasnip', -- https://github.com/L3MON4D3/LuaSnip
   'cmp', -- https://github.com/hrsh7th/nvim-cmp
   'cheat_sheet', --https://github.com/Djancyp/cheat-sheet
+
   -- Editing --
   'autopairs', -- https://github.com/windwp/nvim-autopairs
   'color-converter', -- https://github.com/NTBBloodbath/color-converter.nvim
@@ -82,6 +83,7 @@ local plugins = {
   'vim-wakatime', -- https://github.com/wakatime/vim-wakatime
 
   -- Testing --
+  'coverage', --https://github.com/andythigpen/nvim-coverage
   'vim-ultest', -- https://github.com/rcarriga/vim-ultest
 
   -- Treesitter/ Syntax Highlighting --

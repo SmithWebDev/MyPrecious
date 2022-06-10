@@ -11,7 +11,8 @@ M.plugin = {
     'nvim-telescope/telescope-frecency.nvim',
     'nvim-telescope/telescope-fzy-native.nvim',
     'benfowler/telescope-luasnip.nvim',
-    'ThePrimeagen/harpoon'
+    'ThePrimeagen/harpoon',
+    --'Zane-/cder.nvim', --https://github.com/Zane-/cder.nvim
   },
 
   -- Setup telescope.nvim settings AFTER the plugin (telescope.nvim) is loaded

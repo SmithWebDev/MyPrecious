@@ -85,6 +85,7 @@ local plugins = {
   -- Testing --
   'coverage', --https://github.com/andythigpen/nvim-coverage
   'vim-ultest', -- https://github.com/rcarriga/vim-ultest
+  --'neotest', -- https://github.com/rcarriga/neotest
 
   -- Treesitter/ Syntax Highlighting --
   'treesitter', -- https://github.com/nvim-treesitter/nvim-treesitter

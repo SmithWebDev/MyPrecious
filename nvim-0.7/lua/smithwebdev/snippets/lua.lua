@@ -33,7 +33,7 @@ return {
      local M = {{}}
 
      M.plugin = {{
-       '{}',
+       {},
 
        config = function()
          {}

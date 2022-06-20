@@ -1,5 +1,7 @@
 local M = {}
 
+vim.g.ultest_deprecation_notice = 0
+
 M.plugin = {
   'rcarriga/vim-ultest',
 

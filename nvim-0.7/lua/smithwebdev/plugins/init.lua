@@ -32,6 +32,7 @@ local plugins = {
   'luasnip', -- https://github.com/L3MON4D3/LuaSnip
   'cmp', -- https://github.com/hrsh7th/nvim-cmp
   'cheat_sheet', --https://github.com/Djancyp/cheat-sheet
+  'nvim-ufo', -- https://github.com/kevinhwang91/nvim-ufo
 
   -- Editing --
   'autopairs', -- https://github.com/windwp/nvim-autopairs

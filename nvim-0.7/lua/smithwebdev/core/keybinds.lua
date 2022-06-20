@@ -101,7 +101,8 @@ nnoremap('<leader><leader>ht', ':helptags $VIMRUNTIME/doc<CR>', { desc = 'Connec
 
 
 
---[[---------------------------------------]] --
+--[[---------------------------------------]]---
 --                 SmithWebDev                --
 --                   Macros                   --
 --[[---------------------------------------]]---
+nnoremap('<leader>mh',  "PI'', -- jjLF/F/lY>Hpjj", { desc = "macro: reduces url to 'github_user/github_repo' format"})

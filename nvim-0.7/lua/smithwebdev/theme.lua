@@ -1,6 +1,7 @@
 --local theme = 'mirodark'
 --local theme = 'tokyonight'
-local theme = 'moonlight'
+--local theme = 'moonlight'
+local theme = 'petrel'
 --local theme = 'gloombuddy'
 
 local ok, err = pcall(vim.cmd, 'colorscheme ' .. theme)

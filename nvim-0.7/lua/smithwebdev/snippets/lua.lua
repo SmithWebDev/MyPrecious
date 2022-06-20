@@ -42,14 +42,6 @@ return {
 
      return M]],
     { i(1), i(2) })),
-  --s('auc', {
-  --  t('vim.api.nvim_create_autocmd({ '),
-  --  i(1),
-  --  t(" '}, {"),
-  --  t('\t'),
-  --  i()
-  --})
-  --}),
   s('aug', fmt("vim.api.nvim_create_autogroup('{}', {{ clear = true }})", { i(1) })),
   s('auc', fmt([[
       vim.api.nvim_create_autocmd('{}', {{

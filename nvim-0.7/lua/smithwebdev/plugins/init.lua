@@ -47,14 +47,14 @@ local plugins = {
   'peekabo', -- https://github.com/junegunn/vim-peekaboo
   'surround', -- https://github.com/tpope/vim-surround
   'vim-exchange', -- https://github.com/tommcdo/vim-exchange
-  'yode', -- https://github.com/hoschi/yode-nvim
+  -- 'yode', -- https://github.com/hoschi/yode-nvim
   'zen', -- https://github.com/folke/zen-mode.nvim
 
   -- Filetype --
   'haml', -- https://github.com/tpope/vim-haml
   'markdown_preview', -- https://github.com/iamcco/markdown-preview.nvim
   'rails', -- https://github.com/tpope/vim-rails
-  'sniprun', -- https://github.com/michaelb/sniprun
+  -- 'sniprun', -- https://github.com/michaelb/sniprun
   --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
 
   -- Formatting--
@@ -63,7 +63,7 @@ local plugins = {
   -- Fuzzy / File Finder --
   --'aerial',              -- https://github.com/stevearc/aerial.nvim
   'harpoon', -- https://github.com/ThePrimeagen/harpoon
-  'lir', -- https://github.com/tamago324/lir.nvim
+  -- 'lir', -- https://github.com/tamago324/lir.nvim
   'telescope', -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git --

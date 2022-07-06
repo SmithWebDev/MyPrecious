@@ -35,6 +35,7 @@ alias zshc='nvim ~/.zshrc'
 alias szsh='source ~/.zshrc'
 alias nvc='nvim ~/.config/nvim/init.lua'
 alias tmc='nvim ~/.tmux.conf'
+alias kc='nvim ~/.config/kitty/kitty.conf'
 
 # FZY
 # ----------------------
@@ -272,7 +273,6 @@ function zu() {echo "sudo apt-get update" >> ~/Setup/linux.txt && sudo apt-get u
 function zr() {echo "sudo add-apt-repository $1" >> ~/Setup/linux.txt && sudo add-apt-repository}
 
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:$HOME/.rvm/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 export PYENV_ROOT=$HOME/.pyenv
@@ -302,10 +302,13 @@ fi
 #### END FIG ENV VARIABLES ####
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
 export PATH="$PATH:$BREW_HOME"
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 #export DISPLAY=$(ip route list default | awk '{print $3}'):0
 #export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 #export LIBGL_ALWAYS_INDIRECT=1
+#
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -70,11 +70,11 @@ vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
   group = AutoSaveGroup
 })
 
-vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
-  pattern = '*',
-  command = 'lua vim.lsp.buf.formatting()',
-  group = AutoSaveGroup
-})
+-- vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
+--   pattern = '*',
+--   command = 'lua vim.lsp.buf.formatting()',
+--   group = AutoSaveGroup
+-- })
 
 vim.api.nvim_create_augroup('CursorInsertMode', { clear = true })
 vim.api.nvim_create_autocmd({ 'InsertLeave', 'WinEnter' }, {

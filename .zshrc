@@ -191,6 +191,10 @@ function deviseview(){ rails g devise:install && rails g devise:views }
 # Ruby/Rails Testing Functions
 #-------------------------------
 
+# Sidekiq
+#-------------------------------
+alias sidekiq='bundle exec sidekiq'
+
 # Matestack UI
 #-------------------------------
 alias matestack='bundle add matestack-ui-core && yarn add matestack-ui-core'

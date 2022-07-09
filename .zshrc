@@ -113,6 +113,8 @@ function grap() { git remote add origin $1 && git push -u origin master;}
 # alias pgstart='sudo service postgresql start'
 # alias pgstop='sudo service postgresql stop'
 
+alias pgstart='brew services start postgresql'
+alias redisstart='brew services start redis'
 #     Python
 # ----------------------------
 alias python='python3'

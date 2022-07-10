@@ -318,3 +318,10 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/Users/swd/.bun/_bun" ] && source "/Users/swd/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/swd/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

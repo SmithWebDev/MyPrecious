@@ -28,6 +28,7 @@ local plugins = {
   'statusline', -- https://github.com/beauwilliams/statusline.lua
   'transparent', -- https://github.com/xiyaowong/nvim-transparent
   'vim-smoothie', -- https://github.com/psliwka/vim-smoothie
+  --'vim-tpipeline', -- https://github.com/vimpostor/vim-tpipeline (For Use with Neovim 0.8)
 
   -- Completion & Snippets --
   'luasnip', -- https://github.com/L3MON4D3/LuaSnip
@@ -47,9 +48,10 @@ local plugins = {
   'marks', -- https://github.com/chentau/marks.nvim
   'peekabo', -- https://github.com/junegunn/vim-peekaboo
   'surround', -- https://github.com/tpope/vim-surround
-  -- 'vim-exchange', -- https://github.com/tommcdo/vim-exchange
-  -- 'yode', -- https://github.com/hoschi/yode-nvim
-  -- 'zen', -- https://github.com/folke/zen-mode.nvim
+  'treesurfer', -- https://github.com/ziontee113/syntax-tree-surfer
+  'vim-exchange', -- https://github.com/tommcdo/vim-exchange
+  'yode', -- https://github.com/hoschi/yode-nvim
+  'zen', -- https://github.com/folke/zen-mode.nvim
 
   -- Filetype --
   -- 'haml', -- https://github.com/tpope/vim-haml
@@ -74,7 +76,7 @@ local plugins = {
   -- Keybinds --
   'whichkey', -- https://github.com/folke/which-key.nvim
 
-  -- LSP/Navigator --
+  -- LSP--
   'lspconfig',
   'lspsaga',
   --'navigator',            -- https://github.com/ray-x/navigator.lua

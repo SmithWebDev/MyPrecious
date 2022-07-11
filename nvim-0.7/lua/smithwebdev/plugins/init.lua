@@ -47,6 +47,7 @@ local plugins = {
   'leap', -- https://github.com/ggandor/leap.nvim
   'marks', -- https://github.com/chentau/marks.nvim
   'peekabo', -- https://github.com/junegunn/vim-peekaboo
+  --'splitjoin', -- https://github.com/AndrewRadev/splitjoin.vim
   'surround', -- https://github.com/tpope/vim-surround
   'treesurfer', -- https://github.com/ziontee113/syntax-tree-surfer
   'vim-exchange', -- https://github.com/tommcdo/vim-exchange
@@ -85,6 +86,7 @@ local plugins = {
   'orgmode', --https://github.com/nvim-orgmode/orgmode
   'vim-mkdir', -- https://github.com/pbrisbin/vim-mkdir
   'vim-wakatime', -- https://github.com/wakatime/vim-wakatime
+  'vimwiki', -- https://github.com/vimwiki/vimwiki
 
   -- Testing --
   'coverage', --https://github.com/andythigpen/nvim-coverage

@@ -55,7 +55,7 @@ M.plugin = {
     telescope.load_extension('rails_related_files')
 
     function _G.TelescopeFindConfigFiles()
-      local configdir = vim.fn.expand('$HOME/.config/nvim-nightly')
+      local configdir = vim.fn.expand('$HOME/.config/nvim')
       telescope_builtin.find_files({
         find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden', configdir },
         previewer = false,

@@ -12,11 +12,7 @@ M.plugin = {
 
     --keybindings
     local u = require'smithwebdev.core.utils'
-    local noremap = u.noremap
     local nnoremap = u.nnoremap
-    local inoremap = u.inoremap
-    local tnoremap = u.tnoremap
-    local vnoremap = u.vnoremap
 
     nnoremap('<leader>fj', ':Telescope harpoon marks<CR>', { desc = 'Show harpoon marks'})
     nnoremap('<leader>jf', ':lua require("harpoon.mark").add_file()<CR>', { desc = 'Mark Files to revisit later'})

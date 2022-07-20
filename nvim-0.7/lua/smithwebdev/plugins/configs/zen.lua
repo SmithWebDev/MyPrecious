@@ -27,12 +27,8 @@ M.plugin = {
       },
     })
 
-    -- local u = require'smithwebdev.core.utils'
-    -- local noremap = u.noremap
-    -- local nnoremap = u.nnoremap
-    -- local inoremap = u.inoremap
-    -- local tnoremap = u.tnoremap
-    -- local vnoremap = u.vnoremap
+    local u = require'smithwebdev.core.utils'
+    local nnoremap = u.nnoremap
 
     -- nnoremap('<leader><leader>z', '<cmd>ZenMode<CR>', { desc = 'Enter The Zen' })
   end

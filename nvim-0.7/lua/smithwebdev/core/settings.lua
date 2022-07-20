@@ -14,8 +14,8 @@ o.shortmess = 'csa' --Adjust short system messages
 o.timeoutlen=1500
 
 -- Fold Options --
---o.foldmethod = 'expr'
---o.foldexpr = 'nvim_treesitter#foldexpr()'
+o.foldmethod = 'expr'
+o.foldexpr = 'nvim_treesitter#foldexpr()'
 o.foldnestmax = 3
 o.foldenable = false
 o.foldlevel = 99

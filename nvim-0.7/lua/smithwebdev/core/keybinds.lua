@@ -27,7 +27,8 @@ nnoremap('<leader>ls', ':ls<CR>', { desc = 'List open files' })
 nnoremap('<leader>w', ':w<CR>', { desc = 'Save shortcut' })
 nnoremap('<leader>W', ':wall<CR>', { desc = 'Save all shortcut' })
 
-nnoremap('<leader>nw', ':set nowrap<CR>', { desc = 'Set No Wrap' })
+nnoremap('<leader>nw', ':set nowrap<CR>', { desc = 'Set No Wrap' }) --  Create a toggle for this setting adjustment
+nnoremap('<leader>nr', ':set nornu<CR>', { desc = 'Set No Relative Number' }) --  Create a toggle for this setting adjustment
 
 -- Disable Highlights
 --------------------------------------------------------------------------------

@@ -114,7 +114,9 @@ function grap() { git remote add origin $1 && git push -u origin master;}
 # alias pgstop='sudo service postgresql stop'
 
 alias pgstart='brew services start postgresql'
+alias pgstop='brew services stop postgresql'
 alias redisstart='brew services start redis'
+alias redisstop='brew services stop redis'
 #     Python
 # ----------------------------
 alias python='python3'
@@ -325,3 +327,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Bun
 export BUN_INSTALL="/Users/swd/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+. "$HOME/.cargo/env"

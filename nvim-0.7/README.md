@@ -28,7 +28,7 @@ coupled.
   - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
   - [vim-rails](https://github.com/tpope/vim-rails)
   - [sniprun](https://github.com/michaelb/sniprun)
-- Git 
+- Git
   - [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
 - Keybindings Reference
   - [which-key.nvim](https://github.com/folke/which-key.nvim)

@@ -34,6 +34,7 @@ M.plugin = {
     ls.filetype_extend("typescriptreact", { "javascript" })
     ls.filetype_extend("typescript", { "javascript" })
     ls.filetype_extend("javascript", { "javascriptreact" })
+    ls.filetype_extend("vimwiki", { "markdown" })
 
 
 

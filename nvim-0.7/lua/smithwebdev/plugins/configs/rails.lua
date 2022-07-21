@@ -33,6 +33,7 @@ M.plugin = {
     -- Rails Bundler Commands
     nnoremap('<leader><leader>rba', ':!bundle add<Space>', { desc = 'Bundle Add Command' })
     nnoremap('<leader><leader>rbi', ':!bundle install<CR>', { desc = 'Bundle Install Command' })
+    nnoremap('<leader><leader>rbI', ':!bundle info<CR>', { desc = 'Bundle Info Command' })
     nnoremap('<leader><leader>rbu', ':!bundle update<CR>', { desc = 'Bundle Update Command' })
 
     -- Rails Database Commands
@@ -91,7 +92,7 @@ M.plugin = {
     -- database.yml,                   database.example.yml,        environments/*.rb
 
     -- Edits to "Alternative" file in various locations
-    nnoremap('<leader><leader>ra', '<cmd>A<CR>')
+    nnoremap('<leader><leader>rA', '<cmd>A<CR>')
     nnoremap('<leader><leader>rae', '<cmd>AE<CR>', { desc = 'edit alternate file' })
     nnoremap('<leader><leader>ras', '<cmd>AS<CR>', { desc = 'edit alternate in h split' })
     nnoremap('<leader><leader>rav', '<cmd>AV<CR>', { desc = 'edit alternate in tab},' })
@@ -126,7 +127,7 @@ M.plugin = {
 
     -- Devise Gem
     nnoremap('<leader><leader>rgDi', ':Generate devise:install <CR>', { desc = 'Rails Generate Devise Install' })
-    nnoremap('<leader><leader>rgDC', ':Generate devise:controllers<Space>', { desc = 'Rails Generate Devise Controllers' })
+    nnoremap('<leader><leader>rgDc', ':Generate devise:controllers<Space>', { desc = 'Rails Generate Devise Controllers' })
     nnoremap('<leader><leader>rgDM', ':Generate devise<Space>', { desc = 'Rails Generate Devise Model' })
     nnoremap('<leader><leader>rgDV', ':Generate devise:views<CR>', { desc = 'Rails Generate Devise Views' })
 
@@ -157,6 +158,9 @@ M.plugin = {
     nnoremap('<leader><leader>rgRS', ':Generate rspec:scaffold<CR>', { desc = 'Rails Generate Rspec Scaffold' })
     nnoremap('<leader><leader>rgRSY', ':Generate rspec:system<CR>', { desc = 'Rails Generate Rspec System' })
     nnoremap('<leader><leader>rgRV', ':Generate rspec:view<CR>', { desc = 'Rails Generate Rspec View' })
+
+    -- Rubocop Bindings
+    nnoremap('<leader><leader>rl',  ':!rubocop -a %<CR>', { desc = 'Rubocop lint command for current file'})
 
     -- Simple Form
     nnoremap('<leader><leader>rgSFi', ':Generate simple_form:install<CR>', { desc = 'Rails Generate Simple Form Install' })

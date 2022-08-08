@@ -34,6 +34,7 @@ end
 
 Util.noremap = get_mapper("n", false)
 Util.nnoremap = get_mapper("n", true)
+Util.cnoremap = get_mapper("c", true)
 Util.inoremap = get_mapper("i", true)
 Util.tnoremap = get_mapper("t", true)
 Util.vnoremap = get_mapper("v", true)

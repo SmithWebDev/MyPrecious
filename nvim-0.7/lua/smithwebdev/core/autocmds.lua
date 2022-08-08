@@ -1,16 +1,17 @@
+vim.api.nvim_create_augroup('Startup', { clear = true })
 vim.api.nvim_create_augroup('Help', { clear = true })
-vim.api.nvim_create_autocmd('BufEnter', {
-  callback = function()
-    if vim.bo.buftype == 'help' then
-      local bufnr = vim.api.nvim_get_current_buf()
-      vim.cmd "wincmd L"
-      vim.keymap.set('n', 'q', ':q<CR>', { silent = true, buffer = bufnr })
-    end
-  end,
-  group = "Help",
-  desc = "Open Help text in vertical split, close with 'q'",
-  pattern = "*.txt",
-})
+--vim.api.nvim_create_autocmd('BufEnter', {
+--  callback = function()
+--    if vim.bo.buftype == 'help' then
+--      local bufnr = vim.api.nvim_get_current_buf()
+--      vim.cmd "wincmd L"
+--      vim.keymap.set('n', 'q', ':q<CR>', { silent = true, buffer = bufnr })
+--    end
+--  end,
+--  group = "Help",
+--  desc = "Open Help text in vertical split, close with 'q'",
+--  pattern = "*.txt",
+--})
 
 vim.api.nvim_create_autocmd('BufEnter', {
   callback = function()
@@ -26,13 +27,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
 vim.cmd('cnoreabbrev h vert bot help')
 vim.cmd('cnoreabbrev help vert bot help')
 
-local UltestRunner = vim.api.nvim_create_augroup('UltestRunner', { clear = true })
-vim.api.nvim_create_autocmd('BufWritePost', {
-  pattern = '*',
-  command = 'UltestNearest',
-  group = UltestRunner
-})
-
 local AutoSaveGroup = vim.api.nvim_create_augroup('autosave_user_events', { clear = true })
 vim.api.nvim_create_autocmd({ 'TextChanged', 'InsertLeave' }, {
   group = AutoSaveGroup,
@@ -41,7 +35,8 @@ vim.api.nvim_create_autocmd({ 'TextChanged', 'InsertLeave' }, {
     local ft = vim.bo[bufnr].filetype
     local modifiable = vim.bo[bufnr].modifiable
     local is_empty_buftype = vim.bo[bufnr].buftype == ''
-    local ignorelist = { 'packer', 'netrw', 'TelescopePrompt', 'lspinfo', 'lsp-installer', 'query', 'tsplayground', 'text', 'harpoon', 'scratch' }
+    local ignorelist = { 'packer', 'netrw', 'TelescopePrompt', 'lspinfo', 'lsp-installer', 'query', 'tsplayground',
+      'text', 'harpoon', 'scratch' }
     if not vim.tbl_contains(ignorelist, ft) and modifiable and is_empty_buftype then
       vim.cmd 'silent update!'
     end
@@ -64,17 +59,18 @@ vim.api.nvim_create_autocmd({ 'TextChangedI', 'InsertEnter' }, {
     end, 8000)
   end
 })
+
 vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
   pattern = '*',
   command = '%s/\\s\\+$//e',
   group = AutoSaveGroup
 })
 
--- vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
---   pattern = '*',
---   command = 'lua vim.lsp.buf.formatting()',
---   group = AutoSaveGroup
--- })
+vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
+  pattern = '*.js',
+  command = 'lua vim.lsp.buf.formatting()',
+  group = AutoSaveGroup
+})
 
 vim.api.nvim_create_augroup('CursorInsertMode', { clear = true })
 vim.api.nvim_create_autocmd({ 'InsertLeave', 'WinEnter' }, {

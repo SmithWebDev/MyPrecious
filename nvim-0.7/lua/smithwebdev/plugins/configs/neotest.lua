@@ -20,43 +20,71 @@ M.plugin = {
         require("neotest-jest")({
           jestCommand = "npm test --"
         }),
+      },
+      diagnostic = {
+        enabled = true
+      },
+      status = {
+        virtual_text = true
       }
     })
 
     local u = require 'smithwebdev.core.utils'
-    local noremap = u.noremap
     local nnoremap = u.nnoremap
-    local inoremap = u.inoremap
-    local vnoremap = u.vnoremap
-    local neotest = require('neotest').run
+
+    function _G.Attach_Test()
+      require('neotest').run.attach()
+    end
 
     function _G.Nearest_Test()
-      require('neotest').run.run({})
+      require('neotest').run.run()
     end
 
     function _G.Current_File()
       require('neotest').run.run(vim.fn.expand('%'))
     end
 
-    function _G.Attach_Test()
-      require('neotest').run.attach()
-    end
-
     function _G.Stop_Test()
       require('neotest').run.stop()
     end
 
-    -- keybindings
-    nnoremap('<leader>Na', '<cmd>lua Attach_Test()<CR>',  { desc = 'Toggle Summary Window' })
-    nnoremap('<leader>Nc', '<cmd>lua Current_File()<CR>', { desc = 'Run All Test Current File' })
-    nnoremap('<leader>Nj', '<cmd>lua Nearest_Test()<CR>', { desc = 'Run Nearest Test Current File' })
-    nnoremap('<leader>Nx', '<cmd>lua Stop_Test()<CR>',    { desc = 'Stop Running Tests' })
+    function _G.Summary_Toggle()
+      require('neotest').summary.toggle()
+    end
 
-    -- nnoremap('<leader>ua', '<cmd>UltestAttach<CR>', { desc = 'Attach Live Debugging' })
-    -- nnoremap('<leader>uj', '<cmd>UltestNearest<CR>', { desc = 'Run Nearest Test Current' })
-    -- nnoremap('<leader>ur', '<cmd>Ultest<CR>', { desc = 'Run All Test Current File' })
-    -- nnoremap('<leader>us', '<cmd>UltestSummary<CR>', { desc = 'Toggle Summary Window' })
-    -- nnoremap('<leader>ux', '<cmd>UltestStop<CR>', { desc = 'Stop Running Tests' })
+    function _G.Clear_Marked()
+      require('neotest').summary.clear_marked()
+    end
+
+    function _G.Run_Marked()
+      require('neotest').summary.run_marked()
+    end
+
+    function _G.Test_Result()
+      require('neotest').output.open()
+    end
+
+    function _G.Jump_Next()
+      require('neotest').jump.next()
+    end
+
+    function _G.Jump_Prev()
+      require('neotest').jump.prev()
+    end
+
+
+    -- keybindings
+    nnoremap('<leader>ra', '<cmd>lua Attach_Test()<CR>',  { desc = 'Attach Test' })
+    nnoremap('<leader>ru', '<cmd>lua Clear_Marked()<CR>', { desc = 'Clear Marked Tests' })
+    nnoremap('<leader>rcf', '<cmd>lua Current_File()<CR>', { desc = 'Run All Test Current File' })
+    nnoremap('<leader>rn', '<cmd>lua Nearest_Test()<CR>', { desc = 'Run Nearest Test Current File' })
+    nnoremap('<leader>rj', '<cmd>lua Jump_Next()<CR>', { desc = 'Jump to Next Test' })
+    nnoremap('<leader>rk', '<cmd>lua Jump_Prev()<CR>', { desc = 'Jump to Previous Test' })
+    nnoremap('<leader>rz', '<cmd>lua Run_Marked()<CR>', { desc = 'Run Marked Tests' })
+    nnoremap('<leader>rx', '<cmd>lua Stop_Test()<CR>',    { desc = 'Stop Running Tests' })
+    nnoremap('<leader>rs', '<cmd>lua Summary_Toggle()<CR>',  { desc = 'Toggle Summary Window' })
+    nnoremap('<leader>rd', '<cmd>lua Test_Result()<CR>',  { desc = 'Toggle Test Result Window' })
+
   end
 }
 

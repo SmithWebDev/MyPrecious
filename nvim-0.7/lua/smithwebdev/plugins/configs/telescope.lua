@@ -13,6 +13,7 @@ M.plugin = {
     'benfowler/telescope-luasnip.nvim',
     'ThePrimeagen/harpoon',
     'erlingur/telescope-rails-related-files', -- https://github.com/erlingur/telescope-rails-related-files
+    'ElPiloto/telescope-vimwiki.nvim', -- https://github.com/ElPiloto/telescope-vimwiki.nvim
     --'Zane-/cder.nvim', --https://github.com/Zane-/cder.nvim
   },
 
@@ -53,6 +54,7 @@ M.plugin = {
     telescope.load_extension('file_browser')
     telescope.load_extension('luasnip')
     telescope.load_extension('rails_related_files')
+    telescope.load_extension('vimwiki')
 
     function _G.TelescopeFindConfigFiles()
       local configdir = vim.fn.expand('$HOME/.config/nvim')
@@ -111,6 +113,8 @@ M.plugin = {
     vim.api.nvim_set_keymap('n', '<leader>fr', [[<Cmd>Telescope rails_related_files<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>fs', [[<Cmd>Telescope luasnip<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>ft', [[<Cmd>lua TelescopeTags()<CR>]], default_opts)
+    vim.api.nvim_set_keymap('n', '<leader>fw', ':Telescope vimwiki<CR>', default_opts)
+    vim.api.nvim_set_keymap('n', '<leader>fwg', ':Telescope vimwiki live_grep<CR>', default_opts)
   end,
 }
 

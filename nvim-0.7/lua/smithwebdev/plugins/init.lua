@@ -14,87 +14,102 @@ local packer = require 'packer'
 packer.init {
   package_root = string.format('%s/site/pack', vim.fn.stdpath('data')),
   compile_path = string.format('%s/site/plugin/packer_compiled.lua', vim.fn.stdpath('data')),
-  max_jobs = 250,
+  max_jobs = 30,
 }
 
 local plugins = {
 
-  -- Aesthetics --
-  'animate', -- https://github.com/camspiers/animate.vim
-  'colorbuddy', -- https://github.com/tjdevries/colorbuddy.nvim
+  -- =Aesthetics= --
+  'animate',                -- https://github.com/camspiers/animate.vim
+  'colorbuddy',             -- https://github.com/tjdevries/colorbuddy.nvim
   'colorscheme',
-  'indent_blankline', -- https://github.com/lukas-reineke/indent-blankline.nvim
-  'lush', -- https://github.com/rktjmp/lush.nvim
-  'statusline', -- https://github.com/beauwilliams/statusline.lua
-  'transparent', -- https://github.com/xiyaowong/nvim-transparent
-  'vim-smoothie', -- https://github.com/psliwka/vim-smoothie
-  --'vim-tpipeline', -- https://github.com/vimpostor/vim-tpipeline (For Use with Neovim 0.8)
+  'indent_blankline',       -- https://github.com/lukas-reineke/indent-blankline.nvim
+  'lush',                   -- https://github.com/rktjmp/lush.nvim
+  'statusline',             -- https://github.com/beauwilliams/statusline.lua
+  'transparent',            -- https://github.com/xiyaowong/nvim-transparent
+  'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie
+  --'vim-tpipeline',        -- https://github.com/vimpostor/vim-tpipeline (For Use with Neovim 0.8)
 
-  -- Completion & Snippets --
-  'luasnip', -- https://github.com/L3MON4D3/LuaSnip
-  'cmp', -- https://github.com/hrsh7th/nvim-cmp
-  'cheat_sheet', --https://github.com/Djancyp/cheat-sheet
-  'nvim-ufo', -- https://github.com/kevinhwang91/nvim-ufo
+  -- Completion & unippets --
+  'luasnip',                -- https://github.com/L3MON4D3/LuaSnip
+  'cmp',                    -- https://github.com/hrsh7th/nvim-cmp
+  'cheat_sheet',            -- https://github.com/Djancyp/cheat-sheet
+  'nvim-ufo',               -- https://github.com/kevinhwang91/nvim-ufo
 
   -- Editing --
-  'autopairs', -- https://github.com/windwp/nvim-autopairs
-  'color-converter', -- https://github.com/NTBBloodbath/color-converter.nvim
-  'colorizer', -- https://github.com/norcalli/nvim-colorizer.lua
-  'comment', -- https://github.com/numToStr/Comment.nvim
-  'easyalign', -- https://github.com/junegunn/vim-easy-align
-  'emmet', -- https://github.com/mattn/emmet-vim
-  'hlslens', -- https://github.com/kevinhwang91/nvim-hlslens
-  'leap', -- https://github.com/ggandor/leap.nvim
-  'marks', -- https://github.com/chentau/marks.nvim
-  'peekabo', -- https://github.com/junegunn/vim-peekaboo
-  --'splitjoin', -- https://github.com/AndrewRadev/splitjoin.vim
-  'surround', -- https://github.com/tpope/vim-surround
-  'treesurfer', -- https://github.com/ziontee113/syntax-tree-surfer
-  'vim-exchange', -- https://github.com/tommcdo/vim-exchange
-  'yode', -- https://github.com/hoschi/yode-nvim
-  'zen', -- https://github.com/folke/zen-mode.nvim
+  'autopairs',              -- https://github.com/windwp/nvim-autopairs
+  'bqf',                    -- https://github.com/kevinhwang91/nvim-bqf
+  'color-converter',        -- https://github.com/NTBBloodbath/color-converter.nvim
+  'colorizer',              -- https://github.com/norcalli/nvim-colorizer.lua
+  'color-picker',           -- https://github.com/ziontee113/color-picker.nvim
+  'comment',                -- https://github.com/numToStr/Comment.nvim
+  'easyalign',              -- https://github.com/junegunn/vim-easy-align
+  'emmet',                  -- https://github.com/mattn/emmet-vim
+  'fold-preview', -- https://github.com/anuvyklack/fold-preview.nvim
+  'hlslens',                -- https://github.com/kevinhwang91/nvim-hlslens
+  'leap',                   -- https://github.com/ggandor/leap.nvim
+  'marks',                  -- https://github.com/chentau/marks.nvim
+  'peekabo',                -- https://github.com/junegunn/vim-peekaboo
+  --'splitjoin',            -- https://github.com/AndrewRadev/splitjoin.vim
+  'surround',               -- https://github.com/tpope/vim-surround
+  'targets',                -- https://github.com/wellle/targets.vim
+  'traces',                 -- https://github.com/markonm/traces.vim
+  'treesurfer',             -- https://github.com/ziontee113/syntax-tree-surfer
+  'vim-exchange',           -- https://github.com/tommcdo/vim-exchange
+  'visual-multi',           -- https://github.com/mg979/vim-visual-multi
+  'yode',                   -- https://github.com/hoschi/yode-nvim
+  'zen',                    -- https://github.com/folke/zen-mode.nvim
 
   -- Filetype --
-  -- 'haml', -- https://github.com/tpope/vim-haml
-  'markdown_preview', -- https://github.com/iamcco/markdown-preview.nvim
-  'rails', -- https://github.com/tpope/vim-rails
-  -- 'sniprun', -- https://github.com/michaelb/sniprun
+  'dash',                   -- https://github.com/mrjones2014/dash.nvim  **
+  -- 'haml',                -- https://github.com/tpope/vim-haml
+  'markdown_preview',       -- https://github.com/iamcco/markdown-preview.nvim
+  'rails',                  -- https://github.com/tpope/vim-rails
+  'sniprun',                -- https://github.com/michaelb/sniprun
   --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
 
   -- Formatting--
-  'prettier', -- https://github.com/MunifTanjim/prettier.nvim
+  'eslint', -- https://github.com/MunifTanjim/eslint.nvim
+  'prettier',               -- https://github.com/MunifTanjim/prettier.nvim
 
   -- Fuzzy / File Finder --
-  --'aerial',              -- https://github.com/stevearc/aerial.nvim
-  'harpoon', -- https://github.com/ThePrimeagen/harpoon
-  'lir', -- https://github.com/tamago324/lir.nvim
-  'telescope', -- https://github.com/nvim-telescope/telescope.nvim
+  --'aerial',               -- https://github.com/stevearc/aerial.nvim
+  'harpoon',                -- https://github.com/ThePrimeagen/harpoon
+  'lir',                    -- https://github.com/tamago324/lir.nvim
+  'telescope',              -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git --
-  'gh', -- https://github.com/ldelossa/gh.nvim
-  'lazygit', -- https://github.com/kdheepak/lazygit.nvim
+  'blamer',                 -- https://github.com/APZelos/blamer.nvim
+  'gh',                     -- https://github.com/ldelossa/gh.nvim
+  'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
 
   -- Keybinds --
-  'whichkey', -- https://github.com/folke/which-key.nvim
+  'hydra',                  -- https://github.com/anuvyklack/hydra.nvim
+  'whichkey',               -- https://github.com/folke/which-key.nvim
 
   -- LSP--
-  'lspconfig',
+  --'lspconfig',
   'lspsaga',
-  --'navigator',            -- https://github.com/ray-x/navigator.lua
+  'lsp_lines',              -- https://github.com/Maan2003/lsp_lines.nvim
+  'mason', -- https://github.com/williamboman/mason.nvim
+  'trouble', -- https://github.com/folke/trouble.nvim 'navigator',            -- https://github.com/ray-x/navigator.lua
 
   -- Project Organization --
-  'orgmode', --https://github.com/nvim-orgmode/orgmode
-  'vim-mkdir', -- https://github.com/pbrisbin/vim-mkdir
-  'vim-wakatime', -- https://github.com/wakatime/vim-wakatime
-  'vimwiki', -- https://github.com/vimwiki/vimwiki
+  'buffertag', -- https://github.com/ldelossa/buffertag
+  'gutentags',              -- https://github.com/ludovicchabant/vim-gutentags
+  --'orgmode',              -- https://github.com/nvim-orgmode/orgmode
+  --'vim-mkdir',            -- https://github.com/pbrisbin/vim-mkdir
+  'vim-wakatime',           -- https://github.com/wakatime/vim-wakatime
+  'vimwiki',                -- https://github.com/vimwiki/vimwiki
 
   -- Testing --
-  'coverage', --https://github.com/andythigpen/nvim-coverage
-  'vim-ultest', -- https://github.com/rcarriga/vim-ultest
-  'neotest', -- https://github.com/rcarriga/neotest
+  --'coverage',             -- https://github.com/andythigpen/nvim-coverage
+  --'dispatch',             -- https://github.com/tpope/vim-dispatch
+  'vim-ultest',             -- https://github.com/rcarriga/vim-ultest
+  'neotest',                -- https://github.com/rcarriga/neotest
 
   -- Treesitter/ Syntax Highlighting --
-  'treesitter', -- https://github.com/nvim-treesitter/nvim-treesitter
+  'treesitter',             -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)

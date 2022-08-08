@@ -1,7 +1,7 @@
 local M = {}
 
 M.plugin = {
-  'ggandor/leap.nvim',
+  'markonm/traces.vim', -- https://github.com/markonm/traces.vim
 
   config = function()
 

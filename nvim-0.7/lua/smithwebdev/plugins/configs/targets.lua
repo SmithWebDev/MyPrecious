@@ -1,7 +1,7 @@
 local M = {}
 
 M.plugin = {
-  'ggandor/leap.nvim',
+  'wellle/targets.vim', -- https://github.com/wellle/targets.vim
 
   config = function()
 

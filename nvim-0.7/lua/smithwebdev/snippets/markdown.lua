@@ -19,8 +19,6 @@ return {
     dscr = 'Description for Pull Request'
   },
     fmt([[
----@diagnostic disable-next-line: undefined-global
----@diagnostic disable-next-line: undefined-global
  [ {} PT-{}] {}
 
  ## Objective

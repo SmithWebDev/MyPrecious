@@ -30,7 +30,7 @@ local plugins = {
   'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie
   --'vim-tpipeline',        -- https://github.com/vimpostor/vim-tpipeline (For Use with Neovim 0.8)
 
-  -- Completion & unippets --
+  -- Completion & Snippets --
   'luasnip',                -- https://github.com/L3MON4D3/LuaSnip
   'cmp',                    -- https://github.com/hrsh7th/nvim-cmp
   'cheat_sheet',            -- https://github.com/Djancyp/cheat-sheet
@@ -53,6 +53,7 @@ local plugins = {
   --'splitjoin',            -- https://github.com/AndrewRadev/splitjoin.vim
   'surround',               -- https://github.com/tpope/vim-surround
   'targets',                -- https://github.com/wellle/targets.vim
+  'toggleterm', -- https://github.com/akinsho/toggleterm.nvim
   'traces',                 -- https://github.com/markonm/traces.vim
   'treesurfer',             -- https://github.com/ziontee113/syntax-tree-surfer
   'vim-exchange',           -- https://github.com/tommcdo/vim-exchange

@@ -83,6 +83,7 @@ local plugins = {
   'blamer',                 -- https://github.com/APZelos/blamer.nvim
   'gh',                     -- https://github.com/ldelossa/gh.nvim
   'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
+  'octo', -- https://github.com/pwntester/octo.nvim
 
   -- Keybinds --
   'hydra',                  -- https://github.com/anuvyklack/hydra.nvim

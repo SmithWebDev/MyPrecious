@@ -56,10 +56,12 @@ local plugins = {
   'toggleterm', -- https://github.com/akinsho/toggleterm.nvim
   'traces',                 -- https://github.com/markonm/traces.vim
   'treesurfer',             -- https://github.com/ziontee113/syntax-tree-surfer
+  'truezen', --     'Pocco81/true-zen.nvim', -- https://github.com/Pocco81/true-zen.nvim
+
   'vim-exchange',           -- https://github.com/tommcdo/vim-exchange
   'visual-multi',           -- https://github.com/mg979/vim-visual-multi
   'yode',                   -- https://github.com/hoschi/yode-nvim
-  'zen',                    -- https://github.com/folke/zen-mode.nvim
+  --'zen',                    -- https://github.com/folke/zen-mode.nvim
 
   -- Filetype --
   'dash',                   -- https://github.com/mrjones2014/dash.nvim  **

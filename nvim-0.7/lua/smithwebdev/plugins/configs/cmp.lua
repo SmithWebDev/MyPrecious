@@ -5,30 +5,31 @@ M.plugin = {
 
   requires = {
     -- CMP Addons --
-    'hrsh7th/cmp-buffer',                  -- https://github.com/hrsh7th/cmp-buffer
-    'hrsh7th/cmp-cmdline',                 -- https://github.com/hrsh7th/cmp-cmdline
-    'octaltree/cmp-look',                  -- https://github.com/octaltree/cmp-look
-    'saadparwaiz1/cmp_luasnip',            -- https://github.com/saadparwaiz1/cmp_luasnip
-    'hrsh7th/cmp-nvim-lsp',                -- https://github.com/hrsh7th/cmp-nvim-lsp
-    'hrsh7th/cmp-nvim-lsp-signature-help', -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
-    'hrsh7th/cmp-nvim-lua',                -- https://github.com/hrsh7th/cmp-nvim-lua
-    'quangnguyen30192/cmp-nvim-tags',      -- https://github.com/quangnguyen30192/cmp-nvim-tags
-    'hrsh7th/cmp-path',                    -- https://github.com/hrsh7th/cmp-path
-    'ray-x/cmp-treesitter',                -- https://github.com/ray-x/cmp-treesitter
-    'hrsh7th/cmp-emoji',                   -- https://github.com/hrsh7th/cmp-emoji
-    'nvim-orgmode/orgmode',                -- https://github.com/nvim-orgmode/orgmode
-    'jc-doyle/cmp-pandoc-references',      -- https://github.com/jc-doyle/cmp-pandoc-references
-    'aspeddro/cmp-pandoc.nvim',            -- https://github.com/aspeddro/cmp-pandoc.nvim
+    'hrsh7th/cmp-buffer'                  , -- https://github.com/hrsh7th/cmp-buffer
+    'hrsh7th/cmp-cmdline'                 , -- https://github.com/hrsh7th/cmp-cmdline
+    'octaltree/cmp-look'                  , -- https://github.com/octaltree/cmp-look
+    'saadparwaiz1/cmp_luasnip'            , -- https://github.com/saadparwaiz1/cmp_luasnip
+    'hrsh7th/cmp-nvim-lsp'                , -- https://github.com/hrsh7th/cmp-nvim-lsp
+    'hrsh7th/cmp-nvim-lsp-signature-help' , -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
+    'hrsh7th/cmp-nvim-lua'                , -- https://github.com/hrsh7th/cmp-nvim-lua
+    'quangnguyen30192/cmp-nvim-tags'      , -- https://github.com/quangnguyen30192/cmp-nvim-tags
+    'hrsh7th/cmp-path'                    , -- https://github.com/hrsh7th/cmp-path
+    'ray-x/cmp-treesitter'                , -- https://github.com/ray-x/cmp-treesitter
+    'hrsh7th/cmp-emoji'                   , -- https://github.com/hrsh7th/cmp-emoji
+    'nvim-orgmode/orgmode'                , -- https://github.com/nvim-orgmode/orgmode
+    'jc-doyle/cmp-pandoc-references'      , -- https://github.com/jc-doyle/cmp-pandoc-references
+    'aspeddro/cmp-pandoc.nvim'            , -- https://github.com/aspeddro/cmp-pandoc.nvim
+    'jcha0713/cmp-tw2css'                 , -- https://github.com/jcha0713/cmp-tw2css
 
     -- Additional
-    'onsails/lspkind-nvim',                -- https://github.com/onsails/lspkind-nvim},
-    'windwp/nvim-autopairs',               -- https://github.com/windwp/nvim-autopairs
-    'nvim-lua/plenary.nvim',
-    'jbyuki/nabla.nvim',
+    'onsails/lspkind-nvim'                , -- https://github.com/onsails/lspkind-nvim}               ,
+    'windwp/nvim-autopairs'               , -- https://github.com/windwp/nvim-autopairs
+    'nvim-lua/plenary.nvim'               ,
+    'jbyuki/nabla.nvim'                   ,
 
     -- Premade Snippet Plugins
-    'honza/vim-snippets',                  -- https://github.com/honza/vim-snippets
-    'rafamadriz/friendly-snippets',        -- https://github.com/rafamadriz/friendly-snippets
+    'honza/vim-snippets'                  , -- https://github.com/honza/vim-snippets
+    'rafamadriz/friendly-snippets'        , -- https://github.com/rafamadriz/friendly-snippets
   },
 
   config = function()
@@ -126,6 +127,7 @@ M.plugin = {
         {name = 'nvim_lsp'},
         {name = 'nvim_lua'},
         {name = 'luasnip'},
+        {name = 'cmp-tw2css'},
         {name = 'tags'},
         {name = 'path'},
         {name = 'emoji'},

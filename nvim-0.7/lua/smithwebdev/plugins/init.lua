@@ -25,6 +25,7 @@ local plugins = {
   'colorscheme',
   'indent_blankline',       -- https://github.com/lukas-reineke/indent-blankline.nvim
   'lush',                   -- https://github.com/rktjmp/lush.nvim
+  'oxocarbon', -- https://github.com/shaunsingh/oxocarbon.nvim
   'statusline',             -- https://github.com/beauwilliams/statusline.lua
   'transparent',            -- https://github.com/xiyaowong/nvim-transparent
   'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie

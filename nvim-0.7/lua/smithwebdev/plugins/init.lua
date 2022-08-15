@@ -27,6 +27,7 @@ local plugins = {
   'lush',                   -- https://github.com/rktjmp/lush.nvim
   'oxocarbon', -- https://github.com/shaunsingh/oxocarbon.nvim
   'statusline',             -- https://github.com/beauwilliams/statusline.lua
+  'tabular', -- https://github.com/godlygeek/tabular
   'transparent',            -- https://github.com/xiyaowong/nvim-transparent
   'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie
   --'vim-tpipeline',        -- https://github.com/vimpostor/vim-tpipeline (For Use with Neovim 0.8)

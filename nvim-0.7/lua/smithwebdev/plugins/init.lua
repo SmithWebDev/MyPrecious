@@ -30,7 +30,6 @@ local plugins = {
   'tabular', -- https://github.com/godlygeek/tabular
   'transparent',            -- https://github.com/xiyaowong/nvim-transparent
   'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie
-  --'vim-tpipeline',        -- https://github.com/vimpostor/vim-tpipeline (For Use with Neovim 0.8)
 
   -- Completion & Snippets --
   'luasnip',                -- https://github.com/L3MON4D3/LuaSnip
@@ -52,7 +51,7 @@ local plugins = {
   'leap',                   -- https://github.com/ggandor/leap.nvim
   'marks',                  -- https://github.com/chentau/marks.nvim
   'peekabo',                -- https://github.com/junegunn/vim-peekaboo
-  --'splitjoin',            -- https://github.com/AndrewRadev/splitjoin.vim
+  'splitjoin',            -- https://github.com/AndrewRadev/splitjoin.vim
   'surround',               -- https://github.com/tpope/vim-surround
   'targets',                -- https://github.com/wellle/targets.vim
   'toggleterm', -- https://github.com/akinsho/toggleterm.nvim
@@ -63,11 +62,10 @@ local plugins = {
   'vim-exchange',           -- https://github.com/tommcdo/vim-exchange
   'visual-multi',           -- https://github.com/mg979/vim-visual-multi
   'yode',                   -- https://github.com/hoschi/yode-nvim
-  --'zen',                    -- https://github.com/folke/zen-mode.nvim
 
   -- Filetype --
   'dash',                   -- https://github.com/mrjones2014/dash.nvim  **
-  -- 'haml',                -- https://github.com/tpope/vim-haml
+  'haml',                -- https://github.com/tpope/vim-haml
   'markdown_preview',       -- https://github.com/iamcco/markdown-preview.nvim
   'rails',                  -- https://github.com/tpope/vim-rails
   'sniprun',                -- https://github.com/michaelb/sniprun

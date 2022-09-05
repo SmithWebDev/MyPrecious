@@ -19,7 +19,8 @@ return {
     dscr = 'Description for Pull Request'
   },
     fmt([[
- [ {} PT-{}] {}
+ {}/{}-{}
+ [{} PT-{}]  {}
 
  ## Objective
 
@@ -56,12 +57,15 @@ return {
    - [ ] Update Pivotal Ticket to let QA know it's on staging
      ]], {
       c(1, {
-        t('Bug'),
-        t('Chore'),
-        t('Feature'),
+        t('Bugs'),
+        t('Chores'),
+        t('Features'),
       }),
       i(2),
       i(3),
+      rep(1),
+      rep(2),
+      rep(3),
       i(4),
       i(5),
       c(6, {

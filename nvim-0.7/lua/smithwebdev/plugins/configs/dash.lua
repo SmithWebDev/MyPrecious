@@ -11,7 +11,6 @@ M.plugin = {
   config = function()
     local u = require 'smithwebdev.core.utils'
     local nnoremap = u.nnoremap
-    local vnoremap = u.vnoremap
 
     -- keybindings
     nnoremap('<leader>d',':Dash<Space>', { desc = 'Open Dash Query' })

@@ -18,12 +18,25 @@ M.plugin = {
   config = function()
     require("nvim-treesitter.configs").setup({
       ensure_installed = {
-        'lua',
-        'ruby',
-        'html',
         'css',
+        'dockerfile',
+        'elixir',
+        'gitignore',
+        'go',
+        'graphql',
+        'html',
         'javascript',
+        'json',
+        'json5',
+        'lua',
+        'markdown',
         'query',
+        'regex',
+        'ruby',
+        'scss',
+        'tsx',
+        'typescript',
+        'yaml'
       },
       sync_install = true,
       indent = {

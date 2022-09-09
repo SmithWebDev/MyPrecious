@@ -1,5 +1,4 @@
 local install_path = os.getenv('HOME') .. '/.local/share/nvim/site/pack/packer/start/packer.nvim'
-
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   local plugin_repo = 'https://github.com/wbthomason/packer.nvim'
   local cli = string.format('!git clone %s %s', plugin_repo, install_path)
@@ -25,9 +24,9 @@ local plugins = {
   'colorscheme',
   'indent_blankline',       -- https://github.com/lukas-reineke/indent-blankline.nvim
   'lush',                   -- https://github.com/rktjmp/lush.nvim
-  'oxocarbon', -- https://github.com/shaunsingh/oxocarbon.nvim
+  'oxocarbon',              -- https://github.com/shaunsingh/oxocarbon.nvim
   'statusline',             -- https://github.com/beauwilliams/statusline.lua
-  'tabular', -- https://github.com/godlygeek/tabular
+  'tabular',                -- https://github.com/godlygeek/tabular
   'transparent',            -- https://github.com/xiyaowong/nvim-transparent
   'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie
 
@@ -46,18 +45,18 @@ local plugins = {
   'comment',                -- https://github.com/numToStr/Comment.nvim
   'easyalign',              -- https://github.com/junegunn/vim-easy-align
   'emmet',                  -- https://github.com/mattn/emmet-vim
-  'fold-preview', -- https://github.com/anuvyklack/fold-preview.nvim
+  'fold-preview',           -- https://github.com/anuvyklack/fold-preview.nvim
   'hlslens',                -- https://github.com/kevinhwang91/nvim-hlslens
   'leap',                   -- https://github.com/ggandor/leap.nvim
   'marks',                  -- https://github.com/chentau/marks.nvim
   'peekabo',                -- https://github.com/junegunn/vim-peekaboo
-  'splitjoin',            -- https://github.com/AndrewRadev/splitjoin.vim
+  'splitjoin',              -- https://github.com/AndrewRadev/splitjoin.vim
   'surround',               -- https://github.com/tpope/vim-surround
   'targets',                -- https://github.com/wellle/targets.vim
-  'toggleterm', -- https://github.com/akinsho/toggleterm.nvim
+  'toggleterm',             -- https://github.com/akinsho/toggleterm.nvim
   'traces',                 -- https://github.com/markonm/traces.vim
   'treesurfer',             -- https://github.com/ziontee113/syntax-tree-surfer
-  'truezen', --     'Pocco81/true-zen.nvim', -- https://github.com/Pocco81/true-zen.nvim
+  'truezen',                -- https://github.com/Pocco81/true-zen.nvim
 
   'vim-exchange',           -- https://github.com/tommcdo/vim-exchange
   'visual-multi',           -- https://github.com/mg979/vim-visual-multi
@@ -65,14 +64,14 @@ local plugins = {
 
   -- Filetype --
   'dash',                   -- https://github.com/mrjones2014/dash.nvim  **
-  'haml',                -- https://github.com/tpope/vim-haml
+  'haml',                   -- https://github.com/tpope/vim-haml
   'markdown_preview',       -- https://github.com/iamcco/markdown-preview.nvim
   'rails',                  -- https://github.com/tpope/vim-rails
   'sniprun',                -- https://github.com/michaelb/sniprun
   --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
 
   -- Formatting--
-  'eslint', -- https://github.com/MunifTanjim/eslint.nvim
+  'eslint',                 -- https://github.com/MunifTanjim/eslint.nvim
   'prettier',               -- https://github.com/MunifTanjim/prettier.nvim
 
   -- Fuzzy / File Finder --
@@ -85,7 +84,7 @@ local plugins = {
   'blamer',                 -- https://github.com/APZelos/blamer.nvim
   'gh',                     -- https://github.com/ldelossa/gh.nvim
   'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
-  'octo', -- https://github.com/pwntester/octo.nvim
+  'octo',                   -- https://github.com/pwntester/octo.nvim
 
   -- Keybinds --
   'hydra',                  -- https://github.com/anuvyklack/hydra.nvim
@@ -95,11 +94,13 @@ local plugins = {
   --'lspconfig',
   'lspsaga',
   'lsp_lines',              -- https://github.com/Maan2003/lsp_lines.nvim
-  'mason', -- https://github.com/williamboman/mason.nvim
-  'trouble', -- https://github.com/folke/trouble.nvim 'navigator',            -- https://github.com/ray-x/navigator.lua
+  'mason',                  -- https://github.com/williamboman/mason.nvim
+  'navigator',              -- https://github.com/ray-x/navigator.lua
+  'trouble',                -- https://github.com/folke/trouble.nvim
+
 
   -- Project Organization --
-  'buffertag', -- https://github.com/ldelossa/buffertag
+  'buffertag',              -- https://github.com/ldelossa/buffertag
   'gutentags',              -- https://github.com/ludovicchabant/vim-gutentags
   --'orgmode',              -- https://github.com/nvim-orgmode/orgmode
   --'vim-mkdir',            -- https://github.com/pbrisbin/vim-mkdir

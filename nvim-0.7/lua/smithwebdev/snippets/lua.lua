@@ -5,17 +5,34 @@ local same = function(index)
 end
 
 return {
-  s(
-    'req',
-    fmt(
-      [[local {} = require "{}"]],
-      { f(function(import_name)
-      local parts = vim.split(import_name[1][1], ".", true)
-      return parts[#parts] or ''
-    end, { 1 }), i(1) }
-    )
+  s({
+    trig = 'test',
+    name = 'test',
+    dscr = 'something'
+  },
+    fmt([[example: {}, function: {}]], { i(1), same(1)})
   ),
-  --s("req", fmt([[local {} = require('{}')]], { i(1), rep(1)})),
+  --s(
+  --  'req',
+  --  fmt(
+  --    [[local {} = require "{}"]],
+  --    { f(function(import_name)
+  --    local parts = vim.split(import_name[1][1], ".", true)
+  --    return parts[#parts] or ''
+  --  end, { 1 }), i(1) }
+  --  )
+  --),
+  -- s({
+  --   trig = 'req',
+  --   name = 'require',
+  --   dscr = 'require'
+  -- },
+  --   fmt([[local {} = require "{}"]], {
+  --     f(function(import_name)
+  --       return ""
+  -- end), i(1)
+  --   })
+  -- ),
   s('key', fmt([[
   {}noremap('{}',  '{}', {{ desc = '{}'}})
   ]], {

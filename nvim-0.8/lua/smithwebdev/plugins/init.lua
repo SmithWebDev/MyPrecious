@@ -18,10 +18,13 @@ packer.init {
 
 local plugins = {
   -- Git --
-  'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
+  'lazygit',    -- https://github.com/kdheepak/lazygit.nvim
 
   -- Qol --
-  'easyalign',              -- https://github.com/junegunn/vim-easy-align
+  'easyalign',  -- https://github.com/junegunn/vim-easy-align
+
+  -- Treesitter/ Syntax Highlighting --
+  'treesitter', -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)

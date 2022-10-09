@@ -28,9 +28,13 @@ nnoremap('<leader>ls',           ':ls<CR>',                                     
 nnoremap('<leader>w',            ':w<CR>',                                                  { desc = 'Save shortcut' })
 nnoremap('<leader>W',            ':wall<CR>',                                               { desc = 'Save all shortcut' })
 
-nnoremap('<leader>nw',           ':set nowrap<CR>',                                         { desc = 'Set No Wrap' }) --  Create a toggle for this setting adjustment
-nnoremap('<leader>nr',           ':set nornu<CR>',                                          { desc = 'Set No Relative Number' }) --  Create a toggle for this setting adjustment
-nnoremap('<leader>nd',           ':lua vim.diagnostic.config({ virtual_text = false})<CR>', { desc = 'Removes inline virtual text on diagnostic errors'})  --  Create a toggle for this setting adjustment
+nnoremap('<leader>nw',           ':set nowrap<CR>',                                         { desc = 'Set No Wrap' })                                     --  Create a toggle for this setting adjustment
+nnoremap('<leader>nr',           ':set nornu<CR>',                                          { desc = 'Set No Relative Number' })                          --  Create a toggle for this setting adjustment
+nnoremap('<leader>nd',           ':lua vim.diagnostic.config({ virtual_text = false})<CR>', { desc = 'Removes inline virtual text on diagnostic errors'}) --  Create a toggle for this setting adjustment
+
+-- Change Colorscheme
+--------------------------------------------------------------------------------
+nnoremap('<',                    '',                                                        { desc = ''})
 
 -- Disable Highlights
 --------------------------------------------------------------------------------
@@ -50,17 +54,22 @@ nnoremap('<leader>J',            '<C-w>J',                                      
 nnoremap('<leader>K',            '<C-w>K',                                                  { desc = 'Move Pane Up' })
 nnoremap('<leader>L',            '<C-w>L',                                                  { desc = 'Move Pane Right' })
 
-
+-- Source file
+--------------------------------------------------------------------------------
+nnoremap('<leader><leader>so',   ':so %<CR>',                                               { desc = 'Source current file'})
 
 -- Tabs
 --------------------------------------------------------------------------------
 nnoremap('<leader>tc',           ':tabc<CR>',                                               { desc = 'Close Tab' })
 nnoremap('<leader>te',           ':tabedit %<CR>',                                          { desc = 'Edit File in Tab' })
 nnoremap('<leader>th',           ':tabfirst<CR>',                                           { desc = 'Goto Tab First' })
-nnoremap('<leader>tj',           ':tabn<Space>',                                            { desc = 'Goto Tab Next' })
-nnoremap('<leader>tk',           ':tabp<Space>',                                            { desc = 'Goto Tab Previous' })
+nnoremap('<leader>tJ',           ':tabn<Space>',                                            { desc = 'Goto Tab Next' })
+nnoremap('<leader>tj',           ':tabn<Space><CR>',                                        { desc = 'Goto Tab Next' })
+nnoremap('<leader>tK',           ':tabp<Space>',                                            { desc = 'Goto Tab Previous' })
+nnoremap('<leader>tk',           ':tabp<Space><CR>',                                        { desc = 'Goto Tab Previous' })
 nnoremap('<leader>tl',           ':tablast<CR>',                                            { desc = 'Goto Tab Last' })
-nnoremap('<leader>tn',           ':tabnew<Space>',                                          { desc = 'Goto Tab New' })
+nnoremap('<leader>tN',           ':tabnew<Space>',                                          { desc = 'Goto Tab New' })
+nnoremap('<leader>tn',           ':tabnew<Space><CR>',                                      { desc = 'Goto Tab New' })
 nnoremap('<leader>to',           '<C-w>T',                                                  { desc = 'Open File In New Tab' })
 nnoremap('<leader>t%',           '<C-w>T',                                                  { desc = 'Open File In New Tab' })
 nnoremap('<leader>tt',           ':tabs',                                                   { desc = 'Show Tab List' })

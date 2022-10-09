@@ -17,6 +17,9 @@ packer.init {
 }
 
 local plugins = {
+  -- Git --
+  'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
+
 }
 
 packer.startup(function(use)

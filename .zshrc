@@ -115,6 +115,10 @@ function grap() { git remote add origin $1 && git push -u origin master;}
 
 alias pgstart='brew services start postgresql'
 alias redisstart='brew services start redis'
+alias redisstop='brew services stop redis'
+alias startservices='brew services start redis && brew services start postgresql@14'
+alias stopservices='brew services stop redis && brew services stop postgresql@14'
+
 #     Python
 # ----------------------------
 alias python='python3'
@@ -256,7 +260,7 @@ alias wt='cd ../../mnt/c/Users/smith/Local\ Settings/Packages/Microsoft.WindowsT
 
 # VIM
 # ----------------------------
-alias v='nv.sh'
+alias v='nvim'
 alias nv='nvim'
 alias vim='$HOME/.config/nvim'
 alias vimc='$HOME/.config/nvim/lua/smithwebdev/plugins/config'

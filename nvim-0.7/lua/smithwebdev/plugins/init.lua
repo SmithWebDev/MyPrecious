@@ -1,6 +1,6 @@
 local install_path = os.getenv('HOME') .. '/.local/share/nvim/site/pack/packer/start/packer.nvim'
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  local plugin_repo = 'https://github.com/wbthomason/packer.nvim'
+  local plugin_repo = 'https://www.github.com/wbthomason/packer.nvim'
   local cli = string.format('!git clone %s %s', plugin_repo, install_path)
   vim.cmd(cli)
 end
@@ -55,9 +55,7 @@ local plugins = {
   'targets',                -- https://github.com/wellle/targets.vim
   'toggleterm',             -- https://github.com/akinsho/toggleterm.nvim
   'traces',                 -- https://github.com/markonm/traces.vim
-  'treesurfer',             -- https://github.com/ziontee113/syntax-tree-surfer
   'truezen',                -- https://github.com/Pocco81/true-zen.nvim
-
   'vim-exchange',           -- https://github.com/tommcdo/vim-exchange
   'visual-multi',           -- https://github.com/mg979/vim-visual-multi
   'yode',                   -- https://github.com/hoschi/yode-nvim
@@ -67,18 +65,20 @@ local plugins = {
   'haml',                   -- https://github.com/tpope/vim-haml
   'markdown_preview',       -- https://github.com/iamcco/markdown-preview.nvim
   'rails',                  -- https://github.com/tpope/vim-rails
+  'rails-extras',
   'sniprun',                -- https://github.com/michaelb/sniprun
-  --'vim-ruby-refactoring', -- https://github.com/ecomba/vim-ruby-refactoring
+  --'vim-ruby-refactoring',   -- https://github.com/ecomba/vim-ruby-refactoring
 
-  -- Formatting--
-  'eslint',                 -- https://github.com/MunifTanjim/eslint.nvim
-  'prettier',               -- https://github.com/MunifTanjim/prettier.nvim
+  ---- Formatting--
+  --'eslint',                 -- https://github.com/MunifTanjim/eslint.nvim
+  --'prettier',               -- https://github.com/MunifTanjim/prettier.nvim
 
   -- Fuzzy / File Finder --
   --'aerial',               -- https://github.com/stevearc/aerial.nvim
   'harpoon',                -- https://github.com/ThePrimeagen/harpoon
   'lir',                    -- https://github.com/tamago324/lir.nvim
   'telescope',              -- https://github.com/nvim-telescope/telescope.nvim
+  'telescope-extras',
 
   -- Git --
   'blamer',                 -- https://github.com/APZelos/blamer.nvim
@@ -95,8 +95,8 @@ local plugins = {
   'lspsaga',
   'lsp_lines',              -- https://github.com/Maan2003/lsp_lines.nvim
   'mason',                  -- https://github.com/williamboman/mason.nvim
-  'navigator',              -- https://github.com/ray-x/navigator.lua
-  'trouble',                -- https://github.com/folke/trouble.nvim
+  --'navigator',              -- https://github.com/ray-x/navigator.lua
+  --'trouble',                -- https://github.com/folke/trouble.nvim
 
 
   -- Project Organization --
@@ -115,6 +115,7 @@ local plugins = {
 
   -- Treesitter/ Syntax Highlighting --
   'treesitter',             -- https://github.com/nvim-treesitter/nvim-treesitter
+  'treesitter-extras'
 }
 
 packer.startup(function(use)

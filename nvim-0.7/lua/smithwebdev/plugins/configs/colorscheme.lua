@@ -19,6 +19,7 @@ M.plugin = {
   'ldelossa/vimdark', -- https://github.com/ldelossa/vimarkd
   'flazz/vim-colorschemes', --https://github.com/flazz/vim-colorschemes
   'rafi/awesome-vim-colorschemes', --https://github.com/rafi/awesome-vim-colorschemes
+  'numToStr/Sakura.nvim', --https://github.com/numToStr/Sakura.nvim
 
   requires = {
     'tjdevries/colorbuddy.nvim', -- https://github.com/tjdevries/colorbuddy.nvim

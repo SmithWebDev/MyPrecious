@@ -20,6 +20,8 @@ local plugins = {
   -- Git --
   'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
 
+  -- Qol --
+  'easyalign',              -- https://github.com/junegunn/vim-easy-align
 }
 
 packer.startup(function(use)

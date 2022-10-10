@@ -17,6 +17,9 @@ packer.init {
 }
 
 local plugins = {
+  -- Editing --
+  'surround',   -- https://github.com/tpope/vim-surround
+
   -- Git --
   'lazygit',    -- https://github.com/kdheepak/lazygit.nvim
 

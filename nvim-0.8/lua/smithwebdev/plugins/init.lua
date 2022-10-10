@@ -17,6 +17,9 @@ packer.init {
 }
 
 local plugins = {
+  -- Aesthetics --
+  'animate',    -- https://github.com/camspiers/animate.vim
+
   -- Editing --
   'surround',   -- https://github.com/tpope/vim-surround
 

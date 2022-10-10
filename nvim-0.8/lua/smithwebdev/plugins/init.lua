@@ -66,7 +66,8 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 local u = require 'smithwebdev.core.utils'
 local nnoremap = u.nnoremap
 
-nnoremap('<leader>PS' , ':PackerSync<cr>'    , { desc = "Packer Sync" })
-nnoremap('<leader>PC' , ':PackerCompile<cr>' , { desc = "Packer Compile" })
+nnoremap('<leader>PI', ':PackerInstall<cr>', { desc = "Packer Install" })
+nnoremap('<leader>PS', ':PackerSync<cr>',    { desc = "Packer Sync" })
+nnoremap('<leader>PC', ':PackerCompile<cr>', { desc = "Packer Compile" })
 
 print('Plugins connected...')

@@ -23,6 +23,9 @@ local plugins = {
   -- Editing --
   'surround',     -- https://github.com/tpope/vim-surround
 
+  -- Fuzzy / File Finder --
+  'telescope',    -- https://github.com/nvim-telescope/telescope.nvim
+
   -- Git --
   'blamer',       -- https://github.com/APZelos/blamer.nvim
   'lazygit',      -- https://github.com/kdheepak/lazygit.nvim
@@ -33,6 +36,7 @@ local plugins = {
 
   -- Testing --
   'neotest',      -- https://github.com/rcarriga/neotest
+
   -- Treesitter/ Syntax Highlighting --
   'treesitter',   -- https://github.com/nvim-treesitter/nvim-treesitter
 }

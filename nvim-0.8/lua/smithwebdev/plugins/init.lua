@@ -24,6 +24,7 @@ local plugins = {
   'surround',     -- https://github.com/tpope/vim-surround
 
   -- Git --
+  'blamer',       -- https://github.com/APZelos/blamer.nvim
   'lazygit',      -- https://github.com/kdheepak/lazygit.nvim
 
   -- Qol --

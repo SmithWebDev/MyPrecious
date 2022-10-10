@@ -31,6 +31,8 @@ local plugins = {
   'easyalign',    -- https://github.com/junegunn/vim-easy-align
   'vim-smoothie', -- https://github.com/psliwka/vim-smoothie
 
+  -- Testing --
+  'neotest',      -- https://github.com/rcarriga/neotest
   -- Treesitter/ Syntax Highlighting --
   'treesitter',   -- https://github.com/nvim-treesitter/nvim-treesitter
 }

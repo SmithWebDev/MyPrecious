@@ -18,19 +18,20 @@ packer.init {
 
 local plugins = {
   -- Aesthetics --
-  'animate',    -- https://github.com/camspiers/animate.vim
+  'animate',      -- https://github.com/camspiers/animate.vim
 
   -- Editing --
-  'surround',   -- https://github.com/tpope/vim-surround
+  'surround',     -- https://github.com/tpope/vim-surround
 
   -- Git --
-  'lazygit',    -- https://github.com/kdheepak/lazygit.nvim
+  'lazygit',      -- https://github.com/kdheepak/lazygit.nvim
 
   -- Qol --
-  'easyalign',  -- https://github.com/junegunn/vim-easy-align
+  'easyalign',    -- https://github.com/junegunn/vim-easy-align
+  'vim-smoothie', -- https://github.com/psliwka/vim-smoothie
 
   -- Treesitter/ Syntax Highlighting --
-  'treesitter', -- https://github.com/nvim-treesitter/nvim-treesitter
+  'treesitter',   -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)

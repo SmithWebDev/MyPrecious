@@ -20,6 +20,8 @@ local plugins = {
   -- Aesthetics --
   'animate',      -- https://github.com/camspiers/animate.vim
 
+  -- Completion & Snippets --
+  'luasnip',                -- https://github.com/L3MON4D3/LuaSnip
   -- Editing --
   'surround',     -- https://github.com/tpope/vim-surround
 

@@ -5,11 +5,11 @@ M.plugin = {
 
   requires = {
     'nvim-treesitter/nvim-treesitter',
-    {'vim-test/vim-test',               after = 'neotest'}, -- https://github.com/vim-test/vim-test
-    {'antoinemadec/FixCursorHold.nvim', after = 'neotest'}, -- https://github.com/antoinemadec/FixCursorHold.nvim
-    {'nvim-neotest/neotest-vim-test',   after = 'neotest'}, -- https://github.com/nvim-neotest/neotest-vim-test
-    {'olimorris/neotest-rspec',         after = 'neotest'}, -- https://github.com/olimorris/neotest-rspec
-    {'haydenmeade/neotest-jest',        after = 'neotest'}, -- https://github.com/haydenmeade/neotest-jest
+    'vim-test/vim-test',               -- https://github.com/vim-test/vim-test
+    'antoinemadec/FixCursorHold.nvim', -- https://github.com/antoinemadec/FixCursorHold.nvim
+    'nvim-neotest/neotest-vim-test',   -- https://github.com/nvim-neotest/neotest-vim-test
+    'olimorris/neotest-rspec',         -- https://github.com/olimorris/neotest-rspec
+    'haydenmeade/neotest-jest',        -- https://github.com/haydenmeade/neotest-jest
   },
 
   config = function()

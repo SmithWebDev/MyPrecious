@@ -101,7 +101,8 @@ M.plugin = {
     end
 
     local default_opts = { noremap = true, silent = true }
-    vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope file_browser', default_opts)
+    vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers', default_opts)
+    vim.api.nvim_set_keymap('n', '<leader>fB', ':Telescope file_browser', default_opts)
     vim.api.nvim_set_keymap('n', '<leader>fc', [[<Cmd>lua TelescopeFindConfigFiles()<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>ff', [[<Cmd>lua TelescopeFindFiles()<CR>]], default_opts)
     vim.api.nvim_set_keymap('n', '<leader>fg', [[<Cmd>lua TelescopeLiveGrep()<CR>]], default_opts)

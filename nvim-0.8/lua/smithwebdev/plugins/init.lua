@@ -19,8 +19,8 @@ packer.init {
 local plugins = {
   -- Aesthetics --
   'animate',          -- https://github.com/camspiers/animate.vim
+  'colorschemes',
 
-  -- Colorschemes --
   -- Completion & Snippets --
   'luasnip',          -- https://github.com/L3MON4D3/LuaSnip
   'cmp',              -- https://github.com/hrsh7th/nvim-cmp

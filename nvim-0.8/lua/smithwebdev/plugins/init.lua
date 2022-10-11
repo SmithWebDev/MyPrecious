@@ -26,6 +26,7 @@ local plugins = {
   'cmp',              -- https://github.com/hrsh7th/nvim-cmp
 
   -- Editing --
+  'autopairs',        -- https://github.com/windwp/nvim-autopairs
   'surround',         -- https://github.com/tpope/vim-surround
 
   -- Fuzzy / File Finder --

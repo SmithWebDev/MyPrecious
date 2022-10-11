@@ -27,6 +27,7 @@ local plugins = {
 
   -- Editing --
   'autopairs',        -- https://github.com/windwp/nvim-autopairs
+  'emmet',            -- https://github.com/mattn/emmet-vim
   'surround',         -- https://github.com/tpope/vim-surround
 
   -- Fuzzy / File Finder --

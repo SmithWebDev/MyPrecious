@@ -18,33 +18,35 @@ packer.init {
 
 local plugins = {
   -- Aesthetics --
-  'animate',      -- https://github.com/camspiers/animate.vim
+  'animate',          -- https://github.com/camspiers/animate.vim
 
+  -- Colorschemes --
   -- Completion & Snippets --
-  'luasnip',      -- https://github.com/L3MON4D3/LuaSnip
-  'cmp',          -- https://github.com/hrsh7th/nvim-cmp
+  'luasnip',          -- https://github.com/L3MON4D3/LuaSnip
+  'cmp',              -- https://github.com/hrsh7th/nvim-cmp
 
   -- Editing --
-  'surround',     -- https://github.com/tpope/vim-surround
+  'surround',         -- https://github.com/tpope/vim-surround
 
   -- Fuzzy / File Finder --
-  'harpoon',      -- https://github.com/ThePrimeagen/harpoon
-  'lir',          -- https://github.com/tamago324/lir.nvim
-  'telescope',    -- https://github.com/nvim-telescope/telescope.nvim
+  'harpoon',          -- https://github.com/ThePrimeagen/harpoon
+  'lir',              -- https://github.com/tamago324/lir.nvim
+  'telescope',        -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git --
-  'blamer',       -- https://github.com/APZelos/blamer.nvim
-  'lazygit',      -- https://github.com/kdheepak/lazygit.nvim
+  'blamer',           -- https://github.com/APZelos/blamer.nvim
+  'lazygit',          -- https://github.com/kdheepak/lazygit.nvim
 
   -- Qol --
-  'easyalign',    -- https://github.com/junegunn/vim-easy-align
-  'vim-smoothie', -- https://github.com/psliwka/vim-smoothie
+  'easyalign',        -- https://github.com/junegunn/vim-easy-align
+  'indent_blankline', -- https://github.com/lukas-reineke/indent-blankline.nvim
+  'vim-smoothie',     -- https://github.com/psliwka/vim-smoothie
 
   -- Testing --
-  'neotest',      -- https://github.com/rcarriga/neotest
+  'neotest',          -- https://github.com/rcarriga/neotest
 
   -- Treesitter/ Syntax Highlighting --
-  'treesitter',   -- https://github.com/nvim-treesitter/nvim-treesitter
+  'treesitter',       -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)

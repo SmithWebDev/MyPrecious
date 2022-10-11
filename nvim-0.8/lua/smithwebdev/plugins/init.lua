@@ -29,6 +29,7 @@ local plugins = {
 
   -- Fuzzy / File Finder --
   'lir',                    -- https://github.com/tamago324/lir.nvim
+  'harpoon',      -- https://github.com/ThePrimeagen/harpoon
   'telescope',    -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git --

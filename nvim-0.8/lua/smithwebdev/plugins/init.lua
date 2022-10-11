@@ -21,15 +21,15 @@ local plugins = {
   'animate',      -- https://github.com/camspiers/animate.vim
 
   -- Completion & Snippets --
-  'luasnip',                -- https://github.com/L3MON4D3/LuaSnip
-  'cmp',                    -- https://github.com/hrsh7th/nvim-cmp
+  'luasnip',      -- https://github.com/L3MON4D3/LuaSnip
+  'cmp',          -- https://github.com/hrsh7th/nvim-cmp
 
   -- Editing --
   'surround',     -- https://github.com/tpope/vim-surround
 
   -- Fuzzy / File Finder --
-  'lir',                    -- https://github.com/tamago324/lir.nvim
   'harpoon',      -- https://github.com/ThePrimeagen/harpoon
+  'lir',          -- https://github.com/tamago324/lir.nvim
   'telescope',    -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git --

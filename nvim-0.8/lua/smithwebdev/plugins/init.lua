@@ -28,6 +28,7 @@ local plugins = {
   'surround',     -- https://github.com/tpope/vim-surround
 
   -- Fuzzy / File Finder --
+  'lir',                    -- https://github.com/tamago324/lir.nvim
   'telescope',    -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git --

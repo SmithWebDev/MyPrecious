@@ -42,6 +42,7 @@ local plugins = {
   -- Qol --
   'easyalign',        -- https://github.com/junegunn/vim-easy-align
   'indent_blankline', -- https://github.com/lukas-reineke/indent-blankline.nvim
+  'markid',           -- https://github.com/David-Kunz/markid
   'vim-smoothie',     -- https://github.com/psliwka/vim-smoothie
 
   -- Testing --

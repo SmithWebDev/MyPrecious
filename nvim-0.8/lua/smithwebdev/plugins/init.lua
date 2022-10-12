@@ -30,6 +30,9 @@ local plugins = {
   'emmet',            -- https://github.com/mattn/emmet-vim
   'surround',         -- https://github.com/tpope/vim-surround
 
+  -- Filetype --
+  'markdown_preview', -- https://github.com/iamcco/markdown-preview.nvim
+
   -- Fuzzy / File Finder --
   'harpoon',          -- https://github.com/ThePrimeagen/harpoon
   'lir',              -- https://github.com/tamago324/lir.nvim

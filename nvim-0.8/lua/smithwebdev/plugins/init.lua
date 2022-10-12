@@ -44,6 +44,7 @@ local plugins = {
   'indent_blankline', -- https://github.com/lukas-reineke/indent-blankline.nvim
   'markid',           -- https://github.com/David-Kunz/markid
   'marks',            -- https://github.com/chentau/marks.nvim
+  'peekabo',          -- https://github.com/junegunn/vim-peekaboo
   'vim-smoothie',     -- https://github.com/psliwka/vim-smoothie
 
   -- Testing --

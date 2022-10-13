@@ -33,7 +33,7 @@ local plugins = {
   -- Filetype --
   'markdown_preview',   -- https://github.com/iamcco/markdown-preview.nvim
   'rails',              -- https://github.com/tpope/vim-rails
-  'typescript-nvim',    -- https://github.com/jose-elias-alvarez/typescript.nvimhttps://github.com/jose-elias-alvarez/typescript.nvim
+  'typescript-nvim',    -- https://github.com/jose-elias-alvarez/typescript.nvim
 
   -- Fuzzy / File Finder --
   'harpoon',            -- https://github.com/ThePrimeagen/harpoon
@@ -51,6 +51,9 @@ local plugins = {
   'marks',              -- https://github.com/chentau/marks.nvim
   'peekabo',            -- https://github.com/junegunn/vim-peekaboo
   'vim-smoothie',       -- https://github.com/psliwka/vim-smoothie
+
+  -- Project Organization --
+  'vimwiki',            -- https://github.com/vimwiki/vimwiki
 
   -- Testing --
   'neotest',            -- https://github.com/rcarriga/neotest

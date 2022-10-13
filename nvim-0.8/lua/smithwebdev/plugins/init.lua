@@ -55,6 +55,7 @@ local plugins = {
   'neotest',            -- https://github.com/rcarriga/neotest
 
   -- Treesitter/ Syntax Highlighting --
+  'syntax-tree-surfer', -- https://github.com/ziontee113/syntax-tree-surfer
   'treesitter',         -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 

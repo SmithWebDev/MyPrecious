@@ -19,39 +19,39 @@ packer.init {
 local plugins = {
 
   -- =Aesthetics= --
-  'animate',                -- https://github.com/camspiers/animate.vim
-  'colorbuddy',             -- https://github.com/tjdevries/colorbuddy.nvim
-  'colorscheme',
-  'indent_blankline',       -- https://github.com/lukas-reineke/indent-blankline.nvim
+  --'animate',                -- https://github.com/camspiers/animate.vim
+  --'colorbuddy',             -- https://github.com/tjdevries/colorbuddy.nvim
+  --'colorscheme',
+  --'indent_blankline',       -- https://github.com/lukas-reineke/indent-blankline.nvim
   'lush',                   -- https://github.com/rktjmp/lush.nvim
-  'oxocarbon',              -- https://github.com/shaunsingh/oxocarbon.nvim
+  --'oxocarbon',              -- https://github.com/shaunsingh/oxocarbon.nvim
   'statusline',             -- https://github.com/beauwilliams/statusline.lua
   'tabular',                -- https://github.com/godlygeek/tabular
   'transparent',            -- https://github.com/xiyaowong/nvim-transparent
-  'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie
+  --'vim-smoothie',           -- https://github.com/psliwka/vim-smoothie
 
   -- Completion & Snippets --
-  'luasnip',                -- https://github.com/L3MON4D3/LuaSnip
-  'cmp',                    -- https://github.com/hrsh7th/nvim-cmp
+  --'luasnip',                -- https://github.com/L3MON4D3/LuaSnip
+  --'cmp',                    -- https://github.com/hrsh7th/nvim-cmp
   'cheat_sheet',            -- https://github.com/Djancyp/cheat-sheet
   'nvim-ufo',               -- https://github.com/kevinhwang91/nvim-ufo
 
   -- Editing --
-  'autopairs',              -- https://github.com/windwp/nvim-autopairs
+  --'autopairs',              -- https://github.com/windwp/nvim-autopairs
   'bqf',                    -- https://github.com/kevinhwang91/nvim-bqf
   'color-converter',        -- https://github.com/NTBBloodbath/color-converter.nvim
   'colorizer',              -- https://github.com/norcalli/nvim-colorizer.lua
   'color-picker',           -- https://github.com/ziontee113/color-picker.nvim
   'comment',                -- https://github.com/numToStr/Comment.nvim
-  'easyalign',              -- https://github.com/junegunn/vim-easy-align
-  'emmet',                  -- https://github.com/mattn/emmet-vim
+  --'easyalign',              -- https://github.com/junegunn/vim-easy-align
+  --'emmet',                  -- https://github.com/mattn/emmet-vim
   'fold-preview',           -- https://github.com/anuvyklack/fold-preview.nvim
   'hlslens',                -- https://github.com/kevinhwang91/nvim-hlslens
   'leap',                   -- https://github.com/ggandor/leap.nvim
-  'marks',                  -- https://github.com/chentau/marks.nvim
-  'peekabo',                -- https://github.com/junegunn/vim-peekaboo
+  --'marks',                  -- https://github.com/chentau/marks.nvim
+  --'peekabo',                -- https://github.com/junegunn/vim-peekaboo
   'splitjoin',              -- https://github.com/AndrewRadev/splitjoin.vim
-  'surround',               -- https://github.com/tpope/vim-surround
+  --'surround',               -- https://github.com/tpope/vim-surround
   'targets',                -- https://github.com/wellle/targets.vim
   'toggleterm',             -- https://github.com/akinsho/toggleterm.nvim
   'traces',                 -- https://github.com/markonm/traces.vim
@@ -63,10 +63,10 @@ local plugins = {
   -- Filetype --
   'dash',                   -- https://github.com/mrjones2014/dash.nvim  **
   'haml',                   -- https://github.com/tpope/vim-haml
-  'markdown_preview',       -- https://github.com/iamcco/markdown-preview.nvim
-  'rails',                  -- https://github.com/tpope/vim-rails
-  'rails-extras',
-  'sniprun',                -- https://github.com/michaelb/sniprun
+  --'markdown_preview',       -- https://github.com/iamcco/markdown-preview.nvim
+  --'rails',                  -- https://github.com/tpope/vim-rails
+  --'rails-extras',
+  --'sniprun',                -- https://github.com/michaelb/sniprun
   --'vim-ruby-refactoring',   -- https://github.com/ecomba/vim-ruby-refactoring
 
   ---- Formatting--
@@ -75,25 +75,25 @@ local plugins = {
 
   -- Fuzzy / File Finder --
   --'aerial',               -- https://github.com/stevearc/aerial.nvim
-  'harpoon',                -- https://github.com/ThePrimeagen/harpoon
-  'lir',                    -- https://github.com/tamago324/lir.nvim
-  'telescope',              -- https://github.com/nvim-telescope/telescope.nvim
-  'telescope-extras',
+  --'harpoon',                -- https://github.com/ThePrimeagen/harpoon
+  --'lir',                    -- https://github.com/tamago324/lir.nvim
+  --'telescope',              -- https://github.com/nvim-telescope/telescope.nvim
+  --'telescope-extras',
 
   -- Git --
-  'blamer',                 -- https://github.com/APZelos/blamer.nvim
+  --'blamer',                 -- https://github.com/APZelos/blamer.nvim
   'gh',                     -- https://github.com/ldelossa/gh.nvim
-  'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
+  --'lazygit',                -- https://github.com/kdheepak/lazygit.nvim
   'octo',                   -- https://github.com/pwntester/octo.nvim
 
   -- Keybinds --
   'hydra',                  -- https://github.com/anuvyklack/hydra.nvim
-  'whichkey',               -- https://github.com/folke/which-key.nvim
+  --'whichkey',               -- https://github.com/folke/which-key.nvim
 
   -- LSP--
   --'lspconfig',
-  'lspsaga',
-  'lsp_lines',              -- https://github.com/Maan2003/lsp_lines.nvim
+  --'lspsaga',
+  --'lsp_lines',              -- https://github.com/Maan2003/lsp_lines.nvim
   'mason',                  -- https://github.com/williamboman/mason.nvim
   --'navigator',              -- https://github.com/ray-x/navigator.lua
   --'trouble',                -- https://github.com/folke/trouble.nvim
@@ -105,17 +105,17 @@ local plugins = {
   --'orgmode',              -- https://github.com/nvim-orgmode/orgmode
   --'vim-mkdir',            -- https://github.com/pbrisbin/vim-mkdir
   'vim-wakatime',           -- https://github.com/wakatime/vim-wakatime
-  'vimwiki',                -- https://github.com/vimwiki/vimwiki
+  --'vimwiki',                -- https://github.com/vimwiki/vimwiki
 
   -- Testing --
   --'coverage',             -- https://github.com/andythigpen/nvim-coverage
   --'dispatch',             -- https://github.com/tpope/vim-dispatch
   'vim-ultest',             -- https://github.com/rcarriga/vim-ultest
-  'neotest',                -- https://github.com/rcarriga/neotest
+  --'neotest',                -- https://github.com/rcarriga/neotest
 
   -- Treesitter/ Syntax Highlighting --
-  'treesitter',             -- https://github.com/nvim-treesitter/nvim-treesitter
-  'treesitter-extras'
+  --'treesitter',             -- https://github.com/nvim-treesitter/nvim-treesitter
+  --'treesitter-extras'
 }
 
 packer.startup(function(use)

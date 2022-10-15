@@ -6,6 +6,9 @@ M.plugin = {
   after = {
     'nvim-lspconfig'
   },
+  requires = {
+    'neovim/nvim-lspconfig', -- https://github.com/neovim/nvim-lspconfig
+  },
 
   config = function()
     require('lsp_lines').setup()

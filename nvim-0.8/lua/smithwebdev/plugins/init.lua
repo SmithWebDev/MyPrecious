@@ -45,6 +45,9 @@ local plugins = {
   'blamer',             -- https://github.com/APZelos/blamer.nvim
   'lazygit',            -- https://github.com/kdheepak/lazygit.nvim
 
+  -- Keybinds --
+  'whichkey',           -- https://github.com/folke/which-key.nvim
+
   -- Qol --
   'easyalign',          -- https://github.com/junegunn/vim-easy-align
   'indent_blankline',   -- https://github.com/lukas-reineke/indent-blankline.nvim

@@ -48,6 +48,8 @@ local plugins = {
   -- Keybinds --
   'whichkey',           -- https://github.com/folke/which-key.nvim
 
+  -- LSP --
+  'lsp_lines',          -- https://github.com/Maan2003/lsp_lines.nvim
   -- Qol --
   'easyalign',          -- https://github.com/junegunn/vim-easy-align
   'indent_blankline',   -- https://github.com/lukas-reineke/indent-blankline.nvim

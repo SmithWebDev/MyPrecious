@@ -33,7 +33,8 @@ local plugins = {
   -- Filetype --
   'markdown_preview',   -- https://github.com/iamcco/markdown-preview.nvim
   'rails',              -- https://github.com/tpope/vim-rails
-  --'typescript-nvim',    -- https://github.com/jose-elias-alvarez/typescript.nvim
+  'sniprun',            -- https://github.com/michaelb/sniprun
+  --'typescript-nvim',  -- https://github.com/jose-elias-alvarez/typescript.nvim
 
   -- Fuzzy / File Finder --
   'harpoon',            -- https://github.com/ThePrimeagen/harpoon

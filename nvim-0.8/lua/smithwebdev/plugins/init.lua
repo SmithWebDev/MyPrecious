@@ -50,6 +50,9 @@ local plugins = {
 
   -- LSP --
   'lsp_lines',          -- https://github.com/Maan2003/lsp_lines.nvim
+  'lspsaga',            -- https://github.com/tami5/lspsaga.nvim
+
+
   -- Qol --
   'easyalign',          -- https://github.com/junegunn/vim-easy-align
   'indent_blankline',   -- https://github.com/lukas-reineke/indent-blankline.nvim

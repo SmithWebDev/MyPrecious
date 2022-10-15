@@ -6,6 +6,14 @@ vim.g.rufo_auto_formatting = 1
 M.plugin = {
   'tpope/vim-rails',
 
+  requires = {
+    'christoomey/vim-rfactory',  after = 'vim-rails', --, https://github.com/christoomey/vim-rfactory
+    'tpope/vim-endwise',         after = 'vim-rails', --, https://github.com/tpope/vim-endwise
+    'tpope/vim-dispatch',        after = 'vim-rails', --, https://github.com/tpope/vim-dispatch
+    'tpope/vim-projectionist',   after = 'vim-rails', --, https://github.com/tpope/vim-projectionist
+    'jgdavey/vim-blockle',       after = 'vim-rails', --, https://github.com/gdavey/vim-blockle
+    --'ruby-formatter/rufo-vim', after = 'vim-rails', --, https://github.com/ruby-formatter/rufo-vim
+  },
   config = function()
     local u = require 'smithwebdev.core.utils'
     local nnoremap = u.nnoremap

@@ -1,4 +1,4 @@
-ocal M = {}
+local M = {}
 
 M.plugin = {
   'Maan2003/lsp_lines.nvim', -- https://github.com/Maan2003/lsp_lines.nvim

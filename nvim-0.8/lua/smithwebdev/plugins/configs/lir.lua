@@ -5,8 +5,9 @@ M.plugin = {
 
 
   requires = {
-    'kyazdani42/nvim-web-devicons', --https://github.com/kyazdani42/nvim-web-devicons
-    'tamago324/lir-bookmark.nvim', --https://github.com/tamago324/lir-bookmark.nvim
+    'kyazdani42/nvim-web-devicons',  --https://github.com/kyazdani42/nvim-web-devicons
+    'tamago324/lir-bookmark.nvim',   --https://github.com/tamago324/lir-bookmark.nvim
+    'tamago324/lir-git-status.nvim', --https://github.com/tamago324/lir-git-status.nvim
   },
 
   config = function()
@@ -31,7 +32,8 @@ M.plugin = {
           0,
           'x',
           'J',
-          ':<C-u>lua require"lir.mark.actions".toggle_mark("v")<CR>'
+          ':<C-u>lua require"lir.mark.actions".toggle_mark("v")<CR>',
+          { noremap = true, silent = true }
         )
         vim.api.nvim_echo({ { vim.fn.expand("%:p"), "Normal" } }, false, {})
       end,
@@ -77,6 +79,18 @@ M.plugin = {
         ['<CR>'] = b_actions.open_lir,
       }
     }
+    -- custom folder icon
+    require'nvim-web-devicons'.set_icon({
+      lir_folder_icon = {
+        icon = "",
+        color = "#7ebae4",
+        name = "LirFolderNode"
+      }
+    })
+
+    require'lir.git_status'.setup({
+      show_ignored = false
+    })
 
     -- keybinds
     local u        = require 'smithwebdev.core.utils'

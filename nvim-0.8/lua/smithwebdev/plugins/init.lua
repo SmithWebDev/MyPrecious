@@ -18,60 +18,60 @@ packer.init {
 
 local plugins = {
   -- Aesthetics --
-  'animate',              -- https://github.com/camspiers/animate.vim
+  'animate',            -- https://github.com/camspiers/animate.vim
   'colorschemes',
 
   -- Completion & Snippets --
-  'luasnip',              -- https://github.com/L3MON4D3/LuaSnip
-  'cmp',                  -- https://github.com/hrsh7th/nvim-cmp
+  'luasnip',            -- https://github.com/L3MON4D3/LuaSnip
+  'cmp',                -- https://github.com/hrsh7th/nvim-cmp
 
   -- Editing --
-  'autopairs',            -- https://github.com/windwp/nvim-autopairs
-  'emmet',                -- https://github.com/mattn/emmet-vim
-  'markid',               -- https://github.com/David-Kunz/markid
-  'surround',             -- https://github.com/tpope/vim-surround
+  'autopairs',          -- https://github.com/windwp/nvim-autopairs
+  'emmet',              -- https://github.com/mattn/emmet-vim
+  'markid',             -- https://github.com/David-Kunz/markid
+  'surround',           -- https://github.com/tpope/vim-surround
 
   -- Filetype --
-  'markdown_preview',     -- https://github.com/iamcco/markdown-preview.nvim
-  'rails',                -- https://github.com/tpope/vim-rails
-  'sniprun',              -- https://github.com/michaelb/sniprun
-  --'typescript-nvim',    -- https://github.com/jose-elias-alvarez/typescript.nvim
+  'markdown_preview',   -- https://github.com/iamcco/markdown-preview.nvim
+  'rails',              -- https://github.com/tpope/vim-rails
+  'sniprun',            -- https://github.com/michaelb/sniprun
+  --'typescript-nvim',  -- https://github.com/jose-elias-alvarez/typescript.nvim
 
   -- Fuzzy / File Finder --
-  'harpoon',              -- https://github.com/ThePrimeagen/harpoon
-  'lir',                  -- https://github.com/tamago324/lir.nvim
-  'telescope',            -- https://github.com/nvim-telescope/telescope.nvim
+  'harpoon',            -- https://github.com/ThePrimeagen/harpoon
+  'lir',                -- https://github.com/tamago324/lir.nvim
+  'telescope',          -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Git --
-  'blamer',               -- https://github.com/APZelos/blamer.nvim
-  'lazygit',              -- https://github.com/kdheepak/lazygit.nvim
+  'blamer',             -- https://github.com/APZelos/blamer.nvim
+  'lazygit',            -- https://github.com/kdheepak/lazygit.nvim
 
   -- Keybinds --
-  'whichkey',             -- https://github.com/folke/which-key.nvim
+  'whichkey',           -- https://github.com/folke/which-key.nvim
 
   -- LSP --
-  'lsp_lines',            -- https://github.com/Maan2003/lsp_lines.nvim
-  'lspsaga',              -- https://github.com/tami5/lspsaga.nvim
+  'lsp_lines',          -- https://github.com/Maan2003/lsp_lines.nvim
+  'lspsaga',            -- https://github.com/tami5/lspsaga.nvim
 
 
   -- Qol --
-  'easyalign',            -- https://github.com/junegunn/vim-easy-align
-  'indent_blankline',     -- https://github.com/lukas-reineke/indent-blankline.nvim
-  'marks',                -- https://github.com/chentau/marks.nvim
-  'NeoZoom', --https://github.com/nyngwang/NeoZoom.lua
-  'nvim-ufo',             -- https://github.com/kevinhwang91/nvim-ufo
-  'peekabo',              -- https://github.com/junegunn/vim-peekaboo
-  'vim-smoothie',         -- https://github.com/psliwka/vim-smoothie
+  'easyalign',          -- https://github.com/junegunn/vim-easy-align
+  'indent_blankline',   -- https://github.com/lukas-reineke/indent-blankline.nvim
+  'marks',              -- https://github.com/chentau/marks.nvim
+  'NeoZoom',            --https://github.com/nyngwang/NeoZoom.lua
+  --'nvim-ufo',           -- https://github.com/kevinhwang91/nvim-ufo
+  'peekabo',            -- https://github.com/junegunn/vim-peekaboo
+  'vim-smoothie',       -- https://github.com/psliwka/vim-smoothie
 
   -- Project Organization --
-  'vimwiki',              -- https://github.com/vimwiki/vimwiki
+  'vimwiki',            -- https://github.com/vimwiki/vimwiki
 
   -- Testing --
-  'neotest',              -- https://github.com/rcarriga/neotest
+  'neotest',            -- https://github.com/rcarriga/neotest
 
   -- Treesitter/ Syntax Highlighting --
-  'syntax-tree-surfer',   -- https://github.com/ziontee113/syntax-tree-surfer
-  'treesitter',           -- https://github.com/nvim-treesitter/nvim-treesitter
+  'syntax-tree-surfer', -- https://github.com/ziontee113/syntax-tree-surfer
+  'treesitter',         -- https://github.com/nvim-treesitter/nvim-treesitter
 }
 
 packer.startup(function(use)

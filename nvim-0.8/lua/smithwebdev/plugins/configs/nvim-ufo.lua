@@ -2,7 +2,8 @@ local M = {}
 
 local o = vim.opt
 o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
-o.foldcolumn = '1'
+o.foldcolumn = '6'
+--o.foldnestmax = 1
 o.foldlevelstart = 99
 o.foldenable = true
 
@@ -13,13 +14,13 @@ M.plugin = {
 
   config = function()
     local handler = function(virtText, lnum, endLnum, width, truncate)
-      local newVirtText = {}
-      local suffix = ('  %d '):format(endLnum - lnum)
-      local sufWidth = vim.fn.strdisplaywidth(suffix)
-      local targetWidth = width - sufWidth
-      local curWidth = 0
+      local newVirtText  = {}
+      local suffix       = ('  %d '):format(endLnum - lnum)
+      local sufWidth     = vim.fn.strdisplaywidth(suffix)
+      local targetWidth  = width - sufWidth
+      local curWidth     = 0
       for _, chunk in ipairs(virtText) do
-        local chunkText = chunk[1]
+        local chunkText  = chunk[1]
         local chunkWidth = vim.fn.strdisplaywidth(chunkText)
         if targetWidth > curWidth + chunkWidth then
           table.insert(newVirtText, chunk)
@@ -54,7 +55,7 @@ M.plugin = {
     local nnoremap = u.nnoremap
     local vnoremap = u.vnoremap
 
---    nnoremap('',  '', { desc = ''})
+    --    nnoremap('',  '', { desc = ''})
   end
 }
 

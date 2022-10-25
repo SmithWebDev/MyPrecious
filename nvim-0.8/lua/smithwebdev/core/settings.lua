@@ -17,7 +17,7 @@ o.timeoutlen=1500
 o.foldmethod = 'expr'
 o.foldexpr = 'nvim_treesitter#foldexpr()'
 o.foldnestmax = 3
-o.foldenable = false
+o.foldenable = true
 o.foldlevel = 99
 
 -- Indentation Options --

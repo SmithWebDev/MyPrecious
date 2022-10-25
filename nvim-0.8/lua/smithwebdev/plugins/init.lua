@@ -51,6 +51,7 @@ local plugins = {
 
   -- LSP --
   'lsp_lines',          -- https://github.com/Maan2003/lsp_lines.nvim
+  'lspconfig',          -- https://github.com/neovim/nvim-lspconfig
   'lspsaga',            -- https://github.com/tami5/lspsaga.nvim
 
 

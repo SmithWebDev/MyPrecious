@@ -4,15 +4,16 @@ M.plugin = {
   'nvim-treesitter/nvim-treesitter',
 
   requires = {
-    {'nvim-treesitter/playground',                  after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/nvim-treesitter/playground
-    {'RRethy/nvim-treesitter-endwise',              after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/RRethy/nvim-treesitter-endwise
-    {'nvim-treesitter/nvim-treesitter-refactor',    after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/nvim-treesitter/nvim-treesitter-refactor
-    {'nvim-treesitter/nvim-treesitter-textobjects', after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-    {'RRethy/nvim-treesitter-textsubjects',         after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/RRethy/nvim-treesitter-textsubjects
-    {'p00f/nvim-ts-rainbow',                        after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/p00f/nvim-ts-rainbow
-    {'ziontee113/syntax-tree-surfer',               after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/ziontee113/syntax-tree-surfer
-    {'nvim-treesitter/tree-sitter-query',           after = 'nvim-treesitter'},                        -- https://github.com/nvim-treesitter/tree-sitter-query
-    'nvim-treesitter/nvim-treesitter-context',                                                         -- https://github.com/nvim-treesitter/nvim-treesitter-context
+    {'nvim-treesitter/playground',                 after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/nvim-treesitter/playground
+    {'RRethy/nvim-treesitter-endwise',             after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/RRethy/nvim-treesitter-endwise
+    {'nvim-treesitter/nvim-treesitter-refactor',   after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/nvim-treesitter/nvim-treesitter-refactor
+    {'nvim-treesitter/nvim-treesitter-textobjects',after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    {'RRethy/nvim-treesitter-textsubjects',        after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/RRethy/nvim-treesitter-textsubjects
+    {'p00f/nvim-ts-rainbow',                       after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/p00f/nvim-ts-rainbow
+    {'ziontee113/syntax-tree-surfer',              after = {'nvim-treesitter', 'tree-sitter-query'}}, -- https://github.com/ziontee113/syntax-tree-surfer
+    {'nvim-treesitter/tree-sitter-query',          after = 'nvim-treesitter'},                        -- https://github.com/nvim-treesitter/tree-sitter-query
+    {'windwp/nvim-ts-autotag',                     after = 'nvim-treesitter'},                        -- https://github.com/windwp/nvim-ts-autotag
+    'nvim-treesitter/nvim-treesitter-context',                                                        -- https://github.com/nvim-treesitter/nvim-treesitter-context
   },
 
   run = function()
@@ -100,6 +101,9 @@ M.plugin = {
           },
         },
       },
+      autotag = {
+        enable = true
+      },
       textsubjects = {
         enable = true,
         -- prev_selection = '', -- optional keymap to select the previous selection
@@ -113,7 +117,7 @@ M.plugin = {
     vim.opt.foldmethod = "expr"
     vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
-    require('treesitter-context').setup {
+    require('treesitter-context').setup{
       enable = true,
       max_lines = 0,
       trim_scope = 'outer',

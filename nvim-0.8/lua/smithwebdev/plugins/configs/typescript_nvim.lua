@@ -1,7 +1,7 @@
 local M = {}
 
 M.plugin = {
-  'typescript-nvim', -- https://github.com/jose-elias-alvarez/typescript.nvim
+  'jose-elias-alvarez/typescript.nvim', -- https://github.com/jose-elias-alvarez/typescript.nvim
 
   config = function()
     require("typescript").setup({
@@ -10,9 +10,10 @@ M.plugin = {
       go_to_source_definition = {
         fallback = true, -- fall back to standard LSP definition on failure
       },
-      --server = { -- pass options to lspconfig's setup method
-      --  on_attach = ...,
-      --},
+      server = {
+        capabilities = capabilities,
+        on_attach = on_attach,
+      },
     })
   end
 }

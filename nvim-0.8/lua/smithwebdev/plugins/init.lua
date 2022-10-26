@@ -59,8 +59,8 @@ local plugins = {
   'easyalign',          -- https://github.com/junegunn/vim-easy-align
   'indent_blankline',   -- https://github.com/lukas-reineke/indent-blankline.nvim
   'marks',              -- https://github.com/chentau/marks.nvim
-  'NeoZoom',            --https://github.com/nyngwang/NeoZoom.lua
-  --'nvim-ufo',           -- https://github.com/kevinhwang91/nvim-ufo
+  'NeoZoom',            -- https://github.com/nyngwang/NeoZoom.lua
+  --'nvim-ufo',         -- https://github.com/kevinhwang91/nvim-ufo
   'peekabo',            -- https://github.com/junegunn/vim-peekaboo
   'vim-smoothie',       -- https://github.com/psliwka/vim-smoothie
 

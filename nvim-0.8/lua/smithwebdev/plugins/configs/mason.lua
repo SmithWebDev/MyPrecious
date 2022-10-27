@@ -5,7 +5,7 @@ M.plugin = {
 
   requires = {
     {'williamboman/mason-lspconfig.nvim', after = 'mason.nvim'},                   -- https://github.com/williamboman/mason-lspconfig.nvim
-    --{'jayp0521/mason-null-ls.nvim',       after = {'mason.nvim', 'null-ls.nvim'}}, -- https://github.com/jayp0521/mason-null-ls.nvim
+    {'jayp0521/mason-null-ls.nvim',       after = {'mason.nvim', 'null-ls.nvim'}}, -- https://github.com/jayp0521/mason-null-ls.nvim
   },
 
   config = function()
@@ -46,7 +46,7 @@ M.plugin = {
         -- Keymap to reinstall/update the package under the current cursor position
         update_package = "u",
         -- Keymap to check for new version for the package under the current cursor position
-        check_package_version = "c",
+        check_package_version = "v",
         -- Keymap to update all installed packages
         update_all_packages = "U",
         -- Keymap to check which installed packages are outdated
@@ -69,22 +69,28 @@ M.plugin = {
         "tailwindcss",
         "sumneko_lua",
         "solargraph",
+        "elixirls",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
     })
 
-    --mason_null_ls.setup({
-    --  -- list of formatters & linters for mason to install
-    --  ensure_installed = {
-    --    "prettier", -- ts/js formatter
-    --    "stylua", -- lua formatter
-    --    "eslint_d", -- ts/js linter
-    --    "rubocop", -- ruby linter
-    --  },
-    --  -- auto-install configured formatters & linters (with null-ls)
-    --  automatic_installation = true,
-    --})
+    mason_null_ls.setup({
+      -- list of formatters & linters for mason to install
+      ensure_installed = {
+        "prettier", -- ts/js formatter
+        "stylua", -- lua formatter
+        "eslint_d", -- ts/js linter
+        "rubocop", -- ruby linter
+        "erb_lint", -- eruby linter
+        "markdownlint", -- markdown linter
+        "actionlint", -- yaml linter
+        --"cspell", -- spelling linter
+        --"standardrb", -- ruby linter/formater/styleguide
+      },
+      -- auto-install configured formatters & linters (with null-ls)
+      automatic_installation = true,
+    })
   end
 }
 

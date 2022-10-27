@@ -54,7 +54,7 @@ local plugins = {
   'lspconfig',          -- https://github.com/neovim/nvim-lspconfig
   'lspsaga',            -- https://github.com/tami5/lspsaga.nvim
   'mason',              -- https://github.com/williamboman/mason.nvim
-
+  'null_ls',            -- https://github.com/jose-elias-alvarez/null-ls.nvim
 
   -- Qol --
   'easyalign',          -- https://github.com/junegunn/vim-easy-align

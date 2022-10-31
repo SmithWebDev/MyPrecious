@@ -8,7 +8,7 @@ local o = vim.opt
 -- vim.cmd 'syntax on'
 
 -- Completion Options --
-o.completeopt = 'menu,menuone,noinsert,noselect'
+o.completeopt = 'menu,menuone,noselect'
 o.shortmess = 'csa' --Adjust short system messages
 -- o.updatetime = 2000
 o.timeoutlen=1500

@@ -51,6 +51,19 @@ return {
     ) }
   )),
   s({
+    trig = 'tsat',
+    name = 'Turbo Stream Action Tag',
+    dscr = 'def custom reusable turbo stream actions'
+  },
+    fmt([[
+    turbo_stream_action_tag :{}, {}: {}
+    ]], {
+        i(1, 'custom action name'),
+        i(2, 'custom attribute name'),
+        rep(2)
+      })
+  ),
+  s({
     trig = 'ftstream',
     name = 'format turbo stream',
     dscr = 'adds turbo stream attribute for rails controllers'

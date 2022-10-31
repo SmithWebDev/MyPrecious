@@ -1,11 +1,11 @@
 local M = {}
 
 M.plugin = {
-  'williamboman/mason.nvim', -- https://github.com/williamboman/mason.nvim
+  "williamboman/mason.nvim", -- https://github.com/williamboman/mason.nvim
 
   requires = {
-    {'williamboman/mason-lspconfig.nvim', after = 'mason.nvim'},                   -- https://github.com/williamboman/mason-lspconfig.nvim
-    {'jayp0521/mason-null-ls.nvim',       after = {'mason.nvim', 'null-ls.nvim'}}, -- https://github.com/jayp0521/mason-null-ls.nvim
+    { "williamboman/mason-lspconfig.nvim", after = "mason.nvim" }, -- https://github.com/williamboman/mason-lspconfig.nvim
+    { "jayp0521/mason-null-ls.nvim", after = { "mason.nvim", "null-ls.nvim" } }, -- https://github.com/jayp0521/mason-null-ls.nvim
   },
 
   config = function()
@@ -35,7 +35,7 @@ M.plugin = {
         -- The list icon to use for packages that are installing, or queued for installation.
         package_pending = "➜",
         -- The list icon to use for packages that are not installed.
-        package_uninstalled = "✗"
+        package_uninstalled = "✗",
       },
 
       keymaps = {
@@ -60,17 +60,19 @@ M.plugin = {
       },
     })
 
+    servers = {
+      "tsserver",
+      "html",
+      "cssls",
+      "tailwindcss",
+      "sumneko_lua",
+      "solargraph",
+      "elixirls",
+    },
+
     mason_lspconfig.setup({
       -- list of servers for mason to install
-      ensure_installed = {
-        "tsserver",
-        "html",
-        "cssls",
-        "tailwindcss",
-        "sumneko_lua",
-        "solargraph",
-        "elixirls",
-      },
+      ensure_installed = servers,
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
     })
@@ -91,7 +93,7 @@ M.plugin = {
       -- auto-install configured formatters & linters (with null-ls)
       automatic_installation = true,
     })
-  end
+  end,
 }
 
 return M

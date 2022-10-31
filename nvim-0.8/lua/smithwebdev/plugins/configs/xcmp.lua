@@ -1,0 +1,192 @@
+local M = {}
+
+M.plugin = {
+	"hrsh7th/nvim-cmp",
+
+	requires = {
+		-- CMP Addons --
+		"hrsh7th/cmp-buffer", -- https://github.com/hrsh7th/cmp-buffer
+		"hrsh7th/cmp-cmdline", -- https://github.com/hrsh7th/cmp-cmdline
+		"octaltree/cmp-look", -- https://github.com/octaltree/cmp-look
+		"saadparwaiz1/cmp_luasnip", -- https://github.com/saadparwaiz1/cmp_luasnip
+		"hrsh7th/cmp-nvim-lsp", -- https://github.com/hrsh7th/cmp-nvim-lsp
+		"hrsh7th/cmp-nvim-lsp-signature-help", -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
+		"hrsh7th/cmp-nvim-lua", -- https://github.com/hrsh7th/cmp-nvim-lua
+		"quangnguyen30192/cmp-nvim-tags", -- https://github.com/quangnguyen30192/cmp-nvim-tags
+		"hrsh7th/cmp-path", -- https://github.com/hrsh7th/cmp-path
+		"ray-x/cmp-treesitter", -- https://github.com/ray-x/cmp-treesitter
+		"hrsh7th/cmp-emoji", -- https://github.com/hrsh7th/cmp-emoji
+		"nvim-orgmode/orgmode", -- https://github.com/nvim-orgmode/orgmode
+		"jc-doyle/cmp-pandoc-references", -- https://github.com/jc-doyle/cmp-pandoc-references
+		"aspeddro/cmp-pandoc.nvim", -- https://github.com/aspeddro/cmp-pandoc.nvim
+		"jcha0713/cmp-tw2css", -- https://github.com/jcha0713/cmp-tw2css
+
+		-- Additional
+		"onsails/lspkind-nvim", -- https://github.com/onsails/lspkind-nvim}               ,
+		"windwp/nvim-autopairs", -- https://github.com/windwp/nvim-autopairs
+		"nvim-lua/plenary.nvim",
+		"jbyuki/nabla.nvim",
+
+		-- Premade Snippet Plugins
+		"honza/vim-snippets", -- https://github.com/honza/vim-snippets
+		"rafamadriz/friendly-snippets", -- https://github.com/rafamadriz/friendly-snippets
+	},
+
+	config = function()
+		local cmp = require("cmp")
+		local select_opts = { behavior = cmp.SelectBehavior.Select }
+		local lspkind = require("lspkind")
+		local luasnip = require("luasnip")
+		local u = require("smithwebdev.core.utils")
+		local trig = u.trigger_completion
+		local icons = {
+			Text = "",
+			Method = "",
+			Function = "",
+			Constructor = "⌘",
+			Field = "ﰠ",
+			Variable = "",
+			Class = "ﴯ",
+			Interface = "",
+			Module = "",
+			Property = "ﰠ",
+			Unit = "塞",
+			Value = "",
+			Enum = "",
+			Keyword = "廓",
+			Snippet = "",
+			Color = "",
+			File = "",
+			Reference = "",
+			Folder = "",
+			EnumMember = "",
+			Constant = "",
+			Struct = "פּ",
+			Event = "",
+			Operator = "",
+			TypeParameter = "",
+		}
+
+		local has_words_before = function()
+			if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
+				return false
+			end
+			local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+			return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+		end
+
+		cmp.setup({
+			snippet = {
+				expand = function(args)
+					require("luasnip").lsp_expand(args.body)
+				end,
+			},
+			experimental = {
+				native_menu = false,
+				ghost_text = false,
+			},
+
+			confirmation = {
+				get_commit_characters = function()
+					return {}
+				end,
+			},
+
+			window = {
+				-- completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
+			},
+
+			mapping = cmp.mapping.preset.insert({
+				["<C-b>"] = cmp.mapping.scroll_docs(-4),
+				["<C-f>"] = cmp.mapping.scroll_docs(4),
+				["<C-j>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_next_item()
+					elseif luasnip.expand_or_jumpable() then
+						luasnip.expand_or_jump()
+					elseif has_words_before() then
+						cmp.complete()
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+				["<c-k>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_prev_item()
+					elseif luasnip.jumpable(-1) then
+						luasnip.jump(-1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+				--["<Tab>"] = cmp.mapping(function(fallback)
+				--	if cmp.visible() then
+				--		cmp.select_next_item()
+				--	elseif luasnip.expand_or_jumpable() then
+				--		luasnip.expand_or_jump()
+				--	elseif has_words_before() then
+				--		cmp.complete()
+				--	else
+				--		fallback()
+				--	end
+				--end, { "i", "s" }),
+				--["<S-Tab>"] = cmp.mapping(function(fallback)
+				--	if cmp.visible() then
+				--		cmp.select_prev_item()
+				--	elseif luasnip.jumpable(-1) then
+				--		luasnip.jump(-1)
+				--	else
+				--		fallback()
+				--	end
+				--end, { "i", "s" }),
+				["<C-e>"] = cmp.mapping.close(),
+				["jk"] = cmp.mapping.confirm({ select = true }),
+			}),
+
+			sources = cmp.config.sources({
+				{ name = "nvim_lsp", keyword_length = 3 },
+				{ name = "nvim_lua" },
+				{ name = "luasnip", keyword_length = 2 },
+				{ name = "cmp-tw2css" },
+				{ name = "tags" },
+				{ name = "path" },
+				{ name = "emoji" },
+				{ name = "orgmode" },
+				{ name = "pandoc_references" },
+				{ name = "cmp-pandoc.nvim" },
+				{ name = "buffer", keyword_length = 5 },
+				{ name = "nvim_lsp_signature_help" },
+			}),
+
+			formatting = {
+				fields = { "kind", "abbr" },
+				format = function(_, vim_item)
+					vim_item.kind = icons[vim_item.kind] or ""
+					return vim_item
+				end,
+			},
+		})
+
+		cmp.setup.cmdline("/", {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = {
+				{ name = "buffer", keyword_length = 5 },
+			},
+		})
+
+		cmp.setup.cmdline(":", {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = cmp.config.sources({
+				{ name = "path" },
+			}, {
+				{ name = "cmdline" },
+			}),
+			--view = {
+			--  entries = { name = 'wildmenu', separator = '|' }
+			--}
+		})
+	end,
+}
+
+return M

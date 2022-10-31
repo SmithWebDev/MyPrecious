@@ -20,5 +20,19 @@ return {
   },
     { t("require('"), i(1), t("\')") }
   ),
+  s({
+    trig = 'sa',
+    name = 'Stream Action',
+    dscr = 'custom turbo stream setup'
+  },
+    fmt([[
+    StreamActions.{} = function() {{
+      {}
+    }}
+    ]], {
+        i(1, 'custom turbo stream name'),
+        i(2)
+      })
+  ),
 },
     print("javascript snippets attached")

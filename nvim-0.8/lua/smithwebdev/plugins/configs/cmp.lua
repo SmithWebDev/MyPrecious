@@ -24,7 +24,7 @@ M.plugin = {
     -- Additional
     "onsails/lspkind-nvim",                -- https://github.com/onsails/lspkind-nvim               ,
     "windwp/nvim-autopairs",               -- https://github.com/windwp/nvim-autopairs
-    'kyazdani42/nvim-web-devicons',        --https://github.com/kyazdani42/nvim-web-devicons
+    "kyazdani42/nvim-web-devicons",        --https://github.com/kyazdani42/nvim-web-devicons
     "nvim-lua/plenary.nvim",
     "jbyuki/nabla.nvim",
 
@@ -34,28 +34,31 @@ M.plugin = {
   },
 
   config = function()
-    local cmp = require('cmp')
-    local lspkind = require('lspkind')
+    local cmp = require("cmp")
+    local lspkind = require("lspkind")
 
     cmp.setup({
       formatting = {
         format = lspkind.cmp_format({
-          mode = 'symbol_text',
+          mode = "symbol_text",
           maxwidth = 50,
-          ellipsis_char = '...',
-          menu = ({
-            buffer = '[Buffer]',
-            nvim_lsp = '[LSP]',
-            luasnip = '[LuaSnip]',
-            nvim_lua = '[Lua]',
-          })
-        })
+          ellipsis_char = "...",
+          menu = {
+            buffer = "[Buffer]",
+            nvim_lsp = "[LSP]",
+            luasnip = "[LuaSnip]",
+            nvim_lua = "[Lua]",
+          },
+        }),
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-Space>"] = cmp.mapping.complete(),
-        ["<C-e>"] = cmp.mapping.abort(),
+        ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+        ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+        ["<C-e>"] = cmp.mapping({
+          i = cmp.mapping.abort(),
+          c = cmp.mapping.close(),
+        }),
+        ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
         ["jk"] = cmp.mapping.confirm({ select = true }),
         --["jk"] = cmp.mapping.complete(),
         ["<C-j>"] = cmp.mapping(function(fallback)
@@ -64,14 +67,14 @@ M.plugin = {
           else
             fallback()
           end
-          end, { "i", "s" }),
+        end, { "i", "s" }),
         ["<C-k>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
           else
             fallback()
           end
-          end, { "i", "s" }),
+        end, { "i", "s" }),
       }),
       snippet = {
         expand = function(args)
@@ -81,16 +84,16 @@ M.plugin = {
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "luasnip" },
-        }, {
+      }, {
           { name = "buffer" },
-      }),
+        }),
       window = {
         -- completion = cmp.config.window.bordered()<
         documentation = cmp.config.window.bordered(),
       },
     })
 
-    cmp.setup.cmdline({'/', '?'}, {
+    cmp.setup.cmdline({ "/", "?" }, {
       mapping = cmp.mapping.preset.cmdline(),
       sources = {
         { name = "buffer", keyword_length = 5 },
@@ -101,9 +104,9 @@ M.plugin = {
       mapping = cmp.mapping.preset.cmdline(),
       sources = cmp.config.sources({
         { name = "path" },
-        }, {
+      }, {
           { name = "cmdline" },
-      }),
+        }),
     })
   end,
 }

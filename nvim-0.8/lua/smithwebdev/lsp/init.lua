@@ -1,5 +1,3 @@
-print("LSP directory loaded")
-
 local M = {}
 
 -- This will be called when the LSP client attaches to the file buffer
@@ -50,4 +48,5 @@ end
 --	return capabilities
 --end
 
+print("LSP directory loaded")
 return M

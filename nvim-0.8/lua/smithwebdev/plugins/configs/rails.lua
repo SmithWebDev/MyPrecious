@@ -162,6 +162,7 @@ M.plugin = {
 
     -- Rubocop Bindings
     nnoremap('<leader><leader>rl',     ':!rubocop -a %<CR>',                               { desc = 'Rubocop lint command for current file'})
+    nnoremap('<leader><leader>rL',     ':!rubocop -A %<CR>',                               { desc = 'Rubocop lint command for current file'})
 
     -- Simple Form
     nnoremap('<leader><leader>rgSFi',  ':Generate simple_form:install<CR>',                { desc = 'Rails Generate Simple Form Install' })

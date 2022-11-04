@@ -121,4 +121,4 @@ nnoremap('<leader><leader>ht',   ':helptags $VIMRUNTIME/doc<CR>',               
 --                 SmithWebDev                --
 --                   Macros                   --
 --[[---------------------------------------]]---
-cnoremap('<leader>mh',           "PI'', -- jjLF/F/lY>Hpjj",                                 { desc = "macro: reduces url to 'github_user/github_repo' format"})
+cnoremap('<leader>mh',           "PF/;lYHi'', -- H€kbjjHpV>",                                 { desc = "macro: reduces url to 'github_user/github_repo' format"})

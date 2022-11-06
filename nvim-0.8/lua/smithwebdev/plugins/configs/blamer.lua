@@ -8,6 +8,11 @@ M.plugin = {
 
   config = function()
 
+    -- keybinds --
+    local u = require 'smithwebdev.core.utils'
+    local nnoremap = u.nnoremap
+
+    nnoremap('<leader><leader>tb',  ':BlamerToggle<CR>', { desc = 'Toggle git blame messages'})
   end
 }
 

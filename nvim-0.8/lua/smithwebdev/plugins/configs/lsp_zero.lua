@@ -34,7 +34,7 @@ M.plugin = {
       }
     })
     lsp.setup()
-
+    lsp.nvim_workspace()
   end
 }
 

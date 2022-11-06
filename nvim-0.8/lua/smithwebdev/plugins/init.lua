@@ -35,7 +35,7 @@ local plugins = {
   'markdown_preview',   -- https://github.com/iamcco/markdown-preview.nvim
   'rails',              -- https://github.com/tpope/vim-rails
   'sniprun',            -- https://github.com/michaelb/sniprun
-  'typescript_nvim',    -- https://github.com/jose-elias-alvarez/typescript.nvim
+  --'typescript_nvim',  -- https://github.com/jose-elias-alvarez/typescript.nvim
 
   -- Fuzzy / File Finder --
   'harpoon',            -- https://github.com/ThePrimeagen/harpoon
@@ -52,10 +52,10 @@ local plugins = {
   -- LSP --
   'lsp_zero',           -- https://github.com/VonHeikemen/lsp-zero.nvim
   'lsp_lines',          -- https://github.com/Maan2003/lsp_lines.nvim
-  'lspconfig',          -- https://github.com/neovim/nvim-lspconfig
-  'lspsaga',            -- https://github.com/tami5/lspsaga.nvim
-  'mason',              -- https://github.com/williamboman/mason.nvim
-  'null_ls',            -- https://github.com/jose-elias-alvarez/null-ls.nvim
+  --'lspconfig',        -- https://github.com/neovim/nvim-lspconfig
+  --'lspsaga',          -- https://github.com/tami5/lspsaga.nvim
+  --'mason',            -- https://github.com/williamboman/mason.nvim
+  --'null_ls',          -- https://github.com/jose-elias-alvarez/null-ls.nvim
 
   -- Qol --
   'easyalign',          -- https://github.com/junegunn/vim-easy-align

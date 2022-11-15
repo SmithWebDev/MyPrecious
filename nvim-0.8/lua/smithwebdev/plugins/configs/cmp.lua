@@ -55,12 +55,12 @@ M.plugin = {
 				['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-1), { 'i', 'c' }),
 				['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(1), { 'i', 'c' }),
 				['<C-e>'] = cmp.mapping({
-					i = cmp.mapping.abort(),
+					--i = cmp.mapping.abort(),
 					c = cmp.mapping.close(),
 				}),
 				--['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
         ['jk'] = cmp.mapping.confirm({
-          behavior = cmp.ConfirmBehavior.Replace,
+          --behavior = cmp.ConfirmBehavior.Replace,
           select = true
         }),
 				--['jk'] = cmp.mapping.complete(),

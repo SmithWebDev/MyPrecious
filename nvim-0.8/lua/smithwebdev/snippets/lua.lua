@@ -12,27 +12,22 @@ return {
   },
     fmt([[example: {}, function: {}]], { i(1), same(1)})
   ),
-  --s(
-  --  'req',
-  --  fmt(
-  --    [[local {} = require "{}"]],
-  --    { f(function(import_name)
-  --    local parts = vim.split(import_name[1][1], ".", true)
-  --    return parts[#parts] or ''
-  --  end, { 1 }), i(1) }
-  --  )
-  --),
-  -- s({
-  --   trig = 'req',
-  --   name = 'require',
-  --   dscr = 'require'
-  -- },
-  --   fmt([[local {} = require "{}"]], {
-  --     f(function(import_name)
-  --       return ""
-  -- end), i(1)
-  --   })
-  -- ),
+  s({
+    trig = 'req',
+    name = 'require',
+    dscr = 'require statement'
+  },
+    fmt([[
+    {}
+    ]], {
+        c(1,{
+          t('require'),
+          t('requires'),
+          { t('requires = {'), i(1), t('}') },
+          { t("require'"), i(1), t("'.setup()") }
+        })
+      })
+  ),
   s('key', fmt([[
   {}noremap('{}', '{}', {{ desc = '{}'}})
   ]], {

@@ -30,6 +30,7 @@ local plugins = {
   'emmet',              -- https://github.com/mattn/emmet-vim
   'markid',             -- https://github.com/David-Kunz/markid
   'surround',           -- https://github.com/tpope/vim-surround
+  'splitjoin',          -- https://github.com/AndrewRadev/splitjoin.vim
 
   -- Filetype --
   'markdown_preview',   -- https://github.com/iamcco/markdown-preview.nvim

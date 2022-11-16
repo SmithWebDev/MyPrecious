@@ -4,10 +4,10 @@ M.plugin = {
   'chentoast/marks.nvim',
 
   config = function()
-    require('marks').setup {
+    require('marks').setup({
       default_mappings = true,
       signs = true,
-    }
+    })
   end,
 }
 

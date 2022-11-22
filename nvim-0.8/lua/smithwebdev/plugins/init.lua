@@ -28,6 +28,7 @@ local plugins = {
   -- Editing --
   'autopairs',          -- https://github.com/windwp/nvim-autopairs
   'emmet',              -- https://github.com/mattn/emmet-vim
+  'leap',               -- https://github.com/ggandor/leap.nvim
   'markid',             -- https://github.com/David-Kunz/markid
   'surround',           -- https://github.com/tpope/vim-surround
   'splitjoin',          -- https://github.com/AndrewRadev/splitjoin.vim

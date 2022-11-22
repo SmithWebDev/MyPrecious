@@ -66,6 +66,7 @@ local plugins = {
   'neozoom',            -- https://github.com/nyngwang/NeoZoom.lua
   'nvim_ufo',           -- https://github.com/kevinhwang91/nvim-ufo
   'peekabo',            -- https://github.com/junegunn/vim-peekaboo
+  'swap_split',         -- https://github.com/xorid/swap-split.nvim
   'vim-smoothie',       -- https://github.com/psliwka/vim-smoothie
 
   -- Project Organization --

@@ -32,6 +32,7 @@ local plugins = {
   'markid',             -- https://github.com/David-Kunz/markid
   'surround',           -- https://github.com/tpope/vim-surround
   'splitjoin',          -- https://github.com/AndrewRadev/splitjoin.vim
+  'vista',              -- https://github.com/liuchengxu/vista.vim
 
   -- Filetype --
   'markdown_preview',   -- https://github.com/iamcco/markdown-preview.nvim

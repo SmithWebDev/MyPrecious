@@ -53,12 +53,12 @@ local plugins = {
   'whichkey',           -- https://github.com/folke/which-key.nvim
 
   -- LSP --
-  --'lsp_zero',         -- https://github.com/VonHeikemen/lsp-zero.nvim
-  --'lsp_lines',        -- https://github.com/Maan2003/lsp_lines.nvim
+  'lsp_zero',         -- https://github.com/VonHeikemen/lsp-zero.nvim
+  'lsp_lines',        -- https://github.com/Maan2003/lsp_lines.nvim
   --'lspconfig',        -- https://github.com/neovim/nvim-lspconfig
   'lspsaga',            -- https://github.com/tami5/lspsaga.nvim
   --'mason',            -- https://github.com/williamboman/mason.nvim
-  'navigator',          -- https://github.com/ray-x/navigator.lua
+  --'navigator',          -- https://github.com/ray-x/navigator.lua
   --'null_ls',          -- https://github.com/jose-elias-alvarez/null-ls.nvim
 
   -- Qol --

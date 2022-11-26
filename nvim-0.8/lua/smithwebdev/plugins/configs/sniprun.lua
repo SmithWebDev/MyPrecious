@@ -15,7 +15,7 @@ M.plugin = {
     local vnoremap = u.vnoremap
 
     nnoremap('<leader>sc', ':SnipClose<CR>',      { desc = 'Remove SnipRun code comments'})
-    nnoremap('<leader>sc', ':SnipInfo<CR>',      { desc = ''})
+    nnoremap('<leader>si', ':SnipInfo<CR>',      { desc = 'SnipRun Info'})
     nnoremap('<leader>sr', ':SnipRun<CR>',      { desc = 'Runs code block in editor'})
     vnoremap('<leader>sr', ":'<,'>SnipRun<CR>", { desc = 'Runs code block in editor'})
   end

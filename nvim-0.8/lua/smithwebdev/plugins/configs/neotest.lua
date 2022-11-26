@@ -74,16 +74,16 @@ M.plugin = {
 
 
     -- keybindings
-    nnoremap('<leader>ra',  '<cmd>lua Attach_Test()<CR>',    { desc = 'Attach Test' })
-    nnoremap('<leader>ru',  '<cmd>lua Clear_Marked()<CR>',   { desc = 'Clear Marked Tests' })
-    nnoremap('<leader>rcf', '<cmd>lua Current_File()<CR>',   { desc = 'Run All Test Current File' })
-    nnoremap('<leader>rn',  '<cmd>lua Nearest_Test()<CR>',   { desc = 'Run Nearest Test Current File' })
-    nnoremap('<leader>rj',  '<cmd>lua Jump_Next()<CR>',      { desc = 'Jump to Next Test' })
-    nnoremap('<leader>rk',  '<cmd>lua Jump_Prev()<CR>',      { desc = 'Jump to Previous Test' })
-    nnoremap('<leader>rz',  '<cmd>lua Run_Marked()<CR>',     { desc = 'Run Marked Tests' })
-    nnoremap('<leader>rx',  '<cmd>lua Stop_Test()<CR>',      { desc = 'Stop Running Tests' })
-    nnoremap('<leader>rs',  '<cmd>lua Summary_Toggle()<CR>', { desc = 'Toggle Summary Window' })
-    nnoremap('<leader>rd',  '<cmd>lua Test_Result()<CR>',    { desc = 'Toggle Test Result Window' })
+    nnoremap('<leader>leader>ta',  '<cmd>lua Attach_Test()<CR>',    { desc = 'Attach Test' })
+    nnoremap('<leader>leader>tcf', '<cmd>lua Current_File()<CR>',   { desc = 'Run All Test Current File' })
+    nnoremap('<leader>leader>tj',  '<cmd>lua Jump_Next()<CR>',      { desc = 'Jump to Next Test' })
+    nnoremap('<leader>leader>tk',  '<cmd>lua Jump_Prev()<CR>',      { desc = 'Jump to Previous Test' })
+    nnoremap('<leader>leader>tn',  '<cmd>lua Nearest_Test()<CR>',   { desc = 'Run Nearest Test Current File' })
+    nnoremap('<leader>leader>tr',  '<cmd>lua Test_Result()<CR>',    { desc = 'Toggle Test Result Window' })
+    nnoremap('<leader>leader>ts',  '<cmd>lua Summary_Toggle()<CR>', { desc = 'Toggle Summary Window' })
+    nnoremap('<leader>leader>tu',  '<cmd>lua Clear_Marked()<CR>',   { desc = 'Clear Marked Tests' })
+    nnoremap('<leader>leader>tx',  '<cmd>lua Stop_Test()<CR>',      { desc = 'Stop Running Tests' })
+    nnoremap('<leader>leader>tz',  '<cmd>lua Run_Marked()<CR>',     { desc = 'Run Marked Tests' })
   end
 }
 

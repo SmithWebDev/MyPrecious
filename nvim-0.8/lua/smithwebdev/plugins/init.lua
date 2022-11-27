@@ -37,6 +37,7 @@ local plugins = {
 
   -- Filetype --
   'markdown_preview',   -- https://github.com/iamcco/markdown-preview.nvim
+  'peek', -- https://github.com/toppair/peek.nvim
   'rails',              -- https://github.com/tpope/vim-rails
   'sniprun',            -- https://github.com/michaelb/sniprun
   --'typescript_nvim',  -- https://github.com/jose-elias-alvarez/typescript.nvim

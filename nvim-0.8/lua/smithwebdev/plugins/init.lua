@@ -79,6 +79,9 @@ local plugins = {
   -- Testing --
   'neotest',            -- https://github.com/rcarriga/neotest
 
+  -- Terminal --
+  'toggleterm', -- https://github.com/akinsho/toggleterm.nvim
+
   -- Treesitter/ Syntax Highlighting --
   'syntax-tree-surfer', -- https://github.com/ziontee113/syntax-tree-surfer
   'treesitter',         -- https://github.com/nvim-treesitter/nvim-treesitter

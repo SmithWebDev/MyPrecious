@@ -40,6 +40,13 @@ nnoremap('<',                    '',                                            
 --------------------------------------------------------------------------------
 nnoremap('<leader><CR>',         ':noh<CR>',                                                { desc = 'Disable Highlights' })
 
+-- Move Lines
+--------------------------------------------------------------------------------
+nnoremap( '<M-j>',               'mz:m+<CR>`z',                                             {desc = 'Move Lines Down'})
+nnoremap( '<M-k>',               'mz:m-2<CR>`z',                                            {desc = 'Move Lines Up'})
+vnoremap( '<M-j>',               [[:m'>+<CR>`<my`>mzgv`yo`z]],                              {desc = 'Move Lines Down'})
+vnoremap( '<M-k>',               [[:m'<-2<CR>`>my`<mzgv`yo`z]],                             {desc = 'Move Lines Up'})
+
 -- Resize Window Panes
 --------------------------------------------------------------------------------
 nnoremap('<up>',                 ':resize +2<CR>',                                          { desc = 'Resize Window Up' })
@@ -121,4 +128,4 @@ nnoremap('<leader><leader>ht',   ':helptags $VIMRUNTIME/doc<CR>',               
 --                 SmithWebDev                --
 --                   Macros                   --
 --[[---------------------------------------]]---
-cnoremap('<leader>mh',           "PF/;lYHi'', -- H€kbjjHpV>",                                 { desc = "macro: reduces url to 'github_user/github_repo' format"})
+cnoremap('<leader>mh',           "PF/;lYHi'', -- H€kbjjHpV>",                            { desc = "macro: reduces url to 'github_user/github_repo' format"})

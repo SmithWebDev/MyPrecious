@@ -61,6 +61,7 @@ local plugins = {
   --'mason',            -- https://github.com/williamboman/mason.nvim
   --'navigator',        -- https://github.com/ray-x/navigator.lua
   --'null_ls',          -- https://github.com/jose-elias-alvarez/null-ls.nvim
+  'symbols_outline',    -- https://github.com/simrat39/symbols-outline.nvim
 
   -- Qol --
   'easyalign',          -- https://github.com/junegunn/vim-easy-align

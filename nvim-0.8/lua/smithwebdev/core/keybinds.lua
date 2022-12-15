@@ -49,10 +49,10 @@ vnoremap( '<M-k>',               [[:m'<-2<CR>`>my`<mzgv`yo`z]],                 
 
 -- Resize Window Panes
 --------------------------------------------------------------------------------
-nnoremap('<up>',                 ':resize +2<CR>',                                          { desc = 'Resize Window Up' })
-nnoremap('<down>',               ':resize -2<CR>',                                          { desc = 'Resize Window Down' })
-nnoremap('<left>',               ':vertical resize +2<CR>',                                 { desc = 'Resize Window Left' })
-nnoremap('<right>',              ':vertical resize -2<CR>',                                 { desc = 'Resize Window Right' })
+nnoremap('<up>',                 ':resize -2<CR>',                                          { desc = 'Resize Window Up' })
+nnoremap('<down>',               ':resize +2<CR>',                                          { desc = 'Resize Window Down' })
+nnoremap('<left>',               ':vertical resize -2<CR>',                                 { desc = 'Resize Window Left' })
+nnoremap('<right>',              ':vertical resize +2<CR>',                                 { desc = 'Resize Window Right' })
 
 -- Rotate Window Panes
 --------------------------------------------------------------------------------

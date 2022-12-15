@@ -27,17 +27,20 @@ local plugins = {
 
   -- Editing --
   'autopairs',          -- https://github.com/windwp/nvim-autopairs
+  'comment',            -- https://github.com/numToStr/Comment.nvim
   'emmet',              -- https://github.com/mattn/emmet-vim
   'leap',               -- https://github.com/ggandor/leap.nvim
   'markid',             -- https://github.com/David-Kunz/markid
   'surround',           -- https://github.com/tpope/vim-surround
   'splitjoin',          -- https://github.com/AndrewRadev/splitjoin.vim
   'spread',             -- https://github.com/aarondiel/spread.nvim
+  'todo_comments',      -- https://github.com/folke/todo-comments.nvim
+  'trouble',            -- https://github.com/folke/trouble.nvim
   'vista',              -- https://github.com/liuchengxu/vista.vim
 
   -- Filetype --
   'markdown_preview',   -- https://github.com/iamcco/markdown-preview.nvim
-  'peek', -- https://github.com/toppair/peek.nvim
+  'peek',               -- https://github.com/toppair/peek.nvim
   'rails',              -- https://github.com/tpope/vim-rails
   'sniprun',            -- https://github.com/michaelb/sniprun
   --'typescript_nvim',  -- https://github.com/jose-elias-alvarez/typescript.nvim
@@ -56,7 +59,7 @@ local plugins = {
 
   -- LSP --
   'lsp_zero',           -- https://github.com/VonHeikemen/lsp-zero.nvim
-  'lsp_lines',          -- https://github.com/Maan2003/lsp_lines.nvim
+  -- 'lsp_lines',          -- https://github.com/Maan2003/lsp_lines.nvim
   --'lspconfig',        -- https://github.com/neovim/nvim-lspconfig
   'lspsaga',            -- https://github.com/tami5/lspsaga.nvim
   --'mason',            -- https://github.com/williamboman/mason.nvim
@@ -81,7 +84,7 @@ local plugins = {
   'neotest',            -- https://github.com/rcarriga/neotest
 
   -- Terminal --
-  'toggleterm', -- https://github.com/akinsho/toggleterm.nvim
+  'toggleterm',         -- https://github.com/akinsho/toggleterm.nvim
 
   -- Treesitter/ Syntax Highlighting --
   'syntax-tree-surfer', -- https://github.com/ziontee113/syntax-tree-surfer

@@ -12,7 +12,7 @@ M.plugin = {
     local u = require 'smithwebdev.core.utils'
     local nnoremap = u.nnoremap
 
-    nnoremap('<leader><leader>tb',  ':BlamerToggle<CR>', { desc = 'Toggle git blame messages'})
+    nnoremap('<leader><leader>b',  ':BlamerToggle<CR>', { desc = 'Toggle git blame messages'})
   end
 }
 

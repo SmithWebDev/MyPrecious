@@ -13,7 +13,7 @@ return {
     fmt([[example: {}, function: {}]], { i(1), same(1)})
   ),
   s({
-    trig = 'req',
+    trig = 'rq',
     name = 'require',
     dscr = 'require statement'
   },
@@ -34,7 +34,8 @@ return {
     c(1, {
       t('i'),
       t('n'),
-      t('v')
+      t('v'),
+      t('t')
     }),
     i(2),
     i(3),

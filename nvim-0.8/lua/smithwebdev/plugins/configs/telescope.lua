@@ -6,13 +6,13 @@ M.plugin = {
   -- This plugin requires that the following plugins be loaded BEFORE telescope.nvim
   requires = {
     'nvim-lua/plenary.nvim',
-    'nvim-telescope/telescope-media-files.nvim',  -- https://github.com/nvim-telescope/telescope-media-files.nvim
+    'nvim-telescope/telescope-media-files.nvim', -- https://github.com/nvim-telescope/telescope-media-files.nvim
     'nvim-telescope/telescope-file-browser.nvim', -- https://github.com/nvim-telescope/telescope-file-browser.nvim,
-    'nvim-telescope/telescope-frecency.nvim',     -- https://github.com/nvim-telescope/telescope-frecency.nvim
-    'nvim-telescope/telescope-fzy-native.nvim',   -- https://github.com/nvim-telescope/telescope-fzy-native.nvim
-    'benfowler/telescope-luasnip.nvim',           -- https://github.com/benfowler/telescope-luasnip.nvim
-    'erlingur/telescope-rails-related-files',     -- https://github.com/erlingur/telescope-rails-related-files
-    'ElPiloto/telescope-vimwiki.nvim',            -- https://github.com/ElPiloto/telescope-vimwiki.nvim
+    'nvim-telescope/telescope-frecency.nvim', -- https://github.com/nvim-telescope/telescope-frecency.nvim
+    'nvim-telescope/telescope-fzy-native.nvim', -- https://github.com/nvim-telescope/telescope-fzy-native.nvim
+    'benfowler/telescope-luasnip.nvim', -- https://github.com/benfowler/telescope-luasnip.nvim
+    'erlingur/telescope-rails-related-files', -- https://github.com/erlingur/telescope-rails-related-files
+    'ElPiloto/telescope-vimwiki.nvim', -- https://github.com/ElPiloto/telescope-vimwiki.nvim
   },
 
   -- Setup telescope.nvim settings AFTER the plugin (telescope.nvim) is loaded

@@ -331,3 +331,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export BUN_INSTALL="/Users/swd/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 . "$HOME/.cargo/env"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

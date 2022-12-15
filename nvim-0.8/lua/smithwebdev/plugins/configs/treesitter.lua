@@ -47,11 +47,11 @@ M.plugin = {
       indent = {
         enable = true,
       },
-      highlight = {
-        enable = true,
-        disable = { 'org' },
-        additional_vim_regex_highlighting = { 'org' },
-      },
+      --highlight = {
+      --  enable = true,
+      --  disable = { 'org' },
+      --  additional_vim_regex_highlighting = { 'org' },
+      --},
       endwise = {
         enable = true,
       },

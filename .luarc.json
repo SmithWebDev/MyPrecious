@@ -22,7 +22,12 @@
         "r",
         "ls",
         "isn",
-        "ngx"
+        "ngx",
+        "_lazygit_toggle",
+        "_rails_console_toggle",
+        "_bin_dev_toggle",
+        "_rails_server_toggle",
+        "local"
     ],
     "Lua.workspace.checkThirdParty": false,
     "Lua.workspace.library": [

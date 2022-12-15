@@ -1,12 +1,47 @@
 return {
   -- Link_to Helper snippet
-  s({
-    trig = 'ltc',
-    name = 'Link to with class',
-    dscr = 'Link_to tag with added class option / optional delete action'
-    }, fmt(
-        [[<%= link_to '{}', {}_path{},{} class: '{}' %>]],
-        { i(1), i(2), i(3), c(4, { t(''), t(' method: :delete,') }), i(5) })),
+  s(
+    {
+      trig = 'ltc',
+      name = 'Link To',
+      dscr = "Rails 'link to' helper"
+    },
+    fmt([[<%= link_to {}, {}{}{}%>]], {
+      c(1,{
+        {t("'"), i(1), t("'")},
+        {i(1)},
+      }),
+      c(2,{
+        {i(1)},
+        {i(1),t('_path')},
+        {i(1),t('_path('), i(2), t(')')},
+        {t('new_'), i(1),t('_path')},
+        {t('edit_'), i(1),t('_path('), i(2), t(')')},
+        {t("'"), i(1), t("'")},
+      }),
+      c(3,{
+        {i(1)},
+        {t(", class: '"), i(1), t("' ")},
+        {t(", class: '<%= "), i(1), t("%>' ")},
+      }),
+      c(4,{
+        {i(1)},
+        {t(', data: { turbo_frame: '), i(1), t(')}')},
+        {t(', data: { turbo_frame: dom_id('), i(1), t(')}')},
+        {t(', data: { turbo_method: dom_id('), i(1), t(')}')},
+        {t(', data: { turbo_method: :delete')},
+        {t(", data: { turbo_method: :delete, turbo_confirm: '"), i(1), t("'}")},
+        {t('method: :delete')}
+      }),
+    })
+  ),
+  --s({
+  --  trig = 'ltc',
+  --  name = 'Link to with class',
+  --  dscr = 'Link_to tag with added class option / optional delete action'
+  --  }, fmt(
+  --      [[<%= link_to '{}', {}_path{},{} class: '{}' %>]],
+  --      { i(1), i(2), i(3), c(4, { t(''), t(' method: :delete,') }), i(5) })),
 
   -- Button_to Helper snippet
   --s({
@@ -44,6 +79,18 @@ return {
 
       })),
 
+  s({
+    trig = 'imgt',
+    name = 'Image Tag',
+    dscr = 'image tag rails helper'
+  },
+    fmt([[<%= image_tag({}) %>]], {
+      c(1,{
+        {i(1)},
+        {i(1),t(", class: '"), i(2), t("'")},
+      })
+    })
+  ),
   -- Turbo Snippets
   -- Turbo Frame
   s({

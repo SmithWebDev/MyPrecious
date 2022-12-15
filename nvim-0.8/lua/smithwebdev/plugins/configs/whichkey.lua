@@ -11,7 +11,7 @@ M.plugin = {
         spelling = {
           enabled = true,
           suggestions = 20,
-          },
+        },
         presets = {
           operators = true,
           motions = true,
@@ -20,9 +20,10 @@ M.plugin = {
           nav = true,
           z = true,
           g = true
-          },
+        },
       },
     })
+
   end
 }
 

@@ -21,6 +21,7 @@ M.plugin = {
 		'aspeddro/cmp-pandoc.nvim',            -- https://github.com/aspeddro/cmp-pandoc.nvim
 		'jcha0713/cmp-tw2css',                 -- https://github.com/jcha0713/cmp-tw2css
 		'petertriho/cmp-git',                  -- https://github.com/petertriho/cmp-git
+    'doxnit/cmp-luasnip-choice',           -- https://github.com/doxnit/cmp-luasnip-choice
 		-- Additional
 		'onsails/lspkind-nvim',                -- https://github.com/onsails/lspkind-nvim               ,
 		'windwp/nvim-autopairs',               -- https://github.com/windwp/nvim-autopairs
@@ -48,6 +49,9 @@ M.plugin = {
 						nvim_lsp = '[LSP]',
 						luasnip = '[LuaSnip]',
 						nvim_lua = '[Lua]',
+            tags = '[Tags]',
+            tw2css = "[Tailwind]",
+
 					},
 				}),
 			},
@@ -55,7 +59,7 @@ M.plugin = {
 				['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-1), { 'i', 'c' }),
 				['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(1), { 'i', 'c' }),
 				['<C-e>'] = cmp.mapping({
-					--i = cmp.mapping.abort(),
+					i = cmp.mapping.abort(),
 					c = cmp.mapping.close(),
 				}),
 				--['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
@@ -85,8 +89,12 @@ M.plugin = {
 				end,
 			},
 			sources = cmp.config.sources({
-				{ name = 'nvim_lsp' },
 				{ name = 'luasnip' },
+				{ name = 'tags' },
+				{ name = 'nvim_lsp' },
+        { name = 'cmp-tw2css' },
+        { name = 'nvim_lsp_signature_help' },
+        { name = 'luasnip_choice' },
 			}, {
 				{ name = 'buffer' },
 			}),
@@ -111,6 +119,9 @@ M.plugin = {
 				{ name = 'cmdline' },
 			}),
 		})
+    require'cmp_luasnip_choice'.setup({
+      auto_open = true,
+    })
 	end,
 }
 

@@ -26,8 +26,8 @@ M.plugin = {
 
     nnoremap('<leader><leader>rD',     ':Destroy<Space>',                                  { desc = 'Rails Destroy Command' })
     nnoremap('<leader><leader>rr',     ':!rails<Space>',                                   { desc = 'Rails CLI command' })
-    nnoremap('<leader><leader>rac',    '!rails assets:clobber<CR>',                        { desc = 'Rails Assets Clobber'})
-    nnoremap('<leader><leader>rap',    '!rails assets:precomile<CR>',                      { desc = 'Rails Assets Precompile'})
+    nnoremap('<leader><leader>rac',    ':!rails assets:clobber<CR>',                       { desc = 'Rails Assets Clobber'})
+    nnoremap('<leader><leader>rap',    ':!rails assets:precomile<CR>',                     { desc = 'Rails Assets Precompile'})
     nnoremap('<leader><leader>rrdc',   ':!rails dev:cache',                                { desc = 'Rails CLI command to cache dev env' })
     nnoremap('<leader><leader>rtlc',   ':!rails tmp:clear log:clear<CR>',                  { desc = 'Removed temp and log files from project' })
 
@@ -65,7 +65,9 @@ M.plugin = {
     nnoremap('<leader><leader>rgst',   ':Generate system_test<Space>',                     { desc = 'Rails Generate System Test Command' })
     nnoremap('<leader><leader>rgt',    ':Generate task<Space>',                            { desc = 'Rails Generate Task Command' })
     --nnoremap('',                     '')
-    --nnoremap('',                     '')
+
+    -- Rails Initial Setup (PostgreSQL)
+    nnoremap('<leader><leader>rbs',    '!bin/setup',                                       { desc = 'Rails Initial Setup Command'})
 
 
     -- Invoking :Rails with no arguments runs a default task.

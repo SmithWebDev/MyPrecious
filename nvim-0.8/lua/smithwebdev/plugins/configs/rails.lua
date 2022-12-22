@@ -4,7 +4,8 @@ local M = {}
 vim.g.rufo_auto_formatting = 1
 
 M.plugin = {
-  'tpope/vim-rails',
+  -- 'tpope/vim-rails',
+  'erlingur/vim-rails', -- https://github.com/erlingur/vim-rails
 
   requires = {
     'christoomey/vim-rfactory',  after = 'vim-rails', --, https://github.com/christoomey/vim-rfactory

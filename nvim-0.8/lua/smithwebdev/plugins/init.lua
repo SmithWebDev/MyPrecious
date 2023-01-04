@@ -78,6 +78,7 @@ local plugins = {
   'vim-smoothie',       -- https://github.com/psliwka/vim-smoothie
 
   -- Project Organization --
+  'mind',               -- https://github.com/phaazon/mind.nvim
   'vimwiki',            -- https://github.com/vimwiki/vimwiki
 
   -- Testing --

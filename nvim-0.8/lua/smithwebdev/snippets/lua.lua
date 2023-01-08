@@ -6,6 +6,59 @@ end
 
 return {
   s({
+    trig = 'wkey',
+    name = 'Wezterm Keybind',
+    dscr = 'Wezterm Keybind snippet'
+  },
+    fmt([[
+    {{ key = '{}'{}{} }}
+    ]], {
+        i(1),
+        c(2, {
+          t(' '),
+          {
+            t(", mods = '"),
+            c(1, {
+              t(''),
+              t('ALT'),
+              t('CTRL'),
+              t('LEADER'),
+              t('SHIFT'),
+              t('SUPER'),
+            }),
+            t("'")
+          }
+        }),
+        c(3, {
+          t(""),
+          {
+            t(", action = wezterm.action."),
+            i(1),
+            t(',')
+          }
+        })
+      })
+  ),
+  s({
+    trig = 'wmod',
+    name = 'Wezterm Key Mod Combinations',
+    dscr = 'Wezterm Key Mod Combinations'
+  },
+    fmt([[{}]], {
+      c(1,{
+        t('ALT|CTRL'),
+        t('ALT|SHIFT'),
+        t('ALT|SUPER'),
+        t('ALT|LEADER'),
+        t('CTRL|SHIFT'),
+        t('CTRL|SUPER'),
+        t('CTRL|LEADER'),
+        t('SHIFT|SUPER'),
+        t('SHIFT|LEADER'),
+      })
+    })
+  ),
+  s({
     trig = 'test',
     name = 'test',
     dscr = 'something'
@@ -31,16 +84,16 @@ return {
   s('key', fmt([[
   {}noremap('{}', '{}', {{ desc = '{}'}})
   ]], {
-    c(1, {
-      t('i'),
-      t('n'),
-      t('v'),
-      t('t')
-    }),
-    i(2),
-    i(3),
-    i(4)
-  })
+      c(1, {
+        t('i'),
+        t('n'),
+        t('v'),
+        t('t')
+      }),
+      i(2),
+      i(3),
+      i(4)
+    })
   ),
   s('pcreate', fmt([[
      local M = {{}}

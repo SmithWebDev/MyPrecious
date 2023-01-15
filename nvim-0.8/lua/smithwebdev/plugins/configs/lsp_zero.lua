@@ -1,19 +1,19 @@
 local M = {}
 
 M.plugin = {
-  'VonHeikemen/lsp-zero.nvim',           -- https://github.com/VonHeikemen/lsp-zero.nvim
+  'VonHeikemen/lsp-zero.nvim', -- https://github.com/VonHeikemen/lsp-zero.nvim
 
   requires = {
-    'neovim/nvim-lspconfig',             -- https://github.com/neovim/nvim-lspconfig
-    'williamboman/mason.nvim',           -- https://github.com/williamboman/mason.nvim
+    'neovim/nvim-lspconfig', -- https://github.com/neovim/nvim-lspconfig
+    'williamboman/mason.nvim', -- https://github.com/williamboman/mason.nvim
     'williamboman/mason-lspconfig.nvim', -- https://github.com/williamboman/mason-lspconfig.nvim
-    'hrsh7th/nvim-cmp',                  -- https://github.com/hrsh7th/nvim-cmp
-    'hrsh7th/cmp-buffer',                -- https://github.com/hrsh7th/cmp-buffer
-    'hrsh7th/cmp-path',                  -- https://github.com/hrsh7th/cmp-path
-    'saadparwaiz1/cmp_luasnip',          -- https://github.com/saadparwaiz1/cmp_luasnip
-    'hrsh7th/cmp-nvim-lsp',              -- https://github.com/hrsh7th/cmp-nvim-lsp
-    'hrsh7th/cmp-nvim-lua',              -- https://github.com/hrsh7th/cmp-nvim-lua
-    'DNLHC/glance.nvim',                 -- https://github.com/DNLHC/glance.nvim
+    'hrsh7th/nvim-cmp', -- https://github.com/hrsh7th/nvim-cmp
+    'hrsh7th/cmp-buffer', -- https://github.com/hrsh7th/cmp-buffer
+    'hrsh7th/cmp-path', -- https://github.com/hrsh7th/cmp-path
+    'saadparwaiz1/cmp_luasnip', -- https://github.com/saadparwaiz1/cmp_luasnip
+    'hrsh7th/cmp-nvim-lsp', -- https://github.com/hrsh7th/cmp-nvim-lsp
+    'hrsh7th/cmp-nvim-lua', -- https://github.com/hrsh7th/cmp-nvim-lua
+    'DNLHC/glance.nvim', -- https://github.com/DNLHC/glance.nvim
   },
 
   config = function()
@@ -46,22 +46,22 @@ M.plugin = {
         "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>",
         { desc = "List Workspace Folders" }
       )
-      nnoremap("<leader>li", ":LspInfo<cr>",                                       { desc = "Connected Language Servers" })
-      nnoremap("<leader>ld", "<cmd>lua vim.lsp.buf.definition()<cr>",              { desc = "Go To Definition" })
-      nnoremap("<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<cr>",             { desc = "Go To Declaration" })
-      nnoremap("<leader>lI", "<cmd>lua vim.lsp.buf.implementation()<CR>",          { desc = "Go To Implementation" })
-      nnoremap("<leader>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>",              { desc = "Format Code" })
-      nnoremap("<leader>lk", "<cmd>lua vim.lsp.buf.signature_help()<cr>",          { desc = "Signature Help" })
-      nnoremap("<leader>lr", "<cmd>lua vim.lsp.buf.references()<cr>",              { desc = "References" })
-      nnoremap("<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<cr>",         { desc = "Type Definition" })
-      nnoremap("<leader>lw", "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>",    { desc = "Add Workspace Folder" })
+      nnoremap("<leader>li", ":LspInfo<cr>", { desc = "Connected Language Servers" })
+      nnoremap("<leader>ld", "<cmd>lua vim.lsp.buf.definition()<cr>", { desc = "Go To Definition" })
+      nnoremap("<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<cr>", { desc = "Go To Declaration" })
+      nnoremap("<leader>lI", "<cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "Go To Implementation" })
+      nnoremap("<leader>lf", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", { desc = "Format Code" })
+      nnoremap("<leader>lk", "<cmd>lua vim.lsp.buf.signature_help()<cr>", { desc = "Signature Help" })
+      nnoremap("<leader>lr", "<cmd>lua vim.lsp.buf.references()<cr>", { desc = "References" })
+      nnoremap("<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<cr>", { desc = "Type Definition" })
+      nnoremap("<leader>lw", "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", { desc = "Add Workspace Folder" })
       nnoremap("<leader>lW", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", { desc = "Remove Workspace Folder" })
-      nnoremap("<leader>la", ":Lspsaga code_action<cr>",                           { desc = "Code Action" })
-      nnoremap("<leader>le", ":Lspsaga show_line_diagnostics<cr>",                 { desc = "Show Line Diagnostics" })
-      nnoremap("<leader>ln", ":Lspsaga diagnostic_jump_next<cr>",                  { desc = "Go To Next Diagnostic" })
-      nnoremap("<leader>lK", ":Lspsaga hover_doc<cr>",                             { desc = "Hover Commands" })
-      nnoremap("<leader>lN", ":Lspsaga diagnostic_jump_prev<cr>",                  { desc = "Go To Previous Diagnostic" })
-      nnoremap("<leader>lr", ":Lspsaga rename<cr>",                                { desc = "Rename" })
+      nnoremap("<leader>la", ":Lspsaga code_action<cr>", { desc = "Code Action" })
+      nnoremap("<leader>le", ":Lspsaga show_line_diagnostics<cr>", { desc = "Show Line Diagnostics" })
+      nnoremap("<leader>ln", ":Lspsaga diagnostic_jump_next<cr>", { desc = "Go To Next Diagnostic" })
+      nnoremap("<leader>lK", ":Lspsaga hover_doc<cr>", { desc = "Hover Commands" })
+      nnoremap("<leader>lN", ":Lspsaga diagnostic_jump_prev<cr>", { desc = "Go To Previous Diagnostic" })
+      nnoremap("<leader>lr", ":Lspsaga rename<cr>", { desc = "Rename" })
     end)
 
     lsp.setup()

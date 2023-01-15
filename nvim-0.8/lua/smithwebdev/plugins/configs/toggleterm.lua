@@ -16,7 +16,7 @@ M.plugin = {
       --  end
       --end,
       --open_mapping = [[<c-\>]],
-      open_mapping = [[<c-Space>]],
+      open_mapping = [[<C-T>]],
       --on_create = fun(t: Terminal), -- function to run when the terminal is first created
       --on_open = fun(t: Terminal), -- function to run when the terminal opens
       --on_close = fun(t: Terminal), -- function to run when the terminal closes
@@ -92,7 +92,7 @@ M.plugin = {
     -- Bin/Dev
     local bin_dev = Terminal:new({
       cmd = 'bin/dev',
-      direction = 'tab',
+      direction = 'vertical',
       hidden = true,
       size = 20,
       count = 1,
@@ -131,6 +131,19 @@ M.plugin = {
     end
     --
 
+    -- Spotify
+    local spotify  = Terminal:new({
+      cmd = 'spt',
+      direction = 'float',
+      hidden = true,
+      count = 4,
+    })
+
+    function _spotify_toggle()
+      spotify:toggle()
+    end
+    --
+
     --==Keybindings==
     --==================================
     local u = require 'smithwebdev.core.utils'
@@ -142,6 +155,7 @@ M.plugin = {
     nnoremap('<leader><leader>rc',  '<cmd>lua _rails_console_toggle()<CR>', { desc = 'Open Rails Console in Vertical Terminal'})
     nnoremap('<leader><leader>rs',  '<cmd>lua _rails_server_toggle()<CR>',  { desc = 'Open Rails Server in Vertical Terminal'})
 
+    nnoremap('<leader><leader>tts',  '<cmd>lua _spotify_toggle()<CR>',       { desc = 'Open Spotify TUI'})
     nnoremap('<leader><leader>tta', '<cmd>ToggleTermToggleAll<CR>',         { desc = 'Toggle All Terminals'})
     nnoremap('<leader><leader>tt1', '<cmd>1ToggleTerm<CR>',                 { desc = 'Toggle All Terminals'})
     nnoremap('<leader><leader>tt2', '<cmd>2ToggleTerm<CR>',                 { desc = 'Toggle All Terminals'})

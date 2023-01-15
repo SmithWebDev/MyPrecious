@@ -35,13 +35,41 @@ return {
       }),
     })
   ),
-  --s({
-  --  trig = 'ltc',
-  --  name = 'Link to with class',
-  --  dscr = 'Link_to tag with added class option / optional delete action'
-  --  }, fmt(
-  --      [[<%= link_to '{}', {}_path{},{} class: '{}' %>]],
-  --      { i(1), i(2), i(3), c(4, { t(''), t(' method: :delete,') }), i(5) })),
+  s(
+    {
+      trig = 'btc',
+      name = 'Button To',
+      dscr = "Rails 'button to' helper"
+    },
+    fmt([[<%= button_to {}, {}{}{}%>]], {
+      c(1,{
+        {t("'"), i(1), t("'")},
+        {i(1)},
+      }),
+      c(2,{
+        {i(1)},
+        {i(1),t('_path')},
+        {i(1),t('_path('), i(2), t(')')},
+        {t('new_'), i(1),t('_path')},
+        {t('edit_'), i(1),t('_path('), i(2), t(')')},
+        {t("'"), i(1), t("'")},
+      }),
+      c(3,{
+        {i(1)},
+        {t(", class: '"), i(1), t("' ")},
+        {t(", class: '<%= "), i(1), t("%>' ")},
+      }),
+      c(4,{
+        {i(1)},
+        {t(', data: { turbo_frame: '), i(1), t(')}')},
+        {t(', data: { turbo_frame: dom_id('), i(1), t(')}')},
+        {t(', data: { turbo_method: dom_id('), i(1), t(')}')},
+        {t(', data: { turbo_method: :delete')},
+        {t(", data: { turbo_method: :delete, turbo_confirm: '"), i(1), t("'}")},
+        {t('method: :delete')}
+      }),
+    })
+  ),
 
   -- Button_to Helper snippet
   --s({
@@ -49,35 +77,26 @@ return {
   --  name = 'Button to with class',
   --  dscr = 'Button_to tag with added class option / optional delete action'
   --}, fmt(
-  --  [[<%= button_to '{}', {}_path{},{} {} %>]],
-  --  { i(1), i(2), i(3), c(4, { t(''), t(' method: :delete,') }), c(5, { t(''), { t('class: \''), i(1), t('\'') } }) })),
+  --    [[<%= button_to '{}'{}{}{}%>]], {
+  --      i(1),
+  --      c(2, {
+  --        { t(', '), i(1), t('_path'), t(' ') },
+  --        { t(', '), i(1), t('_path('), i(2), t(')') },
+  --      }),
+  --      c(3, {
+  --        { t(', destroy_user_session_path, method: :delete'), t(' ') },
+  --        { t(', '), i(1), t('_path('), i(2), t('), method: :delete'), t(' ') },
+  --        { t(', '), i(1), t(', method: :delete'), t(' ') },
+  --        { t(', destroy_user_session_path, data: {"turbo-method": :delete}'), t(' ') },
+  --        { t(', '), i(1), t('_path('), i(2), t('), data: {"turbo-method": :delete}'), t(' ') },
+  --        { t(', '), i(1), t(', data: {"turbo-method": :delete}'), t(' ') },
+  --      }),
+  --      c(4, {
+  --        t(' '),
+  --        { t(', class: \''), i(1), t('\'') }
+  --      }),
 
-  -- Button_to Helper snippet
-  s({
-    trig = 'btc',
-    name = 'Button to with class',
-    dscr = 'Button_to tag with added class option / optional delete action'
-  }, fmt(
-      [[<%= button_to '{}'{}{}{}%>]], {
-        i(1),
-        c(2, {
-          { t(', '), i(1), t('_path'), t(' ') },
-          { t(', '), i(1), t('_path('), i(2), t(')') },
-        }),
-        c(3, {
-          { t(', destroy_user_session_path, method: :delete'), t(' ') },
-          { t(', '), i(1), t('_path('), i(2), t('), method: :delete'), t(' ') },
-          { t(', '), i(1), t(', method: :delete'), t(' ') },
-          { t(', destroy_user_session_path, data: {"turbo-method": :delete}'), t(' ') },
-          { t(', '), i(1), t('_path('), i(2), t('), data: {"turbo-method": :delete}'), t(' ') },
-          { t(', '), i(1), t(', data: {"turbo-method": :delete}'), t(' ') },
-        }),
-        c(4, {
-          t(' '),
-          { t(', class: \''), i(1), t('\'') }
-        }),
-
-      })),
+  --    })),
 
   s({
     trig = 'imgt',

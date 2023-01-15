@@ -32,6 +32,9 @@ M.plugin = {
     nnoremap('<leader><leader>rrdc',   ':!rails dev:cache',                                { desc = 'Rails CLI command to cache dev env' })
     nnoremap('<leader><leader>rtlc',   ':!rails tmp:clear log:clear<CR>',                  { desc = 'Removed temp and log files from project' })
 
+    -- Rails Module Commands
+    nnoremap('<leader><leader>rASi',   ':!rails active_storage:install<CR>',                { desc = 'Install Rails Active Storage module' })
+
     -- Rails Bundler Commands
     nnoremap('<leader><leader>rba',    ':!bundle add<Space>',                              { desc = 'Bundle Add Command' })
     nnoremap('<leader><leader>rbi',    ':!bundle install<CR>',                             { desc = 'Bundle Install Command' })
@@ -96,7 +99,7 @@ M.plugin = {
     -- database.yml,                   database.example.yml,                               environments/*.rb
 
     -- Edits to "Alternative" file in various locations
-    nnoremap('<leader><leader>rA',     '<cmd>A<CR>')
+    nnoremap('<leader><leader>ra',     '<cmd>A<CR>')
     nnoremap('<leader><leader>rae',    '<cmd>AE<CR>',                                      { desc = 'edit alternate file' })
     nnoremap('<leader><leader>ras',    '<cmd>AS<CR>',                                      { desc = 'edit alternate in h split' })
     nnoremap('<leader><leader>rav',    '<cmd>AV<CR>',                                      { desc = 'edit alternate in tab' })

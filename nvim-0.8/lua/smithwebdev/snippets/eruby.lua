@@ -130,6 +130,27 @@ return {
         i(2)
       })
   ),
+  ---- Turbo Frame Tag helper snippet
+  s(
+    {
+      trig = 'tft',
+      name = 'turbo frame tag',
+      dscr = 'Turbo Frame Tag helper',
+    },
+    fmt(
+      [[
+      <%= turbo_frame_tag{} %>
+        {}
+      <% end %>
+      ]],
+      {
+        c(1,{
+          i(1),
+          {t('(dom_id '), i(1), t(') do')}
+        }),
+        i(2)
+      })
+  ),
   s({
     trig = 'ts',
     name = 'turbo stream Tag',
@@ -176,6 +197,17 @@ return {
         i(0)
       })
   ),
+  s({
+    trig = 'tsf',
+    name = 'Turbo Stream From',
+    dscr = 'Turbo Stream From tag for erb'
+  },
+    fmt(
+      [[<%= turbo_stream_from '{}' %>]],
+      {
+        i(1)
+      })
+  ),
 
 
 
@@ -205,7 +237,6 @@ return {
   --)
   --),
 
-  ---- Turbo Frame Tag helper snippet
   --s({
   --  trig = 'tft',
   --  name = 'turbo_frame_tag',

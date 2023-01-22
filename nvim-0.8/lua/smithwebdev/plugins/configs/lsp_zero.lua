@@ -36,32 +36,52 @@ M.plugin = {
     })
 
 
+
     lsp.on_attach(function(client, bufnr)
       print("Attached to " .. client.name)
 
       local nnoremap = require("smithwebdev.core.utils").nnoremap
 
-      nnoremap(
+      vim.keymap.set("n",
         "<leader>ll",
         "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>",
         { desc = "List Workspace Folders" }
       )
-      nnoremap("<leader>li", ":LspInfo<cr>", { desc = "Connected Language Servers" })
-      nnoremap("<leader>ld", "<cmd>lua vim.lsp.buf.definition()<cr>", { desc = "Go To Definition" })
-      nnoremap("<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<cr>", { desc = "Go To Declaration" })
-      nnoremap("<leader>lI", "<cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "Go To Implementation" })
-      nnoremap("<leader>lf", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", { desc = "Format Code" })
-      nnoremap("<leader>lk", "<cmd>lua vim.lsp.buf.signature_help()<cr>", { desc = "Signature Help" })
-      nnoremap("<leader>lr", "<cmd>lua vim.lsp.buf.references()<cr>", { desc = "References" })
-      nnoremap("<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<cr>", { desc = "Type Definition" })
-      nnoremap("<leader>lw", "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", { desc = "Add Workspace Folder" })
-      nnoremap("<leader>lW", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", { desc = "Remove Workspace Folder" })
-      nnoremap("<leader>la", ":Lspsaga code_action<cr>", { desc = "Code Action" })
-      nnoremap("<leader>le", ":Lspsaga show_line_diagnostics<cr>", { desc = "Show Line Diagnostics" })
-      nnoremap("<leader>ln", ":Lspsaga diagnostic_jump_next<cr>", { desc = "Go To Next Diagnostic" })
-      nnoremap("<leader>lK", ":Lspsaga hover_doc<cr>", { desc = "Hover Commands" })
-      nnoremap("<leader>lN", ":Lspsaga diagnostic_jump_prev<cr>", { desc = "Go To Previous Diagnostic" })
-      nnoremap("<leader>lr", ":Lspsaga rename<cr>", { desc = "Rename" })
+      --vim.keymap.set("n", "<leader>li", ":LspInfo<cr>",                                       { desc = "Connected Language Servers" })
+      --vim.keymap.set("n", "<leader>ld", "<cmd>lua vim.lsp.buf.definition()<cr>",              { desc = "Go To Definition" })
+      --vim.keymap.set("n", "<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<cr>",             { desc = "Go To Declaration" })
+      --vim.keymap.set("n", "<leader>lI", "<cmd>lua vim.lsp.buf.implementation()<CR>",          { desc = "Go To Implementation" })
+      --vim.keymap.set("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format { async = true }<CR>",   { desc = "Format Code" })
+      --vim.keymap.set("n", "<leader>lk", "<cmd>lua vim.lsp.buf.signature_help()<cr>",          { desc = "Signature Help" })
+      --vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.references()<cr>",              { desc = "References" })
+      --vim.keymap.set("n", "<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<cr>",         { desc = "Type Definition" })
+      --vim.keymap.set("n", "<leader>lw", "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>",    { desc = "Add Workspace Folder" })
+      --vim.keymap.set("n", "<leader>lW", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", { desc = "Remove Workspace Folder" })
+      --vim.keymap.set("n", "<leader>la", ":Lspsaga code_action<cr>",                           { desc = "Code Action" })
+      --vim.keymap.set("n", "<leader>le", ":Lspsaga show_line_diagnostics<cr>",                 { desc = "Show Line Diagnostics" })
+      --vim.keymap.set("n", "<leader>ln", ":Lspsaga diagnostic_jump_next<cr>",                  { desc = "Go To Next Diagnostic" })
+      --vim.keymap.set("n", "<leader>lK", ":Lspsaga hover_doc<cr>",                             { desc = "Hover Commands" })
+      --vim.keymap.set("n", "<leader>lN", ":Lspsaga diagnostic_jump_prev<cr>",                  { desc = "Go To Previous Diagnostic" })
+      --vim.keymap.set("n", "<leader>lr", ":Lspsaga rename<cr>",                                { desc = "Rename" })
+
+      --vim.keymap.set('', '', '', {desc = ""})
+      vim.keymap.set("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", { desc = "Format Code" })
+      vim.keymap.set('n', '<leader>lgf', '<cmd>Lspsaga lsp_finder<CR>', { desc = "LSP Finder" })
+      vim.keymap.set('n', '<leader>lgD', '<cmd>lua vim.lsp.buf.declaration<CR>', { desc = "Declaration" })
+      vim.keymap.set('n', '<leader>lgd', '<cmd>Lspsaga peek_definition()<CR>', { desc = "Peek Definition" })
+      vim.keymap.set('n', '<leader>lgi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { desc = "Implementation" })
+      vim.keymap.set('n', '<leader>lca', '<cmd>Lspsaga code_action<CR>', { desc = "Code Action" })
+      vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.references()<cr>", { desc = "References" })
+      vim.keymap.set('n', '<leader>lrn', '<cmd>Lspsaga rename<CR>', { desc = "Rename" })
+      vim.keymap.set('n', '<leader>ld', '<cmd>Lspsaga show_line_diagnostics<CR>', { desc = "Show Line Diagnostics" })
+      vim.keymap.set('n', '<leader>ld', '<cmd>Lspsaga show_cursor_diagnostics<CR>', { desc = "Show Line Diagnostics" })
+      vim.keymap.set('n', '<leader>l[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>',
+        { desc = "Jump to Previous diagnostic error" })
+      vim.keymap.set('n', '<leader>l]d', '<cmd>Lspsaga diagnostic_jump_next<CR>',
+        { desc = "Jump to Next diagnostic error" })
+      vim.keymap.set("n", "<leader>lk", "<cmd>lua vim.lsp.buf.signature_help()<cr>", { desc = "Signature Help" })
+      vim.keymap.set('n', '<leader>lK', '<cmd>Lspsaga hover-doc<CR>', { desc = "Hover Doc" })
+      vim.keymap.set("n", "<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<cr>", { desc = "Type Definition" })
     end)
 
     lsp.setup()

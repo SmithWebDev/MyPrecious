@@ -66,7 +66,6 @@ M.plugin = {
       "cssls",
       "tailwindcss",
       "sumneko_lua",
-      "solargraph",
       "elixirls",
     },
 

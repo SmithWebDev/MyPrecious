@@ -1,0 +1,27 @@
+#https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
+
+#Get a Fly API token with flyctl auth token.
+#Go to your newly created repository on GitHub and select Settings.
+#Go to Secrets and create a secret called FLY_API_TOKEN with the value of the token from step 2
+#Clone the repository to your local machine to edit it
+#Edit .gitignore and remove fly.toml - fly.toml will need to be pushed into the repository to allow deployment to happen.
+#Run flyctl launch to create a fly.toml configuration file. Say N to adding databases and N to immediate deployment.
+
+name: Fly Deploy
+on:
+push:
+branches:
+  - main
+env:
+FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+jobs:
+deploy:
+name: Deploy App
+runs-on: ubuntu-latest
+steps:
+  - uses: actions/checkout@v3
+  - uses: superfly/flyctl-actions/setup-flyctl@master
+  - run: flyctl deploly --remote-only
+
+#Commit your changes and push them up to GitHub.
+#This is where the magic happens - The push will have triggered a deploy and from now on whenever you push a change, the app will automatically be redeployed.

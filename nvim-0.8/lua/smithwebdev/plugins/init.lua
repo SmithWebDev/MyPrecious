@@ -53,6 +53,7 @@ local plugins = {
   -- Git --
   'blamer',             -- https://github.com/APZelos/blamer.nvim
   'lazygit',            -- https://github.com/kdheepak/lazygit.nvim
+  'octo',               -- https://github.com/pwntester/octo.nvim
 
   -- Keybinds --
   'whichkey',           -- https://github.com/folke/which-key.nvim

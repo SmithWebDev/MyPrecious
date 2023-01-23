@@ -13,6 +13,7 @@ M.plugin = {
     'benfowler/telescope-luasnip.nvim', -- https://github.com/benfowler/telescope-luasnip.nvim
     'erlingur/telescope-rails-related-files', -- https://github.com/erlingur/telescope-rails-related-files
     'ElPiloto/telescope-vimwiki.nvim', -- https://github.com/ElPiloto/telescope-vimwiki.nvim
+    'xiyaowong/telescope-octo-commands.nvim', -- https://github.com/xiyaowong/telescope-octo-commands.nvim
   },
 
   -- Setup telescope.nvim settings AFTER the plugin (telescope.nvim) is loaded
@@ -53,6 +54,7 @@ M.plugin = {
     telescope.load_extension('luasnip')
     telescope.load_extension('rails_related_files')
     telescope.load_extension('vimwiki')
+    telescope.load_extension('octo_commands')
 
     function _G.TelescopeFindConfigFiles()
       local configdir = vim.fn.expand('$HOME/.config/nvim')

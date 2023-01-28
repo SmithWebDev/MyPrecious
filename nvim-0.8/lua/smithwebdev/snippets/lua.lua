@@ -1,9 +1,3 @@
-local same = function(index)
-  return f(function(arg)
-    return arg[1]
-  end, { index })
-end
-
 return {
   s({
     trig = 'wkey',

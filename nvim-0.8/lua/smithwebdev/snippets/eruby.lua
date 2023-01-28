@@ -1,4 +1,6 @@
 return {
+require 'lua.smithwebdev.snippets.turbo_snippets',
+
   -- Link_to Helper snippet
   s(
     {
@@ -479,4 +481,4 @@ return {
   --  })
   --),
 },
-  print("eruby snippets attached")
+print("eruby snippets attached")

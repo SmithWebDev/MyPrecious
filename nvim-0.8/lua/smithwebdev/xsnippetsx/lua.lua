@@ -53,13 +53,6 @@ return {
     })
   ),
   s({
-    trig = 'test',
-    name = 'test',
-    dscr = 'something'
-  },
-    fmt([[example: {}, function: {}]], { i(1), same(1)})
-  ),
-  s({
     trig = 'rq',
     name = 'require',
     dscr = 'require statement'

@@ -1,5 +1,6 @@
 --@diagnostic disable: lowercase-global
 ls = require("luasnip")
+
 -- some shorthands...
 s = ls.snippet
 sn = ls.snippet_node
@@ -20,8 +21,5 @@ fmt = require("luasnip.extras.fmt").fmt
 fmta = require("luasnip.extras.fmt").fmta
 types = require("luasnip.util.types")
 conds = require("luasnip.extras.expand_conditions")
-
-local date = function() return { os.date('%Y-%m-%d') } end
-
 
 print('snippets dir accessed!')

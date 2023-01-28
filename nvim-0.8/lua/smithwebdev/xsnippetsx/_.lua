@@ -6,7 +6,7 @@ return {
   }),
   ls.parser.parse_snippet('expand', '-- this is what was expanded!'),
 
-  s('snip',
+  s('sni',
     c(1,{fmt([[
     s({{
       trig = '{}',

@@ -1,7 +1,7 @@
 # Rails defaults for creating new application project
 
---database=postgresql
---javascript=esbuild
+#--database=postgresql
+#--javascript=esbuild
 #--skip-action-mailer
 #--skip-action-mailbox
 #--skip-action-text

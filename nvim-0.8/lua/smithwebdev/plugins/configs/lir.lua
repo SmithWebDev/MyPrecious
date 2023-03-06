@@ -2,14 +2,11 @@ local M = {}
 
 M.plugin = {
   'tamago324/lir.nvim',
-
-
   requires = {
-    'kyazdani42/nvim-web-devicons',  --https://github.com/kyazdani42/nvim-web-devicons
-    'tamago324/lir-bookmark.nvim',   --https://github.com/tamago324/lir-bookmark.nvim
+    'kyazdani42/nvim-web-devicons', --https://github.com/kyazdani42/nvim-web-devicons
+    'tamago324/lir-bookmark.nvim', --https://github.com/tamago324/lir-bookmark.nvim
     'tamago324/lir-git-status.nvim', --https://github.com/tamago324/lir-git-status.nvim
   },
-
   config = function()
     local actions           = require 'lir.actions'
     local b_actions         = require 'lir.bookmark.actions'
@@ -49,25 +46,25 @@ M.plugin = {
         ['<BS>'] = actions.up,
         ['q']    = actions.quit,
 
-        ['A'] = actions.mkdir,
-        ['a'] = actions.newfile,
-        ['r'] = actions.rename,
-        ['C'] = actions.cd,
-        ['Y'] = actions.yank_path,
-        ['.'] = actions.toggle_show_hidden,
-        ['d'] = actions.delete,
+        ['A']    = actions.mkdir,
+        ['a']    = actions.newfile,
+        ['r']    = actions.rename,
+        ['C']    = actions.cd,
+        ['Y']    = actions.yank_path,
+        ['.']    = actions.toggle_show_hidden,
+        ['d']    = actions.delete,
 
-        ['J'] = function()
+        ['J']    = function()
           mark_actions.toggle_mark()
           vim.cmd('normal! j')
         end,
 
-        ['c'] = clipboard_actions.copy,
-        ['x'] = clipboard_actions.cut,
-        ['p'] = clipboard_actions.paste,
+        ['c']    = clipboard_actions.copy,
+        ['x']    = clipboard_actions.cut,
+        ['p']    = clipboard_actions.paste,
 
-        ['B']  = require 'lir.bookmark.actions'.list,
-        ['ba'] = require 'lir.bookmark.actions'.add,
+        ['B']    = require 'lir.bookmark.actions'.list,
+        ['ba']   = require 'lir.bookmark.actions'.add,
       },
     }
 
@@ -82,7 +79,7 @@ M.plugin = {
       }
     }
     -- custom folder icon
-    require'nvim-web-devicons'.set_icon({
+    require 'nvim-web-devicons'.set_icon({
       lir_folder_icon = {
         icon = "",
         color = "#7ebae4",
@@ -90,7 +87,7 @@ M.plugin = {
       }
     })
 
-    require'lir.git_status'.setup({
+    require 'lir.git_status'.setup({
       show_ignored = false
     })
 

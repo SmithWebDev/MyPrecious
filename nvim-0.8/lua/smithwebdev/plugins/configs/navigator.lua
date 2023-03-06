@@ -2,7 +2,6 @@ local M = {}
 
 M.plugin = {
   'ray-x/navigator.lua', -- https://github.com/ray-x/navigator.lua
-
   requires = {
     { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
     'neovim/nvim-lspconfig',
@@ -10,13 +9,12 @@ M.plugin = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
   },
-
   config = function()
     require 'mason'.setup()
     require 'mason-lspconfig'.setup()
     require 'navigator'.setup({
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }, -- border style, can be one of 'none', 'single', 'double',
-      debug = false, -- log output, set to true and log path: ~/.cache/nvim/gh.log
+      debug = false,                                       -- log output, set to true and log path: ~/.cache/nvim/gh.log
       default_mapping = false,
       --icons = {
       --  -- Code action
@@ -29,20 +27,18 @@ M.plugin = {
       lsp = {
         code_action = { enable = true, sign = true, sign_priority = 40, virtual_text = true },
         code_lens_action = { enable = true, sign = true, sign_priority = 40, virtual_text = true },
-        document_highlight = true, -- LSP reference highlight,
-        format_on_save = true, -- {true|false} set to false to disasble lsp code format on save (if you are using prettier/efm/formater etc)
+        document_highlight = true,          -- LSP reference highlight,
+        format_on_save = true,              -- {true|false} set to false to disasble lsp code format on save (if you are using prettier/efm/formater etc)
         format_options = { async = false }, -- async: disable by default, the option used in vim.lsp.buf.format({async={true|false}, name = 'xxx'})
-
         diagnostic = {
           underline = true,
-          virtual_text = true, -- show virtual for diagnostic message
-          update_in_insert = false, -- update diagnostic message in insert mode
+          virtual_text = true,                         -- show virtual for diagnostic message
+          update_in_insert = false,                    -- update diagnostic message in insert mode
         },
-
         diagnostic_scrollbar_sign = { '▃', '▆', '█' }, -- experimental:  diagnostic status in scroll bar area; set to false to disable the diagnostic sign,
-        diagnostic_virtual_text = true, -- show virtual for diagnostic message
-        diagnostic_update_in_insert = false, -- update diagnostic message in insert mode
-        disply_diagnostic_qf = true, -- always show quickfix if there are diagnostic errors, set to false if you  want to ignore it
+        diagnostic_virtual_text = true,                -- show virtual for diagnostic message
+        diagnostic_update_in_insert = false,           -- update diagnostic message in insert mode
+        disply_diagnostic_qf = true,                   -- always show quickfix if there are diagnostic errors, set to false if you  want to ignore it
         --tsserver = {
         --  filetypes = {'typescript'} -- disable javascript etc,
         --  -- set to {} to disable the lspclient for all filetypes
@@ -82,9 +78,9 @@ M.plugin = {
       --  nnoremap("<leader>lw", "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", { desc = "Add Workspace Folder" })
       --  nnoremap("<leader>lW", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", { desc = "Remove Workspace Folder" })
       --end,
-      transparency = 50, -- 0 ~ 100 blur the main window, 100: fully transparent, 0: opaque,  set to nil or 100 to disable it
-      treesitter_analysis = true, -- treesitter variable context
-      treesitter_analysis_max_num = 100, -- how many items to run treesitter analysis
+      transparency = 50,                   -- 0 ~ 100 blur the main window, 100: fully transparent, 0: opaque,  set to nil or 100 to disable it
+      treesitter_analysis = true,          -- treesitter variable context
+      treesitter_analysis_max_num = 100,   -- how many items to run treesitter analysis
       treesitter_analysis_condense = true, -- condense form for treesitter analysis
     })
   end

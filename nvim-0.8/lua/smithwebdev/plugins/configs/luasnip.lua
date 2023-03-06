@@ -34,6 +34,7 @@ M.plugin = {
     ls.filetype_extend("typescript", { "javascript" })
     ls.filetype_extend("javascript", { "javascriptreact" })
     ls.filetype_extend("vimwiki", { "markdown" })
+    ls.filetype_extend("markdown", { "vimwiki" })
 
 
 
@@ -50,7 +51,7 @@ M.plugin = {
     end)
 
     vim.keymap.set({ "i", "s" }, "<C-j>", function()
-      if ls.expand_or_jumpable() then
+      if ls.jumpable(1) then
         ls.expand_or_jump()
       end
     end)

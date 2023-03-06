@@ -117,6 +117,8 @@ alias pgstart='brew services start postgresql'
 alias pgstop='brew services stop postgresql'
 alias redisstart='brew services start redis'
 alias redisstop='brew services stop redis'
+#alias startservices='brew services start redis && brew services start postgresql@15'
+#alias stopservices='brew services stop redis && brew services stop postgresql@15'
 alias startservices='brew services start redis && brew services start postgresql@14'
 alias stopservices='brew services stop redis && brew services stop postgresql@14'
 

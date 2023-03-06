@@ -35,24 +35,38 @@ M.plugin = {
       }
     })
 
+    lsp.configure('ruby_ls', {
+      init_options = {
+        enabledFeatures = {
+          'hover',
+          'codeActions',
+          'diagnostics',
+          'documentHighlights',
+          'documentSymbols',
+          'formatting',
+          'inlayHint'
+        }
+      }
+    })
+
     lsp.on_attach(function(client, bufnr)
       vim.keymap.set('n', '<leader>lf', '<cmd>lua vim.lsp.buf.format { async = true }<CR>', { desc = 'Format Code' })
-      vim.keymap.set('n', '<leader>lgf', '<cmd>Lspsaga lsp_finder<CR>', { desc = 'LSP Finder' })
       vim.keymap.set('n', '<leader>lgD', '<cmd>lua vim.lsp.buf.declaration<CR>', { desc = 'Declaration' })
-      vim.keymap.set('n', '<leader>lgd', '<cmd>Lspsaga peek_definition()<CR>', { desc = 'Peek Definition' })
       vim.keymap.set('n', '<leader>lgi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { desc = 'Implementation' })
-      vim.keymap.set('n', '<leader>lca', '<cmd>Lspsaga code_action<CR>', { desc = 'Code Action' })
       vim.keymap.set('n', '<leader>lr', '<cmd>lua vim.lsp.buf.references()<cr>', { desc = 'References' })
+      vim.keymap.set('n', '<leader>lk', '<cmd>lua vim.lsp.buf.signature_help()<cr>', { desc = 'Signature Help' })
+      vim.keymap.set('n', '<leader>lt', '<cmd>lua vim.lsp.buf.type_definition()<cr>', { desc = 'Type Definition' })
+      vim.keymap.set('n', '<leader>lgf', '<cmd>Lspsaga lsp_finder<CR>', { desc = 'LSP Finder' })
+      vim.keymap.set('n', '<leader>lgd', '<cmd>Lspsaga peek_definition()<CR>', { desc = 'Peek Definition' })
+      vim.keymap.set({ 'n', 'v' }, '<leader>lca', '<cmd>Lspsaga code_action<CR>', { desc = 'Code Action' })
       vim.keymap.set('n', '<leader>lrn', '<cmd>Lspsaga rename<CR>', { desc = 'Rename' })
       vim.keymap.set('n', '<leader>ld', '<cmd>Lspsaga show_line_diagnostics<CR>', { desc = 'Show Line Diagnostics' })
       vim.keymap.set('n', '<leader>ld', '<cmd>Lspsaga show_cursor_diagnostics<CR>', { desc = 'Show Line Diagnostics' })
       vim.keymap.set('n', '<leader>l[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>',
-        { desc = 'Jump to Previous diagnostic error' })
+      { desc = 'Jump to Previous diagnostic error' })
       vim.keymap.set('n', '<leader>l]d', '<cmd>Lspsaga diagnostic_jump_next<CR>',
-        { desc = 'Jump to Next diagnostic error' })
-      vim.keymap.set('n', '<leader>lk', '<cmd>lua vim.lsp.buf.signature_help()<cr>', { desc = 'Signature Help' })
-      vim.keymap.set('n', '<leader>lK', '<cmd>Lspsaga hover-doc<CR>', { desc = 'Hover Doc' })
-      vim.keymap.set('n', '<leader>lt', '<cmd>lua vim.lsp.buf.type_definition()<cr>', { desc = 'Type Definition' })
+      { desc = 'Jump to Next diagnostic error' })
+      vim.keymap.set('n', '<leader>lK', '<cmd>Lspsaga hover_doc<CR>', { desc = 'Hover Doc' })
       print('Attached to ' .. client.name)
     end)
     lsp.setup()

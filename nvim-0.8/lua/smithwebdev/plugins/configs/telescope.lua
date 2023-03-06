@@ -2,7 +2,6 @@ local M = {}
 
 M.plugin = {
   'nvim-telescope/telescope.nvim',
-
   -- This plugin requires that the following plugins be loaded BEFORE telescope.nvim
   requires = {
     'nvim-lua/plenary.nvim',
@@ -15,7 +14,6 @@ M.plugin = {
     'ElPiloto/telescope-vimwiki.nvim', -- https://github.com/ElPiloto/telescope-vimwiki.nvim
     'xiyaowong/telescope-octo-commands.nvim', -- https://github.com/xiyaowong/telescope-octo-commands.nvim
   },
-
   -- Setup telescope.nvim settings AFTER the plugin (telescope.nvim) is loaded
   config = function()
     local telescope = require('telescope')
@@ -29,7 +27,6 @@ M.plugin = {
         sorting_strategy = 'descending',
         use_less = false,
       },
-
       extensions = {
         file_browser = {
           mappings = {

@@ -28,6 +28,7 @@ vim.cmd('cnoreabbrev h vert bot help')
 vim.cmd('cnoreabbrev help vert bot help')
 
 local AutoSaveGroup = vim.api.nvim_create_augroup('autosave_user_events', { clear = true })
+
 vim.api.nvim_create_autocmd({ 'TextChanged', 'InsertLeave' }, {
   group = AutoSaveGroup,
   callback = function()
@@ -67,8 +68,8 @@ vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
 })
 
 vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
-  pattern = '*.js',
-  command = 'lua vim.lsp.buf.formatting()',
+  pattern = '*',
+  command = 'lua vim.lsp.buf.format {async = true}',
   group = AutoSaveGroup
 })
 

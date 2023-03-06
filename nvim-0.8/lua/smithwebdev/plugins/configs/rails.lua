@@ -1,6 +1,6 @@
 local M = {}
 
---vim.g.blockle_mapping = '<leader>bl'
+--vim.g.blockle_mapping = '<leade/>bl'
 vim.g.rufo_auto_formatting = 1
 
 M.plugin = {
@@ -145,9 +145,9 @@ M.plugin = {
     nnoremap('<leader><leader>rgGi',   ':!guard init && bundle binstubs guard<CR>',        { desc = 'Initialize Guard' })
 
     -- LiveReload Gem
-    nnoremap('<leader><leader>rLRi',   ':!rails livereload:install<CR>',                   { desc = 'Install Rails Live Reload' })
-    nnoremap('<leader><leader>rLRD',   ':!rails livereload:disable<CR>',                   { desc = 'Disable Rails Live Reload' })
-    nnoremap('<leader><leader>rLRE',   ':!rails livereload:enable<CR>',                    { desc = 'Enable Rails Live Reload' })
+    nnoremap('<leader><leader>rgLRi',   ':!rails livereload:install<CR>',                   { desc = 'Install Rails Live Reload' })
+    nnoremap('<leader><leader>rgLRD',   ':!rails livereload:disable<CR>',                   { desc = 'Disable Rails Live Reload' })
+    nnoremap('<leader><leader>rgLRE',   ':!rails livereload:enable<CR>',                    { desc = 'Enable Rails Live Reload' })
 
     -- Rspec Gem
     nnoremap('<leader><leader>rgRCH',  ':Generate rspec:channel<CR>',                      { desc = 'Rails Generate Rspec Channel' })

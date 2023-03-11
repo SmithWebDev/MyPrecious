@@ -25,6 +25,13 @@ plugins = {
   'numToStr/Sakura.nvim', --https://github.com/numToStr/Sakura.nvim
 
   --[[ Completion/ Snippets ]]--
+  {
+    'L3MON4D3/LuaSnip', -- https://github.com/L3MON4D3/LuaSnip
+    version = '1.*', build = 'make install_jsregexp',
+    config = function()
+      require('smithwebdev.plugins.configs.luasnip')
+    end
+  },
 
   --[[ Fuzzy / File Finder ]]--
   {

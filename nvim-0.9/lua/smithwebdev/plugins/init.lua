@@ -17,6 +17,14 @@ plugins = {
   --[[ Colorschemes ]]--
   'B4mbus/oxocarbon-lua.nvim', --https://github.com/B4mbus/oxocarbon-lua.nvim
   'folke/tokyonight.nvim',  --https://github.com/folke/tokyonight.nvim
+  'vim-scripts/ScrollColors', -- https://github.com/vim-scripts/ScrollColors
+  'yonlu/omni.vim', -- https://github.com/yonlu/omni.vim
+  'ldelossa/vimdark', -- https://github.com/ldelossa/vimarkd
+  'flazz/vim-colorschemes', --https://github.com/flazz/vim-colorschemes
+  'rafi/awesome-vim-colorschemes', --https://github.com/rafi/awesome-vim-colorschemes
+  'numToStr/Sakura.nvim', --https://github.com/numToStr/Sakura.nvim
+
+  --[[ Completion/ Snippets ]]--
 
   --[[ Fuzzy / File Finder ]]--
   {

@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 plugins = {
   --[[ Colorschemes ]]--
+  'B4mbus/oxocarbon-lua.nvim', --https://github.com/B4mbus/oxocarbon-lua.nvim
   'folke/tokyonight.nvim',  --https://github.com/folke/tokyonight.nvim
 
   --[[ Fuzzy / File Finder ]]--

@@ -1,5 +1,6 @@
 {
   "lazy.nvim": { "branch": "main", "commit": "5b4444f0d7e556deba3f7ca949a2ba0e2c3369fb" },
+  "oxocarbon-lua.nvim": { "branch": "trunk", "commit": "3b8a15a43ee268ee795be6dd9f78f48116ba791e" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "94fe37a1ea217dd2f90d91222bc1531521146ac3" },
   "telescope-frecency.nvim": { "branch": "master", "commit": "e5696afabd8753d772987ea48434d9c0d8b0aa6b" },

@@ -133,6 +133,26 @@ plugins = {
       require('smithwebdev.plugins.configs.telescope')
     end
   },
+
+  --[[ LSP ]]--
+  ------------------------------------------------------------------------------
+  --{
+  --  'ray-x/navigator.lua', -- https://github.com/ray-x/navigator.lua
+  --  dependencies = {
+  --    {
+  --      'ray-x/guihua.lua',
+  --      build = 'cd lua/fzy && make',
+  --    },
+  --    'neovim/nvim-lspconfig',
+  --    {
+  --      'nvim-treesitter/nvim-treesitter',
+
+  --    },
+  --  },
+  --  config = function()
+  --    require('smithwebdev.plugins.configs.navigator')
+  --  end
+  --},
 }
 
 require('lazy').setup(plugins, opts)

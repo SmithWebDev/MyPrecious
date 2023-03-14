@@ -20,6 +20,7 @@ vim.keymap.set("n", '<leader>b',            ':b<Space>',                     { d
 vim.keymap.set("n", '<leader>ls',           ':ls<CR>',                       { desc = 'List open files' })
 vim.keymap.set("n", '<leader>w',            ':w<CR>',                        { desc = 'Save shortcut' })
 vim.keymap.set("n", '<leader>W',            ':wall<CR>',                     { desc = 'Save all shortcut' })
+vim.keymap.set('n', 'vv', 'viw', { desc = 'Select word under cursor'})
 
 vim.keymap.set("n", '<leader>nw',           ':set nowrap<CR>',               { desc = 'Set No Wrap' })                                     --  Create a toggle for this setting adjustment --
 vim.keymap.set("n", '<leader>nr',           ':set nornu<CR>',                { desc = 'Set No Relative Number' })                          --  Create a toggle for this setting adjustment --

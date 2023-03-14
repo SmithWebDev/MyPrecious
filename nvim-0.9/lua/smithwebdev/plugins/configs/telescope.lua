@@ -3,7 +3,7 @@ require('telescope').setup({
     layout_config = { prompt_position = 'bottom' },
     layout_strategy = 'horizontal',
     sorting_strategy = 'descending',
-    mappings ={
+    mappings = {
       ['i'] = {
         ['<esc>'] = require("telescope.actions").close,
         ['<C-s>'] = require('telescope.actions').add_selection,
@@ -64,6 +64,7 @@ vim.keymap.set('n', '<leader>fli', telescope_builtin.lsp_implementations, { desc
 vim.keymap.set('n', '<leader>flr', telescope_builtin.lsp_references, { desc = 'Telescope Lsp References'})
 vim.keymap.set('n', '<leader>fL', ':Telescope luasnip<CR>', { desc = 'Telescope LuaSnip'})
 vim.keymap.set('n', '<leader>fm', telescope_builtin.marks, { desc = 'Telescope Marks'})
+vim.keymap.set('n', '<leader>fo', telescope_builtin.oldfiles, { desc = 'Telescope Old Files'})
 vim.keymap.set('n', '<leader>fq', telescope_builtin.quickfix, { desc = 'Telescope Quickfix'})
 vim.keymap.set('n', '<leader>fr', telescope_builtin.registers, { desc = 'Telescope Registers'})
 vim.keymap.set('n', '<leader>fR', ':Telescope rails_related_files<CR>', { desc = 'Telescope Rails Related Files'})

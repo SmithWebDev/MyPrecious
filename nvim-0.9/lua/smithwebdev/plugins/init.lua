@@ -74,7 +74,10 @@ plugins = {
       'erlingur/telescope-rails-related-files',     -- https://github.com/erlingur/telescope-rails-related-files
       'ElPiloto/telescope-vimwiki.nvim',            -- https://github.com/ElPiloto/telescope-vimwiki.nvim
       'xiyaowong/telescope-octo-commands.nvim',     -- https://github.com/xiyaowong/telescope-octo-commands.nvim
-    }
+    },
+    config = function()
+      require('smithwebdev.plugins.configs.telescope')
+    end
   },
 }
 

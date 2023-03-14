@@ -78,18 +78,18 @@ vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePre' }, {
 --})
 
 --------------------------------------------------------------------------------
-local CursorInsertMode = vim.api.nvim_create_augroup('CursorInsertMode', { clear = true })
-vim.api.nvim_create_autocmd({ 'InsertLeave', 'WinEnter' }, {
-  callback = function()
-    vim.opt.cursorline = true
-  end,
-  group = CursorInsertMode,
-  desc = "Enable cursorline in normal mode",
-})
-vim.api.nvim_create_autocmd({ 'InsertEnter', 'WinLeave' }, {
-  callback = function()
-    vim.opt.cursorline = false
-  end,
-  group = CursorInsertMode,
-  desc = 'Disable cursorline on insert',
-})
+--local CursorInsertMode = vim.api.nvim_create_augroup('CursorInsertMode', { clear = true })
+--vim.api.nvim_create_autocmd({ 'InsertLeave', 'WinEnter' }, {
+--  callback = function()
+--    vim.opt.cursorline = true
+--  end,
+--  group = CursorInsertMode,
+--  desc = "Enable cursorline in normal mode",
+--})
+--vim.api.nvim_create_autocmd({ 'InsertEnter', 'WinLeave' }, {
+--  callback = function()
+--    vim.opt.cursorline = false
+--  end,
+--  group = CursorInsertMode,
+--  desc = 'Disable cursorline on insert',
+--})

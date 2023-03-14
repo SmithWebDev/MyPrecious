@@ -16,7 +16,12 @@ vim.opt.rtp:prepend(lazypath)
 plugins = {
   --[[ Colorschemes ]]--
   'B4mbus/oxocarbon-lua.nvim', --https://github.com/B4mbus/oxocarbon-lua.nvim
-  'folke/tokyonight.nvim',  --https://github.com/folke/tokyonight.nvim
+  {
+    'folke/tokyonight.nvim',  --https://github.com/folke/tokyonight.nvim
+    config = function()
+      require('smithwebdev.plugins.configs.tokyonight')
+    end
+  },
   'vim-scripts/ScrollColors', -- https://github.com/vim-scripts/ScrollColors
   'yonlu/omni.vim', -- https://github.com/yonlu/omni.vim
   'ldelossa/vimdark', -- https://github.com/ldelossa/vimarkd

@@ -2,6 +2,7 @@
   "LuaSnip": { "branch": "master", "commit": "500981ff6cefc7343e3959ef0f939bd0bfd49ba9" },
   "Sakura.nvim": { "branch": "master", "commit": "0b56b51fa9fcab0423d2809775d91966837581e6" },
   "ScrollColors": { "branch": "master", "commit": "2ce50b9e0d811456b7627cf81197ea9d68f9e667" },
+  "SnippetGenie": { "branch": "master", "commit": "a043ef98675ac513ee26a1636c861ce6bcc8b8da" },
   "awesome-vim-colorschemes": { "branch": "master", "commit": "9f96bbdef5cb19daf58449f0fbb597af6fc4c2eb" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "8fcc934a52af96120fe26358985c10c035984b53" },

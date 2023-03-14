@@ -32,6 +32,7 @@ plugins = {
 
   --[[ Completion/ Snippets ]]--
   ------------------------------------------------------------------------------
+  'rafamadriz/friendly-snippets', -- https://github.com/rafamadriz/friendly-snippets
   {
     'L3MON4D3/LuaSnip', -- https://github.com/L3MON4D3/LuaSnip
     version = '1.*',
@@ -66,8 +67,13 @@ plugins = {
       require('smithwebdev.plugins.configs.cmp')
     end
   },
+{
+  'ziontee113/SnippetGenie', -- https://github.com/ziontee113/SnippetGenie
+    config = function()
+      require('smithwebdev.plugins.configs.snippetgenie')
+    end
+  },
   'honza/vim-snippets',           -- https://github.com/honza/vim-snippets
-  'rafamadriz/friendly-snippets', -- https://github.com/rafamadriz/friendly-snippets
 
   --[[ Editing / Syntax ]]--
   ------------------------------------------------------------------------------

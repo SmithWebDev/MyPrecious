@@ -66,6 +66,14 @@ plugins = {
   'honza/vim-snippets',           -- https://github.com/honza/vim-snippets
   'rafamadriz/friendly-snippets', -- https://github.com/rafamadriz/friendly-snippets
 
+  --[[ Editing / Syntax ]]--
+  {
+    'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require('smithwebdev.plugins.configs.treesitter')
+    end
+  },
+
   --[[ Fuzzy / File Finder ]]--
   {
     'nvim-telescope/telescope.nvim', --https://github.com/nvim-telescope/telescope.nvim

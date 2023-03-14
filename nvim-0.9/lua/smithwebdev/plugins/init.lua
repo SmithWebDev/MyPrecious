@@ -96,10 +96,12 @@ plugins = {
       'nvim-lua/plenary.nvim',
       {'nvim-tree/nvim-web-devicons', name = 'web-icons'},
       'MunifTanjim/nui.nvim',
+      {'s1n7ax/nvim-window-picker', version = '1.*'}, -- https://github.com/s1n7ax/nvim-window-picker
     },
     version = '2.*',
     config = function()
       require('smithwebdev.plugins.configs.neotree')
+      require('smithwebdev.plugins.configs.nvim_window_picker')
     end
   },
   {

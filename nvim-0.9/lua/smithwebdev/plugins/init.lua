@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 plugins = {
   --[[ Colorschemes ]]--
+  ------------------------------------------------------------------------------
   'B4mbus/oxocarbon-lua.nvim', --https://github.com/B4mbus/oxocarbon-lua.nvim
   {
     'folke/tokyonight.nvim',  --https://github.com/folke/tokyonight.nvim
@@ -30,9 +31,11 @@ plugins = {
   'numToStr/Sakura.nvim', --https://github.com/numToStr/Sakura.nvim
 
   --[[ Completion/ Snippets ]]--
+  ------------------------------------------------------------------------------
   {
     'L3MON4D3/LuaSnip', -- https://github.com/L3MON4D3/LuaSnip
-    version = '1.*', build = 'make install_jsregexp',
+    version = '1.*',
+    build = 'make install_jsregexp',
     config = function()
       require('smithwebdev.plugins.configs.luasnip')
     end
@@ -67,6 +70,7 @@ plugins = {
   'rafamadriz/friendly-snippets', -- https://github.com/rafamadriz/friendly-snippets
 
   --[[ Editing / Syntax ]]--
+  ------------------------------------------------------------------------------
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
@@ -90,6 +94,7 @@ plugins = {
   },
 
   --[[ Fuzzy / File Finder ]]--
+  ------------------------------------------------------------------------------
   {
     'nvim-neo-tree/neo-tree.nvim', -- https://github.com/nvim-neo-tree/neo-tree.nvim
     dependencies = {
@@ -106,7 +111,8 @@ plugins = {
   },
   {
     'nvim-telescope/telescope.nvim', --https://github.com/nvim-telescope/telescope.nvim
-    tag = '0.1.1', dependencies = {
+    tag = '0.1.1',
+    dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope-media-files.nvim',  -- https://github.com/nvim-telescope/telescope-media-files.nvim
       'nvim-telescope/telescope-file-browser.nvim', -- https://github.com/nvim-telescope/telescope-file-browser.nvim,

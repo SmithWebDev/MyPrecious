@@ -47,6 +47,6 @@
   "tree-sitter-query": { "branch": "master", "commit": "e97504446f14f529d5a8e649667d3d60391e4dfd" },
   "vim-colorschemes": { "branch": "master", "commit": "fd8f122cef604330c96a6a6e434682dbdfb878c9" },
   "vim-snippets": { "branch": "master", "commit": "c7e61b73a546c9dd0525cd158cc1613bb48e414a" },
-  "vimdark": { "branch": "master", "commit": "ffd7240f8346cb61ab80eda84b78f8983a3c69bf" }
+  "vimdark": { "branch": "master", "commit": "ffd7240f8346cb61ab80eda84b78f8983a3c69bf" },
   "web-icons": { "branch": "master", "commit": "b8d0c99578dcb9d084a45ca4b3a4a502712c2741" }
 }

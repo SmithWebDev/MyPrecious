@@ -32,6 +32,34 @@ plugins = {
       require('smithwebdev.plugins.configs.luasnip')
     end
   },
+  {
+    'danymat/neogen', -- https://github.com/danymat/neogen
+    dependencies = 'nvim-treesitter/nvim-treesitter',
+    config = true, version = "*"
+  },
+  {
+    'hrsh7th/nvim-cmp', -- https://www.github.com/hrsh7th/nvim-cmp
+    dependencies = {
+      'saadparwaiz1/cmp_luasnip',            -- https://github.com/saadparwaiz1/cmp_luasnip
+      'hrsh7th/cmp-buffer',                  -- https://github.com/hrsh7th/cmp-buffer
+      'jcha0713/cmp-tw2css',                 -- https://github.com/jcha0713/cmp-tw2css
+      'hrsh7th/cmp-emoji',                   -- https://github.com/hrsh7th/cmp-emoji
+      'hrsh7th/cmp-path',                    -- https://github.com/hrsh7th/cmp-path
+      'hrsh7th/cmp-cmdline',                 -- https://github.com/hrsh7th/cmp-cmdline
+      'hrsh7th/cmp-nvim-lsp',                -- https://github.com/hrsh7th/cmp-nvim-lsp
+      'hrsh7th/cmp-nvim-lsp-signature-help', -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
+      'hrsh7th/cmp-nvim-lua',                -- https://github.com/hrsh7th/cmp-nvim-lua
+      'windwp/nvim-autopairs',               -- https://github.com/windwp/nvim-autopairs
+      'kyazdani42/nvim-web-devicons',        -- https://github.com/kyazdani42/nvim-web-devicons
+      'nvim-lua/plenary.nvim',
+    },
+    config = function()
+      require('smithwebdev.plugins.configs.autopairs')
+      require('smithwebdev.plugins.configs.cmp')
+    end
+  },
+  'honza/vim-snippets',           -- https://github.com/honza/vim-snippets
+  'rafamadriz/friendly-snippets', -- https://github.com/rafamadriz/friendly-snippets
 
   --[[ Fuzzy / File Finder ]]--
   {

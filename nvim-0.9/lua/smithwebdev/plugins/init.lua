@@ -91,6 +91,18 @@ plugins = {
 
   --[[ Fuzzy / File Finder ]]--
   {
+    'nvim-neo-tree/neo-tree.nvim', -- https://github.com/nvim-neo-tree/neo-tree.nvim
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      {'nvim-tree/nvim-web-devicons', name = 'web-icons'},
+      'MunifTanjim/nui.nvim',
+    },
+    version = '2.*',
+    config = function()
+      require('smithwebdev.plugins.configs.neotree')
+    end
+  },
+  {
     'nvim-telescope/telescope.nvim', --https://github.com/nvim-telescope/telescope.nvim
     tag = '0.1.1', dependencies = {
       'nvim-lua/plenary.nvim',

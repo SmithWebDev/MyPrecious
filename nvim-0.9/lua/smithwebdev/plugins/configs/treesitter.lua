@@ -1,18 +1,3 @@
-dependencies = {
-  'nvim-treesitter/playground', -- https://github.com/nvim-treesitter/playground
-  'RRethy/nvim-treesitter-endwise', -- https://github.com/RRethy/nvim-treesitter-endwise
-  'nvim-treesitter/nvim-treesitter-refactor', -- https://github.com/nvim-treesitter/nvim-treesitter-refactor
-  'nvim-treesitter/nvim-treesitter-textobjects', -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-  'RRethy/nvim-treesitter-textsubjects', -- https://github.com/RRethy/nvim-treesitter-textsubjects
-  'HiPhish/nvim-ts-rainbow', -- https://github.com/HiPhish/nvim-ts-rainbow
-  'ziontee113/syntax-tree-surfer', -- https://github.com/ziontee113/syntax-tree-surfer
-  'nvim-treesitter/tree-sitter-query', -- https://github.com/nvim-treesitter/tree-sitter-query
-  'windwp/nvim-ts-autotag', -- https://github.com/windwp/nvim-ts-autotag
-  'nvim-treesitter/nvim-treesitter-context', -- https://github.com/nvim-treesitter/nvim-treesitter-context
-},
-build = function()
-  require('nvim-treesitter.install').update({ with_sync = true })
-end,
 require("nvim-treesitter.configs").setup({
   ensure_installed = {
     'css',

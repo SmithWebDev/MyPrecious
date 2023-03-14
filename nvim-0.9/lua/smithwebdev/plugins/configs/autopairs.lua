@@ -11,6 +11,7 @@ autopairs.setup({
   --	java = false,
   --},
   ignored_next_char = "[%w%.]", -- will ignore alphanumeric and `.` symbol
+  disable_filetype = { "TelescopePrompt", "guihua", "guihua_rust", "clap_input" },
   fast_wrap = {
     map = '<c-e>',
     chars = { '{', '[', '(', '"', "'" },
@@ -22,6 +23,12 @@ autopairs.setup({
     highlight_grey='Comment'
   },
 })
+
+-- If statement to ensure that Nvim-Autopairs doesnt interfere with
+-- Navigation.lua plugin
+if vim.o.ft == 'clap_input' and vim.o.ft == 'guihua' and vim.o.ft == 'guihua_rust' then
+  require("cmp").setup.buffer { completion = { enable = false }}
+end
 
 local cmp_autopairs_status, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
 if not cmp_autopairs_status then

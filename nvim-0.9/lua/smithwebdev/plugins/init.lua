@@ -203,6 +203,8 @@ local plugins = {
 
   --[[ QOL ]]--
   ------------------------------------------------------------------------------
+  'camspiers/animate.vim', -- https://github.com/camspiers/animate.vim
+  'uga-rosa/ccc.nvim', -- https://github.com/uga-rosa/ccc.nvim
   {
     'rcarriga/nvim-notify',                           -- https://github.com/rcarriga/nvim-notify
     config = function()

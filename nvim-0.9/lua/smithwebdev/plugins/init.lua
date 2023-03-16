@@ -79,6 +79,7 @@ local plugins = {
 
   --[[ Editing / Syntax ]]--
   ------------------------------------------------------------------------------
+  'mattn/emmet-vim',                                  -- https://github.com/mattn/emmet-vim
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
@@ -157,7 +158,7 @@ local plugins = {
 
   --[[ LSP ]]--
   ------------------------------------------------------------------------------
-  'glepnir/lspsaga.nvim', -- https://github.com/glepnir/lspsaga.nvim
+  'glepnir/lspsaga.nvim',                             -- https://github.com/glepnir/lspsaga.nvim
   {
     'VonHeikemen/lsp-zero.nvim',                      -- https://github.com/VonHeikemen/lsp-zero.nvim/
     dependencies = {
@@ -203,8 +204,8 @@ local plugins = {
 
   --[[ QOL ]]--
   ------------------------------------------------------------------------------
-  'camspiers/animate.vim', -- https://github.com/camspiers/animate.vim
-  'uga-rosa/ccc.nvim', -- https://github.com/uga-rosa/ccc.nvim
+  'camspiers/animate.vim',                            -- https://github.com/camspiers/animate.vim
+  'uga-rosa/ccc.nvim',                                -- https://github.com/uga-rosa/ccc.nvim
   {
     'rcarriga/nvim-notify',                           -- https://github.com/rcarriga/nvim-notify
     config = function()

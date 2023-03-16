@@ -5,6 +5,7 @@ local Quick_Close = vim.api.nvim_create_augroup('Quick_Close', { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
   group = 'Quick_Close',
   pattern = {
+    'guihua',
     "PlenaryTestPopup",
     "help",
     "lspinfo",

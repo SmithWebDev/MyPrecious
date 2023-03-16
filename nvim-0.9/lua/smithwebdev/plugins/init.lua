@@ -157,6 +157,7 @@ local plugins = {
 
   --[[ LSP ]]--
   ------------------------------------------------------------------------------
+  'glepnir/lspsaga.nvim', -- https://github.com/glepnir/lspsaga.nvim
   {
     'VonHeikemen/lsp-zero.nvim',                      -- https://github.com/VonHeikemen/lsp-zero.nvim/
     dependencies = {

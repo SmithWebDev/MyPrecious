@@ -17,7 +17,12 @@ local plugins = {
 
   --[[ Colorschemes ]]--
   ------------------------------------------------------------------------------
-  'B4mbus/oxocarbon-lua.nvim',                        --https://github.com/B4mbus/oxocarbon-lua.nvim
+  {
+    'B4mbus/oxocarbon-lua.nvim',                      --https://github.com/B4mbus/oxocarbon-lua.nvim
+    config = function()
+      require("smithwebdev.plugins.configs.oxocarbon")
+    end
+  },
   {
     'folke/tokyonight.nvim',                          --https://github.com/folke/tokyonight.nvim
     config = function()

@@ -161,6 +161,14 @@ local plugins = {
     end
   },
 
+  --[[ Git ]]--
+  ------------------------------------------------------------------------------
+  {
+    'kdheepak/lazygit.nvim',                            -- https://github.com/kdheepak/lazygit.nvim
+    config = function ()
+      require('smithwebdev.plugins.configs.lazygit')
+    end
+  },
   --[[ LSP ]]--
   ------------------------------------------------------------------------------
   'glepnir/lspsaga.nvim',                             -- https://github.com/glepnir/lspsaga.nvim

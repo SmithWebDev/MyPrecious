@@ -57,6 +57,7 @@
   "telescope-rails-related-files": { "branch": "master", "commit": "cb1b7f77ac95f7a293fb9fb0c3ac3b8136403854" },
   "telescope-vimwiki.nvim": { "branch": "main", "commit": "13a83b6107da17af9eb8a1d8e0fe49e1004dfeb4" },
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
+  "todo-comments.nvim": { "branch": "main", "commit": "6ccb0bebeb22dbe31940776a750db54b844ae653" },
   "tokyonight.nvim": { "branch": "main", "commit": "467d889ba82a74e26821c812aa8e70d7dff04c6c" },
   "tree-sitter-query": { "branch": "master", "commit": "e97504446f14f529d5a8e649667d3d60391e4dfd" },
   "vim-colorschemes": { "branch": "master", "commit": "fd8f122cef604330c96a6a6e434682dbdfb878c9" },

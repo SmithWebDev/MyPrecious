@@ -106,6 +106,12 @@ local plugins = {
       require('smithwebdev.plugins.configs.treesitter')
     end
   },
+  {
+    'folke/todo-comments.nvim', -- https://github.com/folke/todo-comments.nvim
+    config = function()
+      require('smithwebdev.plugins.configs.todo_comments')
+    end
+  },
 
   --[[ Fuzzy / File Finder ]]--
   ------------------------------------------------------------------------------

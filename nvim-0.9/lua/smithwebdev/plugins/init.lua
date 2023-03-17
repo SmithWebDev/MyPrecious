@@ -112,6 +112,12 @@ local plugins = {
       require('smithwebdev.plugins.configs.todo_comments')
     end
   },
+  {
+    'tpope/vim-surround', -- https://github.com/tpope/vim-surround
+    config = function()
+      require('smithwebdev.plugins.configs.surround')
+    end
+  },
 
   --[[ Fuzzy / File Finder ]]--
   ------------------------------------------------------------------------------

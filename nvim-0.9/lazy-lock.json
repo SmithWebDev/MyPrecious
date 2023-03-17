@@ -63,6 +63,7 @@
   "vim-colorschemes": { "branch": "master", "commit": "fd8f122cef604330c96a6a6e434682dbdfb878c9" },
   "vim-easy-align": { "branch": "master", "commit": "12dd6316974f71ce333e360c0260b4e1f81169c3" },
   "vim-snippets": { "branch": "master", "commit": "c7e61b73a546c9dd0525cd158cc1613bb48e414a" },
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vimdark": { "branch": "master", "commit": "ffd7240f8346cb61ab80eda84b78f8983a3c69bf" },
   "web-icons": { "branch": "master", "commit": "2c07b4a1fe40284c61c4a40e6d0d769c198a27f5" }
 }

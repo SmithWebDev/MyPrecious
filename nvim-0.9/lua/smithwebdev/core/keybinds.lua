@@ -35,6 +35,7 @@ vim.keymap.set('n', '<leader>y',            "\"+y",                          {de
 vim.keymap.set('v', '<leader>y',            "\"+y",                          {desc = 'Yank text to System Clipboard'})
 vim.keymap.set('n', '<leader>Y',            "\"+Y",                          {desc = 'Yank text to System Clipboard'})
 vim.keymap.set('v', '<leader>Y',            "\"+Y",                          {desc = 'Yank text to System Clipboard'})
+vim.keymap.set('n', '==', 'gg=G', {desc = 'Easy indent'})
 
 --[[ Change Colorscheme ]]------------------------------------------------------
 --vim.keymap.set("n",  '<',                    '',                                                        { desc = ''})

@@ -24,6 +24,9 @@ local plugins = {
     end
   },
   {
+    'freddiehaddad/base16-nvim',                      -- https://github.com/freddiehaddad/base16-nvim
+  },
+  {
     'folke/tokyonight.nvim',                          --https://github.com/folke/tokyonight.nvim
     config = function()
       require('smithwebdev.plugins.configs.tokyonight')

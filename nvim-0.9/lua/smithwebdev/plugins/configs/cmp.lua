@@ -96,7 +96,7 @@ cmp.setup({
   },
   sources = {
     { name = "luasnip" },
-    { name = "nvim_lsp", max_item_count = 6 },
+    { name = "nvim_lsp" },
     { name = "nvim_lua" },
     { name = "path" },
     { name = 'cmp-tw2css' },

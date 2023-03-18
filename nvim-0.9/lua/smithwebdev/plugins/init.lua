@@ -107,14 +107,14 @@ local plugins = {
     end
   },
   {
-    'folke/todo-comments.nvim', -- https://github.com/folke/todo-comments.nvim
+    'folke/todo-comments.nvim',                       -- https://github.com/folke/todo-comments.nvim
     dependencies = 'nvim-lua/plenary.nvim',
     config = function()
       require('smithwebdev.plugins.configs.todo_comments')
     end
   },
   {
-    'tpope/vim-surround', -- https://github.com/tpope/vim-surround
+    'tpope/vim-surround',                             -- https://github.com/tpope/vim-surround
     config = function()
       require('smithwebdev.plugins.configs.surround')
     end
@@ -177,7 +177,7 @@ local plugins = {
   --[[ Git ]]--
   ------------------------------------------------------------------------------
   {
-    'kdheepak/lazygit.nvim',                            -- https://github.com/kdheepak/lazygit.nvim
+    'kdheepak/lazygit.nvim',                          -- https://github.com/kdheepak/lazygit.nvim
     config = function ()
       require('smithwebdev.plugins.configs.lazygit')
     end
@@ -231,7 +231,7 @@ local plugins = {
   --[[ QOL ]]--
   ------------------------------------------------------------------------------
   {
-    'camspiers/animate.vim',                            -- https://github.com/camspiers/animate.vim
+    'camspiers/animate.vim',                          -- https://github.com/camspiers/animate.vim
     dependencies = 'camspiers/lens.vim' -- https://github.com/camspiers/lens.vim
   },
   'uga-rosa/ccc.nvim',                                -- https://github.com/uga-rosa/ccc.nvim
@@ -242,6 +242,13 @@ local plugins = {
     end
   },
   'junegunn/vim-easy-align',
+  {
+    'shortcuts/no-neck-pain.nvim',                      -- https://github.com/shortcuts/no-neck-pain.nvim
+    version = '*',
+    config = function()
+      require('smithwebdev.plugins.configs.no_neck_pain')
+    end
+  },
 }
 
 require('lazy').setup(plugins, opts)

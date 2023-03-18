@@ -230,6 +230,12 @@ local plugins = {
       require('smithwebdev.plugins.configs.navigator')
     end
   },
+  {
+    'folke/trouble.nvim', -- https://github.com/folke/trouble.nvim
+    config = function()
+      require('smithwebdev.plugins.configs.trouble')
+    end
+  },
 
   --[[ QOL ]]--
   ------------------------------------------------------------------------------

@@ -150,7 +150,7 @@ NoNeckPain.bufferOptionsWo = {
     --- @type boolean
     number = false,
     --- @type boolean
-    relativenumber = false,
+    relativenumber = true,
     --- @type boolean
     foldenable = false,
     --- @type boolean
@@ -186,3 +186,5 @@ NoNeckPain.bufferOptionsColors = {
     --- @type string?
     text = nil,
 }
+
+vim.keymap.set('n', '<Tab>z', ':NoNeckPain<CR>', {desc = 'Toggle No Neck Pain'})

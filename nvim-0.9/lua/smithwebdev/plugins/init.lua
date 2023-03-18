@@ -108,6 +108,7 @@ local plugins = {
   },
   {
     'folke/todo-comments.nvim', -- https://github.com/folke/todo-comments.nvim
+    dependencies = 'nvim-lua/plenary.nvim',
     config = function()
       require('smithwebdev.plugins.configs.todo_comments')
     end
@@ -229,7 +230,10 @@ local plugins = {
 
   --[[ QOL ]]--
   ------------------------------------------------------------------------------
-  'camspiers/animate.vim',                            -- https://github.com/camspiers/animate.vim
+  {
+    'camspiers/animate.vim',                            -- https://github.com/camspiers/animate.vim
+    dependencies = 'camspiers/lens.vim' -- https://github.com/camspiers/lens.vim
+  },
   'uga-rosa/ccc.nvim',                                -- https://github.com/uga-rosa/ccc.nvim
   {
     'rcarriga/nvim-notify',                           -- https://github.com/rcarriga/nvim-notify

@@ -26,7 +26,7 @@ vim.opt.smarttab       = true
 vim.opt.softtabstop    = 2
 
 --[[ Line Options ]]--
-vim.opt.cursorline = false
+vim.opt.cursorline     = false
 vim.opt.textwidth      = 80
 vim.opt.showbreak      = '++'
 vim.opt.listchars      = 'tab:→ ,trail:·,extends:…,eol:↩' --space:·,
@@ -59,7 +59,7 @@ vim.opt.relativenumber = true
 
 --[[ Window/Buffer/Tab Options ]]--
 vim.opt.hidden         = true
-vim.opt.cmdheight      = 1
+vim.opt.cmdheight      = 0
 vim.opt.guifont        = 'FiraCode'
 vim.opt.pumheight      = 10
 vim.opt.pumblend       = 25
@@ -70,5 +70,5 @@ vim.opt.writebackup    = false
 vim.opt.clipboard      = 'unnamedplus'
 vim.opt.laststatus     = 3
 vim.cmd [[:highlight WinSeparator guibg=None]]
-vim.opt.completefunc = 'emoji#complete'
+vim.opt.completefunc   = 'emoji#complete'
 print('Settings connected')

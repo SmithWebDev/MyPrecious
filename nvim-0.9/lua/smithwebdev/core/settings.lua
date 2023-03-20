@@ -7,6 +7,7 @@
 vim.opt.completeopt    = 'menu,menuone,noselect'
 vim.opt.shortmess      = 'csa'   --Adjust short system messages
 -- vim.opt.updatetime = 2000
+vim.opt.timeout        = true
 vim.opt.timeoutlen     = 1500
 
 --[[ Fold Options ]]--
@@ -59,7 +60,7 @@ vim.opt.relativenumber = true
 
 --[[ Window/Buffer/Tab Options ]]--
 vim.opt.hidden         = true
-vim.opt.cmdheight      = 0
+vim.opt.cmdheight      = 1
 vim.opt.guifont        = 'FiraCode'
 vim.opt.pumheight      = 10
 vim.opt.pumblend       = 25

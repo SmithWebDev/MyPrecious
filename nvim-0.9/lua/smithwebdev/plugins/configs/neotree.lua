@@ -212,5 +212,5 @@ require("neo-tree").setup({
 })
 
 --vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
-vim.keymap.set('n', '|', ':NeoTreeShowToggle<CR>', { desc = 'Toggle Sidebar Panel Tree'})
-vim.keymap.set('n', '\\', ':NeoTreeFloatToggle<CR>', { desc = 'Toggle Floating Panel Tree'})
+vim.keymap.set('n', '|', ':NeoTreeShowToggle<CR>', { desc = 'Toggle Sidebar Panel Tree', silent = true })
+vim.keymap.set('n', '\\', ':NeoTreeFloatToggle<CR>', { desc = 'Toggle Floating Panel Tree', silent = true })

@@ -26,7 +26,7 @@ function _G.Neogen_Type()
   neogen.generate({type = 'type'})
 end
 
-vim.keymap.set('n', '<leader><leader>dc', '<Cmd> Neogen_Class()<CR>', { desc = 'Document Class'})
-vim.keymap.set('n', '<leader><leader>dF', '<Cmd> Neogen_File()<CR>', { desc = 'Document File'})
-vim.keymap.set('n', '<leader><leader>df', '<Cmd> Neogen_Function()<CR>', { desc = 'Document Function'})
-vim.keymap.set('n', '<leader><leader>dt', '<Cmd> Neogen_Type()<CR>', { desc = 'Document Type'})
+vim.keymap.set('n', '<leader><leader>dc', '<Cmd> Neogen_Class()<CR>', { desc = 'Document Class', silent = true })
+vim.keymap.set('n', '<leader><leader>dF', '<Cmd> Neogen_File()<CR>', { desc = 'Document File', silent = true })
+vim.keymap.set('n', '<leader><leader>df', '<Cmd> Neogen_Function()<CR>', { desc = 'Document Function', silent = true })
+vim.keymap.set('n', '<leader><leader>dt', '<Cmd> Neogen_Type()<CR>', { desc = 'Document Type', silent = true })

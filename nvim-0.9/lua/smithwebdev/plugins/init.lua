@@ -87,7 +87,12 @@ local plugins = {
 
   --[[ Editing / Syntax ]]--
   ------------------------------------------------------------------------------
-  'mattn/emmet-vim',                                  -- https://github.com/mattn/emmet-vim
+  {
+    'mattn/emmet-vim',                                -- https://github.com/mattn/emmet-vim
+    config = function()
+      require("smithwebdev.plugins.configs.emmet")
+    end
+  },
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
@@ -179,7 +184,8 @@ local plugins = {
 
   --[[ Git ]]--
   ------------------------------------------------------------------------------
-  {
+  --'sindrets/diffview.nvim', -- https://github.com/sindrets/diffview.nvim
+    {
     'kdheepak/lazygit.nvim',                          -- https://github.com/kdheepak/lazygit.nvim
     config = function ()
       require('smithwebdev.plugins.configs.lazygit')
@@ -231,7 +237,7 @@ local plugins = {
     end
   },
   {
-    'folke/trouble.nvim', -- https://github.com/folke/trouble.nvim
+    'folke/trouble.nvim',                             -- https://github.com/folke/trouble.nvim
     config = function()
       require('smithwebdev.plugins.configs.trouble')
     end
@@ -241,23 +247,29 @@ local plugins = {
   ------------------------------------------------------------------------------
   {
     'camspiers/animate.vim',                          -- https://github.com/camspiers/animate.vim
-    dependencies = 'camspiers/lens.vim' -- https://github.com/camspiers/lens.vim
+    dependencies = 'camspiers/lens.vim',              -- https://github.com/camspiers/lens.vim
   },
   'uga-rosa/ccc.nvim',                                -- https://github.com/uga-rosa/ccc.nvim
+  {
+    'shortcuts/no-neck-pain.nvim',                    -- https://github.com/shortcuts/no-neck-pain.nvim
+    version = '*',
+    config = function()
+      require('smithwebdev.plugins.configs.no_neck_pain')
+    end
+  },
   {
     'rcarriga/nvim-notify',                           -- https://github.com/rcarriga/nvim-notify
     config = function()
       require('smithwebdev.plugins.configs.nvim_notify')
     end
   },
-  'junegunn/vim-easy-align',
   {
-    'shortcuts/no-neck-pain.nvim',                      -- https://github.com/shortcuts/no-neck-pain.nvim
-    version = '*',
+    'folke/which-key.nvim',                           -- https://github.com/folke/which-key.nvim
     config = function()
-      require('smithwebdev.plugins.configs.no_neck_pain')
+      require('smithwebdev.plugins.configs.which_key')
     end
   },
+  'junegunn/vim-easy-align',
 }
 
 require('lazy').setup(plugins, opts)

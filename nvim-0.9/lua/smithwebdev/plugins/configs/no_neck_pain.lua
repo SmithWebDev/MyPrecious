@@ -187,4 +187,4 @@ NoNeckPain.bufferOptionsColors = {
     text = nil,
 }
 
-vim.keymap.set('n', '<Tab>z', ':NoNeckPain<CR>', {desc = 'Toggle No Neck Pain'})
+vim.keymap.set('n', '<Tab>z', ':NoNeckPain<CR>', {desc = 'Toggle No Neck Pain', silent = true })

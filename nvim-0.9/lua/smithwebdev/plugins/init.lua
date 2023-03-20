@@ -70,6 +70,8 @@ local plugins = {
       'hrsh7th/cmp-nvim-lua',                         -- https://github.com/hrsh7th/cmp-nvim-lua
       'windwp/nvim-autopairs',                        -- https://github.com/windwp/nvim-autopairs
       'kyazdani42/nvim-web-devicons',                 -- https://github.com/kyazdani42/nvim-web-devicons
+      'honza/vim-snippets',                           -- https://github.com/honza/vim-snippets
+      'rafamadriz/friendly-snippets',                 -- https://github.com/rafamadriz/friendly-snippets
       'nvim-lua/plenary.nvim',
     },
     config = function()
@@ -119,6 +121,12 @@ local plugins = {
     dependencies = 'nvim-lua/plenary.nvim',
     config = function()
       require('smithwebdev.plugins.configs.todo_comments')
+    end
+  },
+  {
+    'aarondiel/spread.nvim',                          -- https://github.com/aarondiel/spread.nvim
+    config = function()
+      require('smithwebdev.plugins.configs.spread')
     end
   },
   {
@@ -181,6 +189,27 @@ local plugins = {
       require('smithwebdev.plugins.configs.ror')
     end
   },
+{
+    'michaelb/sniprun',                               -- https://github.com/michaelb/sniprun
+    build = 'bash ./install.sh',
+    config = function()
+      require("smithwebdev.plugins.configs.sniprun")
+    end
+  },
+  {
+    'erlingur/vim-rails',                             -- https://github.com/erlingur/vim-rails
+
+    dependencies = {
+      'christoomey/vim-rfactory',                     -- https://github.com/christoomey/vim-rfactory
+      'tpope/vim-endwise',                            -- https://github.com/tpope/vim-endwise
+      'tpope/vim-dispatch',                           -- https://github.com/tpope/vim-dispatch
+      'tpope/vim-projectionist',                      -- https://github.com/tpope/vim-projectionist
+      'jgdavey/vim-blockle',                          -- https://github.com/gdavey/vim-blockle
+    },
+    config = function ()
+      require('smithwebdev.plugins.configs.rails')
+    end
+  },
 
   --[[ Git ]]--
   ------------------------------------------------------------------------------
@@ -193,7 +222,13 @@ local plugins = {
   },
   --[[ LSP ]]--
   ------------------------------------------------------------------------------
-  'glepnir/lspsaga.nvim',                             -- https://github.com/glepnir/lspsaga.nvim
+  {
+    'glepnir/lspsaga.nvim',                           -- https://github.com/glepnir/lspsaga.nvim
+    event = "BufRead",
+    config = function()
+      require('smithwebdev.plugins.configs.lspsaga')
+    end
+  },
   {
     'VonHeikemen/lsp-zero.nvim',                      -- https://github.com/VonHeikemen/lsp-zero.nvim/
     dependencies = {

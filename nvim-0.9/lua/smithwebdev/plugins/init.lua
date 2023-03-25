@@ -316,6 +316,7 @@ local plugins = {
     end
   },
   'junegunn/vim-easy-align',
+  'psliwka/vim-smoothie',                             -- https://github.com/psliwka/vim-smoothie
 }
 
 require('lazy').setup(plugins, opts)

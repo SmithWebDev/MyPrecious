@@ -189,7 +189,7 @@ local plugins = {
       require('smithwebdev.plugins.configs.ror')
     end
   },
-{
+  {
     'michaelb/sniprun',                               -- https://github.com/michaelb/sniprun
     build = 'bash ./install.sh',
     config = function()
@@ -214,10 +214,21 @@ local plugins = {
   --[[ Git ]]--
   ------------------------------------------------------------------------------
   --'sindrets/diffview.nvim', -- https://github.com/sindrets/diffview.nvim
-    {
+  {
     'kdheepak/lazygit.nvim',                          -- https://github.com/kdheepak/lazygit.nvim
     config = function ()
       require('smithwebdev.plugins.configs.lazygit')
+    end
+  },
+  {
+    'pwntester/octo.nvim',                            -- https://github.com/pwntester/octo.nvim
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'kyazdani42/nvim-web-devicons',
+    },
+    config = function()
+      require("smithwebdev.plugins.configs.octo")
     end
   },
   --[[ LSP ]]--

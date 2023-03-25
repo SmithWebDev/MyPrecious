@@ -11,6 +11,7 @@ vim.api.nvim_create_autocmd("FileType", {
     "lspinfo",
     "man",
     "notify",
+    "octo",
     "qf",
     "query", -- :InspectTree
     "spectre_panel",

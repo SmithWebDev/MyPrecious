@@ -40,6 +40,7 @@ require('telescope').setup({
 local telescope = require('telescope')
 local telescope_builtin = require('telescope.builtin')
 local telescope_actions = require('telescope.actions')
+local telescope_extension = require('telescope').extensions
 
 telescope.load_extension('file_browser')
 telescope.load_extension('luasnip')
@@ -64,7 +65,8 @@ vim.keymap.set('n', '<leader>fli', telescope_builtin.lsp_implementations,  { des
 vim.keymap.set('n', '<leader>flr', telescope_builtin.lsp_references,       { desc = 'Telescope Lsp References',      silent = true })
 vim.keymap.set('n', '<leader>fL',  ':Telescope luasnip<CR>',               { desc = 'Telescope LuaSnip',             silent = true })
 vim.keymap.set('n', '<leader>fm',  telescope_builtin.marks,                { desc = 'Telescope Marks',               silent = true })
-vim.keymap.set('n', '<leader>fo',  telescope_builtin.oldfiles,             { desc = 'Telescope Old Files',           silent = true })
+--vim.keymap.set('n', '<leader>fo',  telescope_extension.octo_commands.octo_commands,             { desc = 'Telescope Octo Commands',           silent = true })
+vim.keymap.set('n', '<leader>fO',  telescope_builtin.oldfiles,             { desc = 'Telescope Old Files',           silent = true })
 vim.keymap.set('n', '<leader>fq',  telescope_builtin.quickfix,             { desc = 'Telescope Quickfix',            silent = true })
 vim.keymap.set('n', '<leader>fr',  telescope_builtin.registers,            { desc = 'Telescope Registers',           silent = true })
 vim.keymap.set('n', '<leader>fR',  ':Telescope rails_related_files<CR>',   { desc = 'Telescope Rails Related Files', silent = true })

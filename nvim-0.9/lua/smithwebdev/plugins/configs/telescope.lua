@@ -39,8 +39,6 @@ require('telescope').setup({
 
 local telescope = require('telescope')
 local telescope_builtin = require('telescope.builtin')
-local telescope_actions = require('telescope.actions')
-local telescope_extension = require('telescope').extensions
 
 telescope.load_extension('file_browser')
 telescope.load_extension('luasnip')

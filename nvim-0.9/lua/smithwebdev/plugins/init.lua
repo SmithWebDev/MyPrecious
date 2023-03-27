@@ -139,6 +139,12 @@ local plugins = {
   --[[ Fuzzy / File Finder ]]--
   ------------------------------------------------------------------------------
   {
+    'ThePrimeagen/harpoon', -- https://github.com/ThePrimeagen/harpoon
+    config = function()
+      require('smithwebdev.plugins.configs.harpoon')
+    end
+  },
+  {
     'nvim-neo-tree/neo-tree.nvim',                    -- https://github.com/nvim-neo-tree/neo-tree.nvim
     dependencies = {
       'nvim-lua/plenary.nvim',

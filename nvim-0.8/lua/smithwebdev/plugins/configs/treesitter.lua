@@ -10,9 +10,15 @@ M.plugin = {
     { 'RRethy/nvim-treesitter-textsubjects',         after = { 'nvim-treesitter', 'tree-sitter-query' } }, -- https://github.com/RRethy/nvim-treesitter-textsubjects
     { 'HiPhish/nvim-ts-rainbow',                     after = { 'nvim-treesitter', 'tree-sitter-query' } }, -- https://github.com/HiPhish/nvim-ts-rainbow
     { 'ziontee113/syntax-tree-surfer',               after = { 'nvim-treesitter', 'tree-sitter-query' } }, -- https://github.com/ziontee113/syntax-tree-surfer
+<<<<<<< HEAD
     { 'nvim-treesitter/tree-sitter-query',           after = 'nvim-treesitter' }, -- https://github.com/nvim-treesitter/tree-sitter-query
     { 'windwp/nvim-ts-autotag',                      after = 'nvim-treesitter' }, -- https://github.com/windwp/nvim-ts-autotag
     'nvim-treesitter/nvim-treesitter-context', -- https://github.com/nvim-treesitter/nvim-treesitter-context
+=======
+    { 'nvim-treesitter/tree-sitter-query',           after = 'nvim-treesitter' },                          -- https://github.com/nvim-treesitter/tree-sitter-query
+    { 'windwp/nvim-ts-autotag',                      after = 'nvim-treesitter' },                          -- https://github.com/windwp/nvim-ts-autotag
+    'nvim-treesitter/nvim-treesitter-context',                                                             -- https://github.com/nvim-treesitter/nvim-treesitter-context
+>>>>>>> 1cea3b9 (final update for this branch...)
   },
   run = function()
     require('nvim-treesitter.install').update({ with_sync = true })

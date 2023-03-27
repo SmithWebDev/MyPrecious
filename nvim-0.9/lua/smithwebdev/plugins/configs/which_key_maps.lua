@@ -1,0 +1,45 @@
+local wk = require('which-key')
+
+--wk.register({
+--  ['<leader>'] = {
+--    o = {
+--      name = 'Octo',
+--      f = {
+--        name = 'File Panel',
+--      },
+--      i = {
+--        name = 'Issues',
+--        a = {
+--          name = 'Assign',
+--          a = {'Add Assignee'},
+--          d = {'Remove Assignee'},
+--        },
+--        c = {'Close Issue'},
+--        l = {
+--          name = 'Label',
+--          a = {'Add Label'},
+--          c = {'Create Label'},
+--          r = {'Remove Label'},
+--        },
+--        L = {'List open issues on the same repo'},
+--        o = {'Reopen Issue'},
+--      },
+--      p = {
+--        name = 'Pull Request',
+--      },
+--      r = {
+--        name = 'Review',
+--        d = {
+--          name = 'Diff',
+--        },
+--        s = {
+--          name = 'Submit Window',
+--        },
+--        t = {
+--          name = 'Thread',
+--        },
+--      }
+--    }
+--  }
+--
+--})

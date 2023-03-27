@@ -313,6 +313,7 @@ local plugins = {
     'folke/which-key.nvim',                           -- https://github.com/folke/which-key.nvim
     config = function()
       require('smithwebdev.plugins.configs.which_key')
+      require('smithwebdev.plugins.configs.which_key_maps')
     end
   },
   'junegunn/vim-easy-align',

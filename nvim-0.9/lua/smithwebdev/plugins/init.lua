@@ -283,6 +283,17 @@ local plugins = {
     end
   },
   {
+    'SmiteshP/nvim-navbuddy', -- https://github.com/SmiteshP/nvim-navbuddy
+    dependencies = {
+      'neovim/nvim-lspconfig',
+      'SmiteshP/nvim-navic',
+      'MunifTanjim/nui.nvim'
+    },
+    config = function()
+      require('smithwebdev/plugins.configs.navbuddy')
+    end
+  },
+  {
     'folke/trouble.nvim',                             -- https://github.com/folke/trouble.nvim
     config = function()
       require('smithwebdev.plugins.configs.trouble')

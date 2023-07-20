@@ -15,7 +15,7 @@ vim.keymap.set("n", 'H',                    '^',                             { d
 vim.keymap.set("n", 'J',                    'mzJ`z',                         { desc = 'Maintains cursor when joining lines'})
 vim.keymap.set("n", 'L',                    '$',                             { desc = 'Alternative End Line' })
 vim.keymap.set("n", 'Y',                    'y$',                            { desc = 'Alternative Copy to End of Line' })
-vim.keymap.set("i", '<C-l>',                '<Esc>$a',                       { desc = 'Jump to end of line while in Insert Mode' })
+--vim.keymap.set("i", '<C-l>',                '<Esc>$a',                       { desc = 'Jump to end of line while in Insert Mode' })
 vim.keymap.set("n", '<',                    '<gv',                           { desc = 'Alternative Shift Tab (indent)' })
 vim.keymap.set("n", '>',                    '>gv',                           { desc = 'Alternative Tab (indent)' })
 vim.keymap.set("n", '<leader>b',            ':b<Space>',                     { desc = 'Switch to buffer' })

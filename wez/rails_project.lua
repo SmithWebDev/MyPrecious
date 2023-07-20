@@ -28,3 +28,15 @@ function rails_project()
   wezterm.run("wezterm -t \"Tab 5\" bin/dev")
   wezterm.run("wezterm -t \"Tab 6\" spotify-player")
 end
+wezterm.on("gui-startup", function(cmd)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+
+  window:gui_window():maximize()
+
+  local bot0 = pane:split { direction = 'Bottom', size = 0.25 }
+  local bot1 = bot0:split { direction = 'Left', size = 0.5 }
+  local bot2 = bot1:split { direction = 'Left', size = 0.5 }
+  local bot3 = bot0:split { direction = 'Left', size = 0.5 }
+
+  local top = pane:split { direction = 'Right', size = 1.25 }
+end)

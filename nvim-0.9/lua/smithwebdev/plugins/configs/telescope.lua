@@ -14,8 +14,9 @@ require('telescope').setup({
         ['<leader>-'] = require('telescope.actions').select_horizontal,
         ['<leader>\\'] = require('telescope.actions').select_vertical,
         ['<C-h>'] = require('telescope.actions').add_to_qflist,
-        ['<C-a>'] = require('telescope.actions').add_selected_to_qflist,
+        --['<C-a>'] = require('telescope.actions').add_selected_to_qflist,
         ['<C-q>'] = require('telescope.actions').send_selected_to_qflist,
+        ['ja'] = require'telescope'.extensions.send_to_harpoon.actions.send_selected_to_harpoon
       },
       ['n'] = {
         ['<esc>'] = require("telescope.actions").close,
@@ -45,6 +46,7 @@ telescope.load_extension('luasnip')
 telescope.load_extension('rails_related_files')
 telescope.load_extension('vimwiki')
 telescope.load_extension('octo_commands')
+telescope.load_extension('send_to_harpoon')
 
 vim.keymap.set('n', '<leader>fc',  telescope_builtin.commands,             { desc = 'Telescope Commands',            silent = true })
 vim.keymap.set('n', '<leader>fC',  telescope_builtin.command_history,      { desc = 'Telescope Command History',     silent = true })

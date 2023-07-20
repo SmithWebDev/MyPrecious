@@ -140,6 +140,9 @@ local plugins = {
   ------------------------------------------------------------------------------
   {
     'ThePrimeagen/harpoon', -- https://github.com/ThePrimeagen/harpoon
+    dependencies = {
+      'asbjornhaland/telescope-send-to-harpoon.nvim',  -- https://github.com/asbjornhaland/telescope-send-to-harpoon.nvim
+    },
     config = function()
       require('smithwebdev.plugins.configs.harpoon')
     end
